@@ -1,0 +1,1599 @@
+{
+  "metadata": {
+    "project": "London Drugs E2E - Desktop",
+    "baseUrl": "https://www.londondrugs.com",
+    "framework": "te-playwright-ts",
+    "generatedAt": "2026-06-08",
+    "source": "inputs/testcases.csv",
+    "totalCases": 27,
+    "automatizable": 24,
+    "blocked": 3
+  },
+  "testCases": [
+    {
+      "id": "TC-79593-01",
+      "name": "Home Page — Logo Click navigates to Home",
+      "priority": "P1",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79593",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/stores",
+        "auth": false,
+        "cartEmpty": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/stores",
+          "description": "Navigate to an internal page (not home)"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "link[href='/'] img[alt='London Drugs']",
+          "description": "Click the London Drugs logo in the header"
+        },
+        {
+          "step": 3,
+          "action": "waitForURL",
+          "target": "**/",
+          "description": "Wait for redirect to homepage"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "url",
+          "operator": "equals",
+          "expected": "https://www.londondrugs.com/"
+        },
+        {
+          "type": "title",
+          "operator": "contains",
+          "expected": "London Drugs"
+        },
+        {
+          "type": "elementVisible",
+          "selector": "img[alt='London Drugs']",
+          "expected": true
+        }
+      ],
+      "pageObjects": ["BasePage", "HomePage"],
+      "tags": ["homepage", "navigation", "smoke"]
+    },
+    {
+      "id": "TC-79593-02-positive",
+      "name": "Home Page — Search returns relevant results",
+      "priority": "P0",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79593",
+      "preconditions": {
+        "url": "https://www.londondrugs.com",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com",
+          "description": "Navigate to homepage"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "input[placeholder='Find your product']",
+          "description": "Focus search input"
+        },
+        {
+          "step": 3,
+          "action": "fill",
+          "target": "input[placeholder='Find your product']",
+          "value": "vitamins",
+          "description": "Type search term"
+        },
+        {
+          "step": 4,
+          "action": "pressKey",
+          "target": "input[placeholder='Find your product']",
+          "value": "Enter",
+          "description": "Submit search"
+        },
+        {
+          "step": 5,
+          "action": "waitForURL",
+          "target": "**/search?text=vitamins",
+          "description": "Wait for search results URL"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "url",
+          "operator": "contains",
+          "expected": "/search?text=vitamins"
+        },
+        {
+          "type": "elementVisible",
+          "selector": "input[placeholder='Find your product']",
+          "expected": true
+        }
+      ],
+      "testData": {
+        "searchTerm": "vitamins"
+      },
+      "pageObjects": ["HomePage", "SearchResultsPage"],
+      "tags": ["homepage", "search", "smoke", "P0"]
+    },
+    {
+      "id": "TC-79593-02-negative",
+      "name": "Home Page — Search with no results shows 'Nothing found'",
+      "priority": "P1",
+      "type": "Negative",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79593",
+      "preconditions": {
+        "url": "https://www.londondrugs.com",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com",
+          "description": "Navigate to homepage"
+        },
+        {
+          "step": 2,
+          "action": "fill",
+          "target": "input[placeholder='Find your product']",
+          "value": "xyznotaproduct999",
+          "description": "Type non-existent search term"
+        },
+        {
+          "step": 3,
+          "action": "pressKey",
+          "target": "input[placeholder='Find your product']",
+          "value": "Enter",
+          "description": "Submit search"
+        },
+        {
+          "step": 4,
+          "action": "waitForSelector",
+          "target": "h2:text('Nothing found!')",
+          "description": "Wait for no-results message"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementVisible",
+          "selector": "h2:text('Nothing found!')",
+          "expected": true
+        }
+      ],
+      "testData": {
+        "searchTerm": "xyznotaproduct999"
+      },
+      "pageObjects": ["HomePage", "SearchResultsPage"],
+      "tags": ["search", "negative", "no-results"]
+    },
+    {
+      "id": "TC-79593-03",
+      "name": "Home Page — Store Locator opens and allows search",
+      "priority": "P1",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79593",
+      "notes": "Map (Google Maps iframe) is BLOCKED — test validates list/search only",
+      "preconditions": {
+        "url": "https://www.londondrugs.com",
+        "auth": false,
+        "blockGeolocation": true
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com",
+          "description": "Navigate to homepage"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "a[href='/stores']",
+          "description": "Click 'Select Your Store' in header"
+        },
+        {
+          "step": 3,
+          "action": "waitForURL",
+          "target": "**/stores",
+          "description": "Wait for Store Locator page"
+        },
+        {
+          "step": 4,
+          "action": "waitForSelector",
+          "target": "h1:text('Find a Store Near You')",
+          "description": "Verify page heading"
+        },
+        {
+          "step": 5,
+          "action": "click",
+          "target": "a[href='stores/all-stores']",
+          "description": "Click Find All Stores by Province link"
+        },
+        {
+          "step": 6,
+          "action": "waitForURL",
+          "target": "**/stores/all-stores",
+          "description": "Wait for all stores page"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "url",
+          "operator": "contains",
+          "expected": "/stores"
+        },
+        {
+          "type": "elementVisible",
+          "selector": "h1:text('Find a Store Near You')",
+          "expected": true
+        },
+        {
+          "type": "elementVisible",
+          "selector": "a[href='stores/all-stores']",
+          "expected": true
+        }
+      ],
+      "pageObjects": ["HeaderComponent", "StoreLocatorPage"],
+      "tags": ["store-locator", "navigation"]
+    },
+    {
+      "id": "TC-79593-05",
+      "name": "Home Page — Mini Cart opens and Proceed to Checkout navigates",
+      "priority": "P1",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79593",
+      "notes": "Requires at least 1 product in cart as precondition (setup via prior AddToCart step)",
+      "preconditions": {
+        "url": "https://www.londondrugs.com",
+        "auth": false,
+        "cartNotEmpty": true
+      },
+      "setup": [
+        {
+          "action": "navigate",
+          "target": "https://www.londondrugs.com"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "click",
+          "target": "button[aria-label='Show Mini Cart Items']",
+          "description": "Click mini cart icon in header"
+        },
+        {
+          "step": 2,
+          "action": "waitForSelector",
+          "target": "[data-testid='mini-cart-panel'], .mini-cart-panel, [class*='miniCart']",
+          "description": "Wait for mini cart panel to open"
+        },
+        {
+          "step": 3,
+          "action": "click",
+          "target": "button:text('Proceed to Checkout'), a:text('Proceed to Checkout')",
+          "description": "Click Proceed to Checkout button"
+        },
+        {
+          "step": 4,
+          "action": "waitForURL",
+          "target": "**/cart",
+          "description": "Wait for cart page URL"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "url",
+          "operator": "contains",
+          "expected": "/cart"
+        }
+      ],
+      "pageObjects": ["HeaderComponent", "MiniCartComponent", "CartPage"],
+      "tags": ["mini-cart", "cart", "navigation"]
+    },
+    {
+      "id": "TC-79593-06",
+      "name": "Home Page — Hamburger Menu opens with categories",
+      "priority": "P1",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79593",
+      "preconditions": {
+        "url": "https://www.londondrugs.com",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com",
+          "description": "Navigate to homepage"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "button[aria-label='Opens Mega Menu']",
+          "description": "Click hamburger/mega menu button"
+        },
+        {
+          "step": 3,
+          "action": "waitForSelector",
+          "target": "[class*='megaMenu'], [class*='mega-menu'], nav[aria-expanded='true']",
+          "description": "Wait for mega menu to appear"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementVisible",
+          "selector": "button[aria-label='Opens Mega Menu']",
+          "expected": true
+        },
+        {
+          "type": "elementVisible",
+          "selector": "button[aria-label='shop by category']",
+          "expected": true
+        }
+      ],
+      "pageObjects": ["HeaderComponent", "MegaMenuComponent"],
+      "tags": ["navigation", "mega-menu", "hamburger"]
+    },
+    {
+      "id": "TC-79593-07",
+      "name": "Home Page — Header Links navigate to correct pages",
+      "priority": "P2",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79593",
+      "preconditions": {
+        "url": "https://www.londondrugs.com",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com",
+          "description": "Navigate to homepage"
+        },
+        {
+          "step": 2,
+          "action": "assertHref",
+          "target": "a[href='/category/deals-and-events/c/1027']",
+          "description": "Deals & Events link exists with correct URL"
+        },
+        {
+          "step": 3,
+          "action": "assertHref",
+          "target": "a[href='/our-services']",
+          "description": "Services link exists with correct URL"
+        },
+        {
+          "step": 4,
+          "action": "assertHref",
+          "target": "a[href='/flyer']",
+          "description": "Flyers link exists with correct URL"
+        },
+        {
+          "step": 5,
+          "action": "assertHref",
+          "target": "a[href='/myaccount/wishlist#registry']",
+          "description": "Gift Registry link exists"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementExists",
+          "selector": "a[href='/category/deals-and-events/c/1027']",
+          "expected": true,
+          "label": "Deals & Events link"
+        },
+        {
+          "type": "elementExists",
+          "selector": "a[href='/our-services']",
+          "expected": true,
+          "label": "Services link"
+        },
+        {
+          "type": "elementExists",
+          "selector": "a[href='/flyer']",
+          "expected": true,
+          "label": "Flyers link"
+        },
+        {
+          "type": "elementExists",
+          "selector": "a[href='https://pharmacy.londondrugs.com']",
+          "expected": true,
+          "label": "Pharmacy link"
+        },
+        {
+          "type": "elementExists",
+          "selector": "a[href='https://photolab.londondrugs.com']",
+          "expected": true,
+          "label": "PhotoLab link"
+        },
+        {
+          "type": "elementExists",
+          "selector": "a[href='https://www.ldextras.com']",
+          "expected": true,
+          "label": "LDExtras link"
+        }
+      ],
+      "pageObjects": ["HeaderComponent"],
+      "tags": ["header", "links", "navigation", "smoke"]
+    },
+    {
+      "id": "TC-79593-10",
+      "name": "Home Page — Email Newsletter accepts valid email",
+      "priority": "P2",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "riskFlags": ["CAPTCHA_POSSIBLE"],
+      "originalTC": "79593",
+      "preconditions": {
+        "url": "https://www.londondrugs.com",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com",
+          "description": "Navigate to homepage"
+        },
+        {
+          "step": 2,
+          "action": "scrollToElement",
+          "target": "input[placeholder='Enter your email']",
+          "description": "Scroll to newsletter section in footer"
+        },
+        {
+          "step": 3,
+          "action": "fill",
+          "target": "input[placeholder='Enter your email']",
+          "value": "{{TEST_EMAIL}}",
+          "description": "Enter valid email address (use env variable)"
+        },
+        {
+          "step": 4,
+          "action": "click",
+          "target": "button:text('SIGN UP')",
+          "description": "Click Sign Up button"
+        },
+        {
+          "step": 5,
+          "action": "waitForResponse",
+          "target": "**/newsletter*",
+          "description": "Wait for newsletter subscription API response"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementVisible",
+          "selector": "[class*='success'], [class*='confirmation'], p:text('thank you')",
+          "expected": true,
+          "label": "Success message visible after signup"
+        }
+      ],
+      "testData": {
+        "TEST_EMAIL": "{{process.env.TEST_EMAIL}}"
+      },
+      "pageObjects": ["NewsletterComponent"],
+      "tags": ["newsletter", "email", "footer"]
+    },
+    {
+      "id": "TC-79594-04",
+      "name": "PLP — Refinements (Filters) narrow product results",
+      "priority": "P1",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79594",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/search?text=lipstick",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/search?text=lipstick",
+          "description": "Navigate to search results with products"
+        },
+        {
+          "step": 2,
+          "action": "waitForSelector",
+          "target": "[class*='filter'], [class*='refinement'], [aria-label*='filter']",
+          "description": "Wait for filter panel to load"
+        },
+        {
+          "step": 3,
+          "action": "click",
+          "target": "[class*='filter-option']:first-child, [class*='refinement-item']:first-child",
+          "description": "Apply first available filter"
+        },
+        {
+          "step": 4,
+          "action": "waitForResponse",
+          "target": "**/search*",
+          "description": "Wait for filtered results API response"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "urlContains",
+          "expected": "filter",
+          "label": "URL reflects active filter"
+        }
+      ],
+      "pageObjects": ["PLPPage", "FiltersComponent"],
+      "tags": ["plp", "filters", "refinements"]
+    },
+    {
+      "id": "TC-79594-09",
+      "name": "PLP — Sorting reorders products by selected rule",
+      "priority": "P2",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79594",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/search?text=vitamins",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/search?text=vitamins",
+          "description": "Navigate to search results"
+        },
+        {
+          "step": 2,
+          "action": "waitForSelector",
+          "target": "[class*='sort'], select[name*='sort'], [aria-label*='sort']",
+          "description": "Wait for sort control to load"
+        },
+        {
+          "step": 3,
+          "action": "selectOption",
+          "target": "select[class*='sort'], [aria-label*='sort by']",
+          "value": "Price: Low to High",
+          "description": "Select Price Low to High sorting"
+        },
+        {
+          "step": 4,
+          "action": "waitForResponse",
+          "target": "**/search*",
+          "description": "Wait for sorted results"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "urlContains",
+          "expected": "sort",
+          "label": "URL reflects active sort"
+        }
+      ],
+      "pageObjects": ["PLPPage"],
+      "tags": ["plp", "sorting"]
+    },
+    {
+      "id": "TC-79595-07",
+      "name": "PDP — Price is visible and correctly formatted",
+      "priority": "P0",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79595",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/search?text=vitamins",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/search?text=vitamins",
+          "description": "Navigate to search results to find a product"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "[class*='product-card']:first-child a, [class*='productCard']:first-child a",
+          "description": "Click first product to open PDP"
+        },
+        {
+          "step": 3,
+          "action": "waitForURL",
+          "target": "**/*-p/*",
+          "description": "Wait for PDP URL (product detail pattern)"
+        },
+        {
+          "step": 4,
+          "action": "waitForSelector",
+          "target": "[class*='price'], [data-testid*='price'], [itemprop='price']",
+          "description": "Wait for price element to render"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementVisible",
+          "selector": "[class*='price'], [data-testid*='price'], [itemprop='price']",
+          "expected": true,
+          "label": "Price element is visible on PDP"
+        },
+        {
+          "type": "textMatches",
+          "selector": "[class*='price'], [data-testid*='price']",
+          "pattern": "\\$[0-9]+\\.[0-9]{2}",
+          "label": "Price has correct format $XX.XX"
+        }
+      ],
+      "pageObjects": ["SearchResultsPage", "PDPPage"],
+      "tags": ["pdp", "price", "smoke", "P0"]
+    },
+    {
+      "id": "TC-79595-12-instock",
+      "name": "PDP — Availability shows 'In Stock' for available product",
+      "priority": "P0",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79595",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/search?text=vitamins",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/search?text=vitamins",
+          "description": "Navigate to search results"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "[class*='product-card']:first-child a",
+          "description": "Click first product"
+        },
+        {
+          "step": 3,
+          "action": "waitForSelector",
+          "target": "[class*='availability'], [data-testid*='availability'], [class*='stock']",
+          "description": "Wait for availability indicator to load"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementVisible",
+          "selector": "[class*='availability'], [data-testid*='availability']",
+          "expected": true,
+          "label": "Availability indicator is visible"
+        }
+      ],
+      "pageObjects": ["PDPPage"],
+      "tags": ["pdp", "availability", "P0"]
+    },
+    {
+      "id": "TC-79595-02",
+      "name": "PDP — Breadcrumbs are present and navigable",
+      "priority": "P2",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79595",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/search?text=vitamins",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/search?text=vitamins",
+          "description": "Navigate to search results"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "[class*='product-card']:first-child a",
+          "description": "Click first product to open PDP"
+        },
+        {
+          "step": 3,
+          "action": "waitForSelector",
+          "target": "[aria-label='breadcrumb'], nav[class*='breadcrumb'], ol[class*='breadcrumb']",
+          "description": "Wait for breadcrumb component"
+        },
+        {
+          "step": 4,
+          "action": "click",
+          "target": "[aria-label='breadcrumb'] a:nth-child(2), nav[class*='breadcrumb'] a:nth-child(2)",
+          "description": "Click second breadcrumb link (category level)"
+        },
+        {
+          "step": 5,
+          "action": "waitForURL",
+          "target": "**/category/**",
+          "description": "Wait for PLP navigation"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementVisible",
+          "selector": "[aria-label='breadcrumb'], nav[class*='breadcrumb']",
+          "expected": true,
+          "label": "Breadcrumbs visible on PDP"
+        },
+        {
+          "type": "urlContains",
+          "expected": "/category/",
+          "label": "Breadcrumb click navigates to category"
+        }
+      ],
+      "pageObjects": ["PDPPage", "PLPPage"],
+      "tags": ["pdp", "breadcrumbs", "navigation"]
+    },
+    {
+      "id": "TC-79595-17",
+      "name": "PDP — Add to Cart ISP (In-Store Pickup)",
+      "priority": "P0",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79595",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/search?text=vitamins",
+        "auth": false,
+        "storeNotSelected": true
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/search?text=vitamins",
+          "description": "Navigate to search results"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "[class*='product-card']:first-child a",
+          "description": "Click first product"
+        },
+        {
+          "step": 3,
+          "action": "waitForSelector",
+          "target": "[class*='delivery-option'], [data-testid*='fulfillment'], [class*='fulfillment']",
+          "description": "Wait for fulfillment/delivery options"
+        },
+        {
+          "step": 4,
+          "action": "click",
+          "target": "[data-value='PickUp'], label:text('Pick Up In Store'), [class*='pickup-option']",
+          "description": "Select In-Store Pickup option"
+        },
+        {
+          "step": 5,
+          "action": "waitForSelector",
+          "target": "input[placeholder*='postal'], input[placeholder*='Postal'], input[placeholder*='city']",
+          "description": "Wait for store search input if no store selected"
+        },
+        {
+          "step": 6,
+          "action": "fill",
+          "target": "input[placeholder*='postal'], input[placeholder*='Postal'], input[placeholder*='city']",
+          "value": "V6B 1A1",
+          "description": "Enter postal code to find nearby store"
+        },
+        {
+          "step": 7,
+          "action": "pressKey",
+          "target": "input[placeholder*='postal']",
+          "value": "Enter",
+          "description": "Search for stores"
+        },
+        {
+          "step": 8,
+          "action": "click",
+          "target": "[class*='store-item']:first-child button, [class*='storeItem']:first-child button",
+          "description": "Select first available store"
+        },
+        {
+          "step": 9,
+          "action": "click",
+          "target": "button:text('Add to Cart'), button[class*='addToCart'], button[data-testid*='add-to-cart']",
+          "description": "Click Add to Cart"
+        },
+        {
+          "step": 10,
+          "action": "waitForSelector",
+          "target": "[class*='mini-cart'], [class*='cart-notification'], [aria-label*='cart']",
+          "description": "Wait for cart confirmation"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementVisible",
+          "selector": "button[aria-label='Show Mini Cart Items']",
+          "expected": true,
+          "label": "Mini cart button visible"
+        },
+        {
+          "type": "textNotEmpty",
+          "selector": "button[aria-label='Show Mini Cart Items'] span[class*='count'], button[aria-label='Show Mini Cart Items'] span[class*='badge']",
+          "label": "Cart counter shows item count > 0"
+        }
+      ],
+      "testData": {
+        "postalCode": "V6B 1A1"
+      },
+      "pageObjects": ["SearchResultsPage", "PDPPage", "HeaderComponent", "MiniCartComponent"],
+      "tags": ["pdp", "add-to-cart", "ISP", "fulfillment", "P0", "smoke"]
+    },
+    {
+      "id": "TC-79595-18",
+      "name": "PDP — Add to Cart STH (Ship to Home)",
+      "priority": "P0",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79595",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/search?text=vitamins",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/search?text=vitamins",
+          "description": "Navigate to search results"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "[class*='product-card']:first-child a",
+          "description": "Click first product"
+        },
+        {
+          "step": 3,
+          "action": "waitForSelector",
+          "target": "[data-value='Ship'], label:text('Ship to Home'), [class*='shipping-option']",
+          "description": "Wait for Ship to Home option"
+        },
+        {
+          "step": 4,
+          "action": "click",
+          "target": "[data-value='Ship'], label:text('Ship to Home'), [class*='shipping-option']",
+          "description": "Select Ship to Home"
+        },
+        {
+          "step": 5,
+          "action": "fill",
+          "target": "input[placeholder*='postal code'], input[placeholder*='Postal Code']",
+          "value": "V6B 1A1",
+          "description": "Enter postal code for shipping availability"
+        },
+        {
+          "step": 6,
+          "action": "click",
+          "target": "button:text('Add to Cart'), button[data-testid*='add-to-cart']",
+          "description": "Click Add to Cart"
+        },
+        {
+          "step": 7,
+          "action": "waitForSelector",
+          "target": "[class*='cart-confirmation'], [class*='mini-cart']",
+          "description": "Wait for add to cart confirmation"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "textNotEmpty",
+          "selector": "button[aria-label='Show Mini Cart Items'] span[class*='count']",
+          "label": "Cart counter incremented"
+        }
+      ],
+      "testData": {
+        "postalCode": "V6B 1A1"
+      },
+      "pageObjects": ["SearchResultsPage", "PDPPage", "MiniCartComponent"],
+      "tags": ["pdp", "add-to-cart", "STH", "shipping", "P0", "smoke"]
+    },
+    {
+      "id": "TC-79595-19-loggedin",
+      "name": "PDP — WishList: Logged-in user can add item to Wishlist",
+      "priority": "P1",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "notes": "Requires authenticated storageState",
+      "originalTC": "79595",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/search?text=vitamins",
+        "auth": true,
+        "storageState": "playwright/.auth/user.json"
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/search?text=vitamins",
+          "description": "Navigate to search results (with auth)"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "[class*='product-card']:first-child a",
+          "description": "Click first product"
+        },
+        {
+          "step": 3,
+          "action": "waitForSelector",
+          "target": "[aria-label*='wishlist'], [class*='wishlist-btn'], button[class*='heart']",
+          "description": "Wait for wishlist/heart button on PDP"
+        },
+        {
+          "step": 4,
+          "action": "click",
+          "target": "[aria-label*='wishlist'], [class*='wishlist-btn'], button[class*='heart']",
+          "description": "Click heart/wishlist icon"
+        },
+        {
+          "step": 5,
+          "action": "waitForResponse",
+          "target": "**/wishlist*",
+          "description": "Wait for wishlist API response"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementAttribute",
+          "selector": "[aria-label*='wishlist'], [class*='wishlist-btn']",
+          "attribute": "class",
+          "operator": "contains",
+          "expected": "active",
+          "label": "Wishlist button shows active/filled state"
+        },
+        {
+          "type": "urlNotContains",
+          "expected": "/myaccount/login",
+          "label": "No redirect to login (user is authenticated)"
+        }
+      ],
+      "pageObjects": ["PDPPage", "WishlistPage"],
+      "tags": ["pdp", "wishlist", "authenticated"]
+    },
+    {
+      "id": "TC-79596-02",
+      "name": "Cart — Delivery Selector allows switching between methods",
+      "priority": "P0",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79596",
+      "notes": "Requires product in cart as precondition",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/cart",
+        "auth": false,
+        "cartNotEmpty": true
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/cart",
+          "description": "Navigate to cart page"
+        },
+        {
+          "step": 2,
+          "action": "waitForSelector",
+          "target": "[class*='delivery-selector'], [data-testid*='delivery'], [class*='fulfillment-selector']",
+          "description": "Wait for delivery selector to load"
+        },
+        {
+          "step": 3,
+          "action": "click",
+          "target": "[data-value='Ship'], button:text('Shipping'), label:text('Shipping')",
+          "description": "Select Shipping option"
+        },
+        {
+          "step": 4,
+          "action": "waitForResponse",
+          "target": "**/cart*",
+          "description": "Wait for cart update after delivery change"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementExists",
+          "selector": "[class*='delivery-selector'], [data-testid*='delivery']",
+          "expected": true,
+          "label": "Delivery selector is present in cart"
+        }
+      ],
+      "pageObjects": ["CartPage"],
+      "tags": ["cart", "delivery", "fulfillment", "P0"]
+    },
+    {
+      "id": "TC-79596-05",
+      "name": "Cart — Subtotal is visible",
+      "priority": "P0",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79596",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/cart",
+        "auth": false,
+        "cartNotEmpty": true
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/cart",
+          "description": "Navigate to cart page"
+        },
+        {
+          "step": 2,
+          "action": "waitForSelector",
+          "target": "[class*='subtotal'], [data-testid*='subtotal'], [class*='cart-summary']",
+          "description": "Wait for cart summary/subtotal to load"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementVisible",
+          "selector": "[class*='subtotal'], [data-testid*='subtotal']",
+          "expected": true,
+          "label": "Cart subtotal is visible"
+        },
+        {
+          "type": "textMatches",
+          "selector": "[class*='subtotal'], [data-testid*='subtotal']",
+          "pattern": "\\$[0-9]+\\.[0-9]{2}",
+          "label": "Subtotal shows dollar amount"
+        }
+      ],
+      "pageObjects": ["CartPage"],
+      "tags": ["cart", "subtotal", "P0", "smoke"]
+    },
+    {
+      "id": "TC-79597-01",
+      "name": "My Account — Login with valid credentials",
+      "priority": "P0",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "riskFlags": ["DATADOME_POSSIBLE", "CLOUDFLARE_POSSIBLE"],
+      "notes": "If bot protection triggers, use storageState fixture instead. Login via API recommended for CI.",
+      "originalTC": "79597",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/myaccount/login",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/myaccount/login",
+          "description": "Navigate to login page"
+        },
+        {
+          "step": 2,
+          "action": "waitForSelector",
+          "target": "input[type='email'], input[name='email'], input[id*='email']",
+          "description": "Wait for email input field"
+        },
+        {
+          "step": 3,
+          "action": "fill",
+          "target": "input[type='email'], input[name='email']",
+          "value": "{{USER_EMAIL}}",
+          "description": "Enter registered email (from env)"
+        },
+        {
+          "step": 4,
+          "action": "fill",
+          "target": "input[type='password'], input[name='password']",
+          "value": "{{USER_PASSWORD}}",
+          "description": "Enter password (from env)"
+        },
+        {
+          "step": 5,
+          "action": "click",
+          "target": "button[type='submit'], button:text('Sign In'), button:text('Log In')",
+          "description": "Click Sign In button"
+        },
+        {
+          "step": 6,
+          "action": "waitForURL",
+          "target": "**/myaccount**",
+          "description": "Wait for My Account redirect"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "urlContains",
+          "expected": "/myaccount",
+          "label": "Redirected to My Account after login"
+        },
+        {
+          "type": "urlNotContains",
+          "expected": "/login",
+          "label": "Not on login page anymore"
+        }
+      ],
+      "testData": {
+        "USER_EMAIL": "{{process.env.USER_EMAIL}}",
+        "USER_PASSWORD": "{{process.env.USER_PASSWORD}}"
+      },
+      "pageObjects": ["LoginPage", "MyAccountPage"],
+      "tags": ["auth", "login", "my-account", "P0", "smoke"]
+    },
+    {
+      "id": "TC-79597-07",
+      "name": "My Account — Address Book: Create new address",
+      "priority": "P1",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79597",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/myaccount",
+        "auth": true,
+        "storageState": "playwright/.auth/user.json"
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/myaccount/address-book",
+          "description": "Navigate to address book"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "button:text('Add New Address'), a:text('Add New Address'), [data-testid*='add-address']",
+          "description": "Click Add New Address"
+        },
+        {
+          "step": 3,
+          "action": "fill",
+          "target": "input[name='firstName'], input[id*='firstName']",
+          "value": "{{TEST_FIRSTNAME}}",
+          "description": "Fill first name"
+        },
+        {
+          "step": 4,
+          "action": "fill",
+          "target": "input[name='lastName'], input[id*='lastName']",
+          "value": "{{TEST_LASTNAME}}",
+          "description": "Fill last name"
+        },
+        {
+          "step": 5,
+          "action": "fill",
+          "target": "input[name='address1'], input[id*='address']",
+          "value": "{{TEST_ADDRESS}}",
+          "description": "Fill street address"
+        },
+        {
+          "step": 6,
+          "action": "fill",
+          "target": "input[name='city'], input[id*='city']",
+          "value": "{{TEST_CITY}}",
+          "description": "Fill city"
+        },
+        {
+          "step": 7,
+          "action": "fill",
+          "target": "input[name='postalCode'], input[id*='postal']",
+          "value": "{{TEST_POSTAL}}",
+          "description": "Fill postal code"
+        },
+        {
+          "step": 8,
+          "action": "click",
+          "target": "button:text('Save'), button[type='submit']",
+          "description": "Save new address"
+        },
+        {
+          "step": 9,
+          "action": "waitForSelector",
+          "target": "[class*='address-card'], [data-testid*='address-item']",
+          "description": "Wait for new address to appear in list"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementVisible",
+          "selector": "[class*='address-card']",
+          "expected": true,
+          "label": "New address appears in address book"
+        }
+      ],
+      "testData": {
+        "TEST_FIRSTNAME": "{{process.env.TEST_FIRSTNAME}}",
+        "TEST_LASTNAME": "{{process.env.TEST_LASTNAME}}",
+        "TEST_ADDRESS": "{{process.env.TEST_ADDRESS}}",
+        "TEST_CITY": "{{process.env.TEST_CITY}}",
+        "TEST_POSTAL": "{{process.env.TEST_POSTAL}}"
+      },
+      "pageObjects": ["MyAccountPage", "AddressBookPage"],
+      "tags": ["my-account", "address-book", "authenticated"]
+    },
+    {
+      "id": "TC-79600-01",
+      "name": "Store Locator — Search by postal code shows stores",
+      "priority": "P1",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "notes": "Map (Google Maps iframe) not validated — test uses list view",
+      "originalTC": "79600",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/stores",
+        "auth": false,
+        "blockGeolocation": true
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/stores",
+          "description": "Navigate to Store Locator"
+        },
+        {
+          "step": 2,
+          "action": "waitForSelector",
+          "target": "h1:text('Find a Store Near You')",
+          "description": "Verify page heading"
+        },
+        {
+          "step": 3,
+          "action": "waitForSelector",
+          "target": "a[href='stores/all-stores']",
+          "description": "Wait for Find All Stores link"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementVisible",
+          "selector": "h1:text('Find a Store Near You')",
+          "expected": true,
+          "label": "Store Locator heading visible"
+        },
+        {
+          "type": "elementVisible",
+          "selector": "a[href='stores/all-stores']",
+          "expected": true,
+          "label": "Find All Stores link visible"
+        }
+      ],
+      "pageObjects": ["StoreLocatorPage"],
+      "tags": ["store-locator", "P1", "smoke"]
+    },
+    {
+      "id": "TC-79600-02",
+      "name": "Store Locator — Find All Stores by Province shows list",
+      "priority": "P2",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79600",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/stores",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/stores",
+          "description": "Navigate to Store Locator"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "a[href='stores/all-stores']",
+          "description": "Click Find All Stores by Province"
+        },
+        {
+          "step": 3,
+          "action": "waitForURL",
+          "target": "**/stores/all-stores",
+          "description": "Wait for all stores page"
+        },
+        {
+          "step": 4,
+          "action": "waitForSelector",
+          "target": "[class*='store-list'], [class*='storeList']",
+          "description": "Wait for stores list to render"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "url",
+          "operator": "contains",
+          "expected": "/stores/all-stores"
+        },
+        {
+          "type": "elementVisible",
+          "selector": "[class*='store-list'], [class*='storeList']",
+          "expected": true,
+          "label": "List of stores visible"
+        }
+      ],
+      "pageObjects": ["StoreLocatorPage"],
+      "tags": ["store-locator", "all-stores"]
+    },
+    {
+      "id": "TC-79601-05",
+      "name": "Deals and Events — Select City filters events",
+      "priority": "P2",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "originalTC": "79601",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/category/deals-and-events/c/1027",
+        "auth": false
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/category/deals-and-events/c/1027",
+          "description": "Navigate to Deals and Events page"
+        },
+        {
+          "step": 2,
+          "action": "waitForSelector",
+          "target": "select[name*='city'], [class*='city-selector'], [aria-label*='city']",
+          "description": "Wait for city selector to load"
+        },
+        {
+          "step": 3,
+          "action": "selectOption",
+          "target": "select[name*='city'], [class*='city-selector']",
+          "value": "Vancouver",
+          "description": "Select Vancouver as city"
+        },
+        {
+          "step": 4,
+          "action": "waitForResponse",
+          "target": "**",
+          "description": "Wait for filtered events to load"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "elementVisible",
+          "selector": "[class*='event'], [class*='deal']",
+          "expected": true,
+          "label": "Events/deals visible after city selection"
+        }
+      ],
+      "pageObjects": ["DealsEventsPage"],
+      "tags": ["deals", "events", "city-filter"]
+    },
+    {
+      "id": "TC-79602-01B",
+      "name": "Checkout — Guest checkout with Credit Card",
+      "priority": "P0",
+      "type": "Positive",
+      "status": "AUTOMATIZABLE",
+      "riskFlags": ["PAYMENT_IFRAME_POSSIBLE", "DATADOME_POSSIBLE"],
+      "notes": "Payment form may be in a third-party iframe. Use page.frameLocator() if direct selectors fail. NEVER use real CC data.",
+      "originalTC": "79602",
+      "preconditions": {
+        "url": "https://www.londondrugs.com/cart",
+        "auth": false,
+        "cartNotEmpty": true
+      },
+      "steps": [
+        {
+          "step": 1,
+          "action": "navigate",
+          "target": "https://www.londondrugs.com/cart",
+          "description": "Navigate to cart"
+        },
+        {
+          "step": 2,
+          "action": "click",
+          "target": "button:text('Proceed to Checkout'), a:text('Proceed to Checkout')",
+          "description": "Proceed to checkout"
+        },
+        {
+          "step": 3,
+          "action": "waitForURL",
+          "target": "**/checkout**",
+          "description": "Wait for checkout page"
+        },
+        {
+          "step": 4,
+          "action": "click",
+          "target": "button:text('Continue as Guest'), [data-testid*='guest-checkout']",
+          "description": "Continue as guest"
+        },
+        {
+          "step": 5,
+          "action": "fill",
+          "target": "input[name='email'], input[type='email']",
+          "value": "{{GUEST_EMAIL}}",
+          "description": "Enter guest email"
+        },
+        {
+          "step": 6,
+          "action": "fill",
+          "target": "input[name='firstName'], input[id*='firstName']",
+          "value": "{{TEST_FIRSTNAME}}",
+          "description": "Fill first name"
+        },
+        {
+          "step": 7,
+          "action": "fill",
+          "target": "input[name='address1']",
+          "value": "{{TEST_ADDRESS}}",
+          "description": "Fill address"
+        },
+        {
+          "step": 8,
+          "action": "fill",
+          "target": "input[name='postalCode']",
+          "value": "{{TEST_POSTAL}}",
+          "description": "Fill postal code"
+        },
+        {
+          "step": 9,
+          "action": "click",
+          "target": "label:text('Credit Card'), [data-value='creditCard'], input[value='creditCard']",
+          "description": "Select Credit Card payment method"
+        },
+        {
+          "step": 10,
+          "action": "fillFrame",
+          "frameSelector": "iframe[name*='card'], iframe[src*='payment'], iframe[src*='cybersource']",
+          "target": "input[name='cardNumber'], input[placeholder*='Card Number']",
+          "value": "{{TEST_CC_NUMBER}}",
+          "description": "Fill card number inside payment iframe (use sandbox card)"
+        },
+        {
+          "step": 11,
+          "action": "click",
+          "target": "button:text('Place Order'), button[type='submit'][class*='order']",
+          "description": "Submit order"
+        },
+        {
+          "step": 12,
+          "action": "waitForURL",
+          "target": "**/order-confirmation**",
+          "description": "Wait for order confirmation page"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "urlContains",
+          "expected": "/order-confirmation",
+          "label": "Order confirmation page loaded"
+        },
+        {
+          "type": "elementVisible",
+          "selector": "[class*='order-number'], [data-testid*='order-id']",
+          "expected": true,
+          "label": "Order number visible on confirmation page"
+        }
+      ],
+      "testData": {
+        "GUEST_EMAIL": "{{process.env.GUEST_EMAIL}}",
+        "TEST_FIRSTNAME": "{{process.env.TEST_FIRSTNAME}}",
+        "TEST_ADDRESS": "{{process.env.TEST_ADDRESS}}",
+        "TEST_POSTAL": "{{process.env.TEST_POSTAL}}",
+        "TEST_CC_NUMBER": "{{process.env.TEST_CC_SANDBOX}}",
+        "TEST_CC_EXPIRY": "{{process.env.TEST_CC_EXPIRY}}",
+        "TEST_CC_CVV": "{{process.env.TEST_CC_CVV}}"
+      },
+      "pageObjects": ["CartPage", "CheckoutPage", "OrderConfirmationPage"],
+      "tags": ["checkout", "guest", "credit-card", "P0"]
+    }
+  ],
+  "blockedCases": [
+    {
+      "id": "TC-79601-01",
+      "name": "MyRegistry — Add from PDP invokes MyRegistry login",
+      "priority": "P2",
+      "status": "BLOCKED",
+      "reason": "MyRegistry is a third-party integration rendered in an iframe. Direct automation not feasible without special iframe handling.",
+      "mitigation": "Validate only that the MyRegistry button exists on PDP and triggers an iframe/modal. Do not attempt to automate inside the third-party iframe."
+    },
+    {
+      "id": "TC-79602-01A",
+      "name": "Checkout — Guest checkout with PayPal",
+      "priority": "P0",
+      "status": "BLOCKED",
+      "reason": "PayPal payment flow is entirely in a third-party iframe/redirect. Cannot be automated directly.",
+      "mitigation": "Validate only up to PayPal button visibility and click-through. Do not automate within PayPal OAuth flow."
+    }
+  ],
+  "pageObjectMapping": {
+    "BasePage": "src/pages/BasePage.ts",
+    "HomePage": "src/pages/HomePage.ts",
+    "SearchResultsPage": "src/pages/SearchResultsPage.ts",
+    "PLPPage": "src/pages/PLPPage.ts",
+    "PDPPage": "src/pages/PDPPage.ts",
+    "CartPage": "src/pages/CartPage.ts",
+    "CheckoutPage": "src/pages/CheckoutPage.ts",
+    "OrderConfirmationPage": "src/pages/OrderConfirmationPage.ts",
+    "LoginPage": "src/pages/LoginPage.ts",
+    "MyAccountPage": "src/pages/MyAccountPage.ts",
+    "AddressBookPage": "src/pages/AddressBookPage.ts",
+    "StoreLocatorPage": "src/pages/StoreLocatorPage.ts",
+    "DealsEventsPage": "src/pages/DealsEventsPage.ts",
+    "WishlistPage": "src/pages/WishlistPage.ts",
+    "HeaderComponent": "src/components/HeaderComponent.ts",
+    "MiniCartComponent": "src/components/MiniCartComponent.ts",
+    "MegaMenuComponent": "src/components/MegaMenuComponent.ts",
+    "NewsletterComponent": "src/components/NewsletterComponent.ts",
+    "FiltersComponent": "src/components/FiltersComponent.ts"
+  },
+  "confirmedSelectors": {
+    "source": "Live site snapshot via Playwright MCP — 2026-06-08",
+    "header": {
+      "logo": "link[href='/'] img[alt='London Drugs']",
+      "searchInput": "input[placeholder='Find your product']",
+      "storeLocatorLink": "a[href='/stores']",
+      "miniCartButton": "button[aria-label='Show Mini Cart Items']",
+      "hamburgerMenuButton": "button[aria-label='Opens Mega Menu']",
+      "shopByCategoryButton": "button[aria-label='shop by category']",
+      "wishlistLink": "a[href='/myaccount/wishlist']",
+      "registryLink": "a[href='/myaccount/wishlist#registry']",
+      "flyersLink": "a[href='/flyer']",
+      "dealsEventsLink": "a[href='/category/deals-and-events/c/1027']",
+      "servicesLink": "a[href='/our-services']",
+      "pharmacyLink": "a[href='https://pharmacy.londondrugs.com']",
+      "photoLabLink": "a[href='https://photolab.londondrugs.com']",
+      "ldExtrasLink": "a[href='https://www.ldextras.com']"
+    },
+    "footer": {
+      "newsletterEmailInput": "input[placeholder='Enter your email']",
+      "newsletterSignupButton": "button:text('SIGN UP')"
+    },
+    "storeLocator": {
+      "pageHeading": "h1:text('Find a Store Near You')",
+      "findAllStoresLink": "a[href='stores/all-stores']",
+      "mapRegion": "region[aria-label='Map']"
+    }
+  },
+  "globalConfig": {
+    "baseUrl": "https://www.londondrugs.com",
+    "defaultTimeout": 15000,
+    "navigationTimeout": 30000,
+    "retries": 2,
+    "headless": false,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "envVars": [
+      "USER_EMAIL",
+      "USER_PASSWORD",
+      "GUEST_EMAIL",
+      "TEST_FIRSTNAME",
+      "TEST_LASTNAME",
+      "TEST_ADDRESS",
+      "TEST_CITY",
+      "TEST_POSTAL",
+      "TEST_PHONE",
+      "TEST_CC_SANDBOX",
+      "TEST_CC_EXPIRY",
+      "TEST_CC_CVV",
+      "COUPON_CODE",
+      "TEST_EMAIL"
+    ],
+    "antiPatterns": [
+      "NEVER use hardcoded passwords or CC numbers",
+      "NEVER use page.waitForTimeout() — use waitForSelector/waitForURL/waitForResponse",
+      "NEVER assume static stock — use high-demand products like 'vitamins'"
+    ]
+  }
+}
