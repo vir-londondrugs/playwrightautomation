@@ -19,6 +19,21 @@ export class HomePage extends BasePage {
         await this.logo.click();
     }
 
+    /**
+     * Waits for the search input to be visible and enabled (React hydration complete).
+     * Call this after navigate() before interacting with the search input.
+     */
+    async waitForSearchInput(): Promise<void> {
+        await this.searchInput.waitFor({ state: 'visible', timeout: 30_000 });
+        await this.page.waitForFunction(
+            () => {
+                const input = document.querySelector<HTMLInputElement>('input[placeholder="Find your product"]');
+                return input !== null && !input.disabled;
+            },
+            { timeout: 30_000 }
+        );
+    }
+
     async search(term: string): Promise<void> {
         await this.searchInput.click();
         await this.searchInput.fill(term);

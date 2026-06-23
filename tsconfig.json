@@ -8,8 +8,9 @@
     "strict": true,
     "skipLibCheck": true,
     "outDir": "./dist",
-    "rootDir": "./"
+    "rootDir": "./",
+    "types": ["node"]
   },
-  "include": ["tests/**/*.ts", "pages/**/*.ts", "test-data/**/*.ts"],
+  "include": ["tests/**/*.ts", "pages/**/*.ts", "test-data/**/*.ts", "helpers/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

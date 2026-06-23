@@ -16,10 +16,28 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. */
   use: {
+    /* Open browser window during test execution */
+    headless: false,
+    /* Suppress browser permission/translate popups */
+    locale: 'en-CA',
+    geolocation: { latitude: 49.2827, longitude: -123.1207 },
+    permissions: ['geolocation'],
+    launchOptions: {
+      args: [
+        '--lang=en-CA',
+        '--disable-features=Translate,TranslateUI',
+        '--disable-translate',
+        '--no-default-browser-check',
+      ],
+    },
+    extraHTTPHeaders: {
+      'Accept-Language': 'en-CA,en;q=0.9',
+    },
     /* Trace disabled to avoid ZIP stream corruption bug in Playwright 1.61 */
     trace: 'off',
-    /* Screenshot on failure for debugging */
-    screenshot: 'only-on-failure',
+    /* Screenshots are handled by the custom afterEach in helpers/evidence.ts
+       (saved to artifacts/outputs/ with TC number + timestamp in the filename) */
+    screenshot: 'off',
   },
 
   /* Configure projects for major browsers */

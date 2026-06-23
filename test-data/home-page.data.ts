@@ -1,6 +1,7 @@
 export const homePageData = {
     urls: {
-        home: 'https://london-drugs-uat-origin.kibology.us/',
+        //home: 'https://london-drugs-uat-origin.kibology.us/',
+        home: 'https://www.londondrugs.com/',
         stores: 'https://london-drugs-uat-origin.kibology.us/stores',
     },
 
