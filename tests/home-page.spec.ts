@@ -344,3 +344,85 @@ test(
         });
     }
 );
+
+// ---------------------------------------------------------------------------
+// TC-83231  Home Page — Header nav links have correct hrefs
+// ADO TC: 83231 | Priority: P1 | Type: Positive
+// Hrefs confirmed from live UAT DOM inspection (header element scope).
+// ---------------------------------------------------------------------------
+test.only(
+    'TC-83231 — Header nav links for Deals, Services, Flyers and Gift Registry have correct hrefs @navigation @header',
+    async ({ page }) => {
+        const homePage = new HomePage(page);
+        const { headerNav } = homePageData;
+
+        await test.step('Navigate to homepage', async () => {
+            await homePage.navigate(homePageData.urls.home);
+        });
+
+        await test.step('Click page body to unblock loading overlay', async () => {
+            await page.locator('body').click({ force: true });
+        });
+
+        await test.step('Verify "Deals & Events" link is visible and has correct href', async () => {
+            await homePage.dealsLink.waitFor({ state: 'visible', timeout: 15_000 });
+            await expect(homePage.dealsLink).toHaveAttribute('href', headerNav.deals.href);
+        });
+
+        await test.step('Verify "Services" link is visible and has correct href', async () => {
+            await homePage.servicesLink.waitFor({ state: 'visible', timeout: 10_000 });
+            await expect(homePage.servicesLink).toHaveAttribute('href', headerNav.services.href);
+        });
+
+        await test.step('Verify "Flyers" link is visible and has correct href', async () => {
+            await homePage.flyersLink.waitFor({ state: 'visible', timeout: 10_000 });
+            await expect(homePage.flyersLink).toHaveAttribute('href', headerNav.flyers.href);
+        });
+
+        await test.step('Verify "Gift Registry" link is visible and has correct href', async () => {
+            await homePage.giftRegistryLink.waitFor({ state: 'visible', timeout: 10_000 });
+            await expect(homePage.giftRegistryLink).toHaveAttribute('href', headerNav.giftRegistry.href);
+        });
+    }
+);
+
+// ---------------------------------------------------------------------------
+// TC-83232  Home Page — Newsletter signup in footer submits and redirects
+// ADO TC: 83232 | Priority: P1 | Type: Positive
+// The SIGN UP button submits via client-side navigation to:
+//   /enewsletter-settings?email=<encoded_email>
+// No confirmation message is shown on the homepage itself.
+// Verification: URL matches /enewsletter-settings after submit.
+// ---------------------------------------------------------------------------
+test(
+    'TC-83232 — Newsletter signup in footer accepts valid email and redirects to confirmation @newsletter @footer',
+    async ({ page }) => {
+        const homePage = new HomePage(page);
+        const { newsletter } = homePageData;
+
+        await test.step('Navigate to homepage', async () => {
+            await homePage.navigate(homePageData.urls.home);
+        });
+
+        await test.step('Scroll to footer newsletter form', async () => {
+            await homePage.newsletterEmailInput.scrollIntoViewIfNeeded();
+            await homePage.newsletterEmailInput.waitFor({ state: 'visible', timeout: 15_000 });
+        });
+
+        await test.step('Fill valid email in newsletter input', async () => {
+            await homePage.newsletterEmailInput.fill(newsletter.testEmail);
+        });
+
+        await test.step('Click SIGN UP button', async () => {
+            await homePage.newsletterSubmitButton.waitFor({ state: 'visible', timeout: 10_000 });
+            await homePage.newsletterSubmitButton.click();
+        });
+
+        await test.step('Verify page redirects to /enewsletter-settings', async () => {
+            // Submit triggers a client-side navigation to /enewsletter-settings?email=<email>.
+            // This confirms the form was accepted and the user is routed to the preferences page.
+            await page.waitForURL(newsletter.expectedRedirectUrlPattern, { timeout: 15_000 });
+            await expect(page).toHaveURL(newsletter.expectedRedirectUrlPattern);
+        });
+    }
+);

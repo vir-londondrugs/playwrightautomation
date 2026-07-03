@@ -17,7 +17,7 @@ export class HomePage extends BasePage {
     /** Mini cart slide-out panel that appears after clicking the cart icon */
     readonly miniCartPanel: Locator;
 
-    /** "Proceed to Checkout" button/link inside the mini cart panel */
+    /** "View Cart" button/link inside the mini cart panel (UAT label) */
     readonly proceedToCheckoutButton: Locator;
 
     /** Hamburger / mega menu toggle button in the header */
@@ -25,6 +25,28 @@ export class HomePage extends BasePage {
 
     /** Mega menu container that opens after clicking the hamburger button */
     readonly megaMenu: Locator;
+
+    // -- Header navigation links (TC-83231) ----------------------------------
+
+    /** "Deals & Events" link in the top header nav */
+    readonly dealsLink: Locator;
+
+    /** "Services" link in the top header nav */
+    readonly servicesLink: Locator;
+
+    /** "Flyers" link in the top header nav */
+    readonly flyersLink: Locator;
+
+    /** "Gift Registry" link in the top header nav */
+    readonly giftRegistryLink: Locator;
+
+    // -- Footer newsletter signup (TC-83232) ---------------------------------
+
+    /** Email input in the footer newsletter signup form */
+    readonly newsletterEmailInput: Locator;
+
+    /** Submit button ("SIGN UP") in the footer newsletter signup form */
+    readonly newsletterSubmitButton: Locator;
 
     constructor(page: Page) {
         super(page);
@@ -46,6 +68,17 @@ export class HomePage extends BasePage {
         // persistent desktop nav (lg:flex). Using .last() targets the always-visible desktop nav
         // that becomes the verified "mega menu is open" state at Desktop Chrome viewport.
         this.megaMenu = page.locator('div[class*="bg-txtmegamenu-secondary"]').last();
+
+        // Header nav links -- confirmed hrefs from live UAT DOM inspection.
+        this.dealsLink = page.locator('header a[href="/category/deals-and-events/c/1027"]').first();
+        this.servicesLink = page.locator('header a[href="/our-services"]').first();
+        this.flyersLink = page.locator('header a[href="/flyer"]').first();
+        this.giftRegistryLink = page.locator('header a[href="/myaccount/wishlist#registry"]').first();
+
+        // Footer newsletter signup -- confirmed from live UAT DOM inspection.
+        // The input is lazy-rendered in the footer; scroll to it before interacting.
+        this.newsletterEmailInput = page.locator('input[type="email"]').first();
+        this.newsletterSubmitButton = page.locator('button[type="submit"]').filter({ hasText: /sign up/i }).first();
     }
 
     async clickLogo(): Promise<void> {

@@ -27,4 +27,31 @@ export const homePageData = {
         cartPageHeading: 'Cart',
         expectedCartUrlRegex: /\/cart/,
     },
+
+    // TC-83231: Header nav links -- hrefs confirmed from live UAT DOM inspection.
+    headerNav: {
+        deals: {
+            text: 'Deals & Events',
+            href: '/category/deals-and-events/c/1027',
+        },
+        services: {
+            text: 'Services',
+            href: '/our-services',
+        },
+        flyers: {
+            text: 'Flyers',
+            href: '/flyer',
+        },
+        giftRegistry: {
+            text: 'Gift Registry',
+            href: '/myaccount/wishlist#registry',
+        },
+    },
+
+    // TC-83232: Footer newsletter signup.
+    // Submit redirects to /enewsletter-settings?email=<encoded_email>.
+    newsletter: {
+        testEmail: 'test_qa_automation@example.com',
+        expectedRedirectUrlPattern: /\/enewsletter-settings/,
+    },
 } as const;

@@ -1,6 +1,0 @@
-2026/07/03-15:50:28.011 1d3370f Reusing MANIFEST /Users/virginia.zambudio/PlaywrightAutomation/.mcp-web-inspector/user-data/Default/Local Storage/leveldb/MANIFEST-000001
-2026/07/03-15:50:28.017 1d3370f Recovering log #3
-2026/07/03-15:50:28.018 1d3370f Reusing old log /Users/virginia.zambudio/PlaywrightAutomation/.mcp-web-inspector/user-data/Default/Local Storage/leveldb/000003.log 
-2026/07/03-16:04:46.159 1d33712 Level-0 table #5: started
-2026/07/03-16:04:46.174 1d33712 Level-0 table #5: 17491 bytes OK
-2026/07/03-16:04:46.182 1d33712 Delete type=0 #3
