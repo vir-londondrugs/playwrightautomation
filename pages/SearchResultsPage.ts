@@ -15,11 +15,20 @@ export class SearchResultsPage extends BasePage {
      */
     readonly productTitles: Locator;
 
+    /**
+     * First product-detail page link in the search results.
+     * Product URLs on this site always contain "/products/", so this
+     * targets the first such anchor inside main.
+     * Catalog-agnostic: no SKU or product name is hardcoded.
+     */
+    readonly firstProductLink: Locator;
+
     constructor(page: Page) {
         super(page);
         this.noResultsHeading = page.locator('h1').filter({ hasText: 'We are sorry, no results were found for' });
         this.searchInput = page.getByPlaceholder('Find your product').first();
         this.productTitles = page.locator('main h3');
+        this.firstProductLink = page.locator('main a[href*="/products/"]').first();
     }
 
     /**
