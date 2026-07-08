@@ -1,0 +1,17 @@
+{
+  "skill": "automation-test-execution",
+  "session_id": "AUTOGEN-PLI-20260706",
+  "status": "COMPLETED",
+  "started_at": "2026-07-06T18:00:00Z",
+  "completed_at": "2026-07-06T18:35:00Z",
+  "total": 6,
+  "completed": 4,
+  "items": [
+    {"tc_id": "TC-83235", "status": "PASS", "duration_ms": 20432},
+    {"tc_id": "TC-83236", "status": "PASS", "duration_ms": 8368},
+    {"tc_id": "TC-83237", "status": "PASS", "duration_ms": 7219},
+    {"tc_id": "TC-83238", "status": "FAIL", "duration_ms": 49846},
+    {"tc_id": "TC-83239", "status": "PASS", "duration_ms": 19212},
+    {"tc_id": "TC-83240", "status": "FAIL", "duration_ms": 223}
+  ]
+}

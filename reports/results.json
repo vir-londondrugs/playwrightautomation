@@ -1,0 +1,532 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/virginia.zambudio/PlaywrightAutomation/node_modules/.bin/playwright",
+      "test",
+      "tests/pdp.spec.ts",
+      "--reporter=json",
+      "--workers=1",
+      "--project=chromium"
+    ],
+    "configFile": "/Users/virginia.zambudio/PlaywrightAutomation/playwright.config.ts",
+    "rootDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/virginia.zambudio/PlaywrightAutomation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/virginia.zambudio/PlaywrightAutomation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/virginia.zambudio/PlaywrightAutomation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "pdp.spec.ts",
+      "file": "pdp.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-83235 — Second-level breadcrumb link on PDP navigates back to category listing @pdp @breadcrumbs @navigation",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "breadcrumbs",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20432,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 13904
+                    },
+                    {
+                      "title": "Verify second-level breadcrumb link is visible",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Click second-level breadcrumb link",
+                      "duration": 62
+                    },
+                    {
+                      "title": "Verify navigation lands on category listing page",
+                      "duration": 5913
+                    }
+                  ],
+                  "startTime": "2026-07-06T17:32:57.355Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-675925af85c1bc07a21b",
+          "file": "pdp.spec.ts",
+          "line": 42,
+          "column": 5
+        },
+        {
+          "title": "TC-83236 — Price element is visible and formatted correctly on the first vitamins PDP @pdp @price",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "price"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8368,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 8174
+                    },
+                    {
+                      "title": "Verify \"Our Price\" label is visible",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Verify price value is visible and matches $X.XX format",
+                      "duration": 3
+                    }
+                  ],
+                  "startTime": "2026-07-06T17:33:18.871Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-6ac80dda422fec71946c",
+          "file": "pdp.spec.ts",
+          "line": 82,
+          "column": 5
+        },
+        {
+          "title": "TC-83237 — Availability indicator is visible on PDP for a vitamins product @pdp @availability",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "availability"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7219,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 7051
+                    },
+                    {
+                      "title": "Verify \"Availability:\" section is visible on the page",
+                      "duration": 2
+                    },
+                    {
+                      "title": "Verify \"Availability:\" label text is present",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Verify availability section contains a status indicator",
+                      "duration": 2
+                    }
+                  ],
+                  "startTime": "2026-07-06T17:33:27.247Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-9296d1911cef9e94d976",
+          "file": "pdp.spec.ts",
+          "line": 112,
+          "column": 5
+        },
+        {
+          "title": "TC-83238 — Add to cart with In-Store Pickup (postal V6B 1A1) increments mini cart counter @pdp @cart @in-store-pickup",
+          "ok": false,
+          "tags": [
+            "pdp",
+            "cart",
+            "in-store-pickup"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 41857,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button').filter({ hasText: 'View Cart & Checkout' }) to be visible\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button').filter({ hasText: 'View Cart & Checkout' }) to be visible\u001b[22m\n\n    at ProductDetailPage.addToCart (/Users/virginia.zambudio/PlaywrightAutomation/pages/ProductDetailPage.ts:318:46)\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:189:13\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:188:9",
+                    "location": {
+                      "file": "/Users/virginia.zambudio/PlaywrightAutomation/pages/ProductDetailPage.ts",
+                      "column": 46,
+                      "line": 318
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../pages/ProductDetailPage.ts:318\n\n  316 |         await this.addToCartButton.waitFor({ state: 'visible', timeout: 10_000 });\n  317 |         await this.addToCartButton.click();\n> 318 |         await this.viewCartAndCheckoutButton.waitFor({ state: 'visible', timeout: 20_000 });\n      |                                              ^\n  319 |     }\n  320 | }\n  321 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/pages/ProductDetailPage.ts",
+                        "column": 46,
+                        "line": 318
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button').filter({ hasText: 'View Cart & Checkout' }) to be visible\u001b[22m\n\n\n   at ../pages/ProductDetailPage.ts:318\n\n  316 |         await this.addToCartButton.waitFor({ state: 'visible', timeout: 10_000 });\n  317 |         await this.addToCartButton.click();\n> 318 |         await this.viewCartAndCheckoutButton.waitFor({ state: 'visible', timeout: 20_000 });\n      |                                              ^\n  319 |     }\n  320 | }\n  321 |\n    at ProductDetailPage.addToCart (/Users/virginia.zambudio/PlaywrightAutomation/pages/ProductDetailPage.ts:318:46)\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:189:13\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:188:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 7028
+                    },
+                    {
+                      "title": "Read current mini cart badge count before adding to cart",
+                      "duration": 0
+                    },
+                    {
+                      "title": "Open store selector dialog and set store using postal code V6B 1A1",
+                      "duration": 866
+                    },
+                    {
+                      "title": "Search for stores using postal code V6B 1A1",
+                      "duration": 6936
+                    },
+                    {
+                      "title": "Select the first store from results",
+                      "duration": 81
+                    },
+                    {
+                      "title": "Verify In-Store Pickup is now selected (fulfillment changed)",
+                      "duration": 1302
+                    },
+                    {
+                      "title": "Click ADD TO CART with In-Store Pickup fulfillment",
+                      "duration": 20088,
+                      "error": {
+                        "message": "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button').filter({ hasText: 'View Cart & Checkout' }) to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button').filter({ hasText: 'View Cart & Checkout' }) to be visible\u001b[22m\n\n    at ProductDetailPage.addToCart (/Users/virginia.zambudio/PlaywrightAutomation/pages/ProductDetailPage.ts:318:46)\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:189:13\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:188:9",
+                        "location": {
+                          "file": "/Users/virginia.zambudio/PlaywrightAutomation/pages/ProductDetailPage.ts",
+                          "column": 46,
+                          "line": 318
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/ProductDetailPage.ts:318\n\n  316 |         await this.addToCartButton.waitFor({ state: 'visible', timeout: 10_000 });\n  317 |         await this.addToCartButton.click();\n> 318 |         await this.viewCartAndCheckoutButton.waitFor({ state: 'visible', timeout: 20_000 });\n      |                                              ^\n  319 |     }\n  320 | }\n  321 |"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-06T17:33:34.472Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/virginia.zambudio/PlaywrightAutomation/test-results/pdp-TC-83238-—-Add-to-cart-7ba04-er-pdp-cart-in-store-pickup-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/pages/ProductDetailPage.ts",
+                    "column": 46,
+                    "line": 318
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-4aebc5fbd00c58740416",
+          "file": "pdp.spec.ts",
+          "line": 151,
+          "column": 5
+        },
+        {
+          "title": "TC-83239 — Add to cart with Ship to Home (postal V6B 1A1) increments cart counter @pdp @cart @ship-to-home",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "cart",
+            "ship-to-home"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 19212,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 8207
+                    },
+                    {
+                      "title": "Open the delivery location modal via \"Change Postal Code\" link",
+                      "duration": 444
+                    },
+                    {
+                      "title": "Fill postal code V6B 1A1 and submit",
+                      "duration": 301
+                    },
+                    {
+                      "title": "Ensure Ship to Home fulfillment is selected",
+                      "duration": 1300
+                    },
+                    {
+                      "title": "Click ADD TO CART with Ship to Home fulfillment",
+                      "duration": 1879
+                    },
+                    {
+                      "title": "Verify cart counter incremented by 1",
+                      "duration": 1806
+                    }
+                  ],
+                  "startTime": "2026-07-06T17:34:16.908Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-e4ea373bc7a3eabfade1",
+          "file": "pdp.spec.ts",
+          "line": 204,
+          "column": 5
+        },
+        {
+          "title": "TC-83240 — Authenticated user adds product to wishlist and API call confirms the action @pdp @wishlist @authenticated",
+          "ok": false,
+          "tags": [
+            "pdp",
+            "wishlist",
+            "authenticated"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 223,
+                  "error": {
+                    "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/myaccount\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/myaccount\", waiting until \"load\"\u001b[22m\n\n    at LoginPage.navigate (/Users/virginia.zambudio/PlaywrightAutomation/pages/BasePage.ts:14:25)\n    at LoginPage.login (/Users/virginia.zambudio/PlaywrightAutomation/pages/LoginPage.ts:27:20)\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:265:29\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:264:9",
+                    "location": {
+                      "file": "/Users/virginia.zambudio/PlaywrightAutomation/pages/BasePage.ts",
+                      "column": 25,
+                      "line": 14
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../pages/BasePage.ts:14\n\n  12 |\n  13 |     async navigate(url: string): Promise<void> {\n> 14 |         await this.page.goto(url);\n     |                         ^\n  15 |         await this.page.waitForLoadState('domcontentloaded');\n  16 |         await this.dismissLoadingIfStuck();\n  17 |     }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/pages/BasePage.ts",
+                        "column": 25,
+                        "line": 14
+                      },
+                      "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/myaccount\", waiting until \"load\"\u001b[22m\n\n\n   at ../pages/BasePage.ts:14\n\n  12 |\n  13 |     async navigate(url: string): Promise<void> {\n> 14 |         await this.page.goto(url);\n     |                         ^\n  15 |         await this.page.waitForLoadState('domcontentloaded');\n  16 |         await this.dismissLoadingIfStuck();\n  17 |     }\n    at LoginPage.navigate (/Users/virginia.zambudio/PlaywrightAutomation/pages/BasePage.ts:14:25)\n    at LoginPage.login (/Users/virginia.zambudio/PlaywrightAutomation/pages/LoginPage.ts:27:20)\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:265:29\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:264:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Log in with test user credentials",
+                      "duration": 3,
+                      "error": {
+                        "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/myaccount\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/myaccount\", waiting until \"load\"\u001b[22m\n\n    at LoginPage.navigate (/Users/virginia.zambudio/PlaywrightAutomation/pages/BasePage.ts:14:25)\n    at LoginPage.login (/Users/virginia.zambudio/PlaywrightAutomation/pages/LoginPage.ts:27:20)\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:265:29\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:264:9",
+                        "location": {
+                          "file": "/Users/virginia.zambudio/PlaywrightAutomation/pages/BasePage.ts",
+                          "column": 25,
+                          "line": 14
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/BasePage.ts:14\n\n  12 |\n  13 |     async navigate(url: string): Promise<void> {\n> 14 |         await this.page.goto(url);\n     |                         ^\n  15 |         await this.page.waitForLoadState('domcontentloaded');\n  16 |         await this.dismissLoadingIfStuck();\n  17 |     }"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-06T17:34:36.791Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/virginia.zambudio/PlaywrightAutomation/test-results/pdp-TC-83240-—-Authenticat-f8435--pdp-wishlist-authenticated-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/pages/BasePage.ts",
+                    "column": 25,
+                    "line": 14
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-2329adf4324b6aaf133c",
+          "file": "pdp.spec.ts",
+          "line": 255,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-06T17:32:56.924Z",
+    "duration": 100300.488,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

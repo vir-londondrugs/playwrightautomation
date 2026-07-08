@@ -11,6 +11,7 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+auth/user.json
 
 # MCP Web Inspector - browser profile data (machine-specific, binary, noisy)
 .mcp-web-inspector/

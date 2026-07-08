@@ -1,0 +1,24 @@
+UAT,,,,,,,,,,,PROD,,,,,
+First name,Last Name,Email address,Phone Number,Password,LDX,LDX password,Created,,,,First name,Last Name,Email address,Phone Number,Password,Created
+Testone,Accept,ldtestone@yopmail.com,7098667507,LDTestone1*,7098667507,LDTestone1*!,Yes,Master Card,,,Jentestone,Accept,ldjentestone@yopmail.com,22222222220,LDTestone1*,Yes
+Testtwo,Accept,ldtesttwo@yopmail.com,9187741106,LDTesttwo2*,9187741106,LDTesttwo2*!,Yes,,,,Jennifer,Accept,jetaoro@gmail.com,22222222220,JeniferTest1*,Yes
+Testthree,Accept,ldtestthree@yopmail.com,9122076423,LDTestthree3*,9122076423,LDTestthree3*!,Yes,,,,Jentesttwo,Accept,ldjentesttwo@yopmail.com,33333333330,LDTestone2*,Yes
+Testfour,Accept,ldtestfour@yopmail.com,55555555555,LDTestfour4*,,,Yes,Registry account,,,Jentestthree,Accept,ldjentestthree@yopmail.com,44444444444,LDTestone3*,Yes
+Testfive,Accept,ldtestfive@yopmail.com,66666666666,LDTestive5*,,,Yes,,,,Jentesfour,Accept,ldjentestour@yopmail.com,55555555555,LDTestone4*,Yes
+Testsix,Accept,ldtestsix@yopmail.com,77777777777,LDTestsix6*,,,Yes,,,,,,,,,
+Testseven,Accept,ldtestseven@yopmail.com,88888888888,LDTestseven7*,,,Yes,,,,,,,,,
+Testeight,Accept,ldtesteight@yopmail.com,4284704169,LDTesteight8*,,LDTesteight8*!,Yes,,,,,,,,,
+Jennifer,Accept,jetaoro@gmail.com,22222222220,JeniferTest1*,,,Yes,,,,,,,,,
+Testnine,Accept,ldtestnine@yopmail.com,22222221111,LDTesteight9*,,LDTesteight9*!,Yes,,,,,,,,,
+,,6048888888@yopmail.com,6048888888,LDTest123*,,LDTest123*!,,,,,,,,,,
+Testten,Accept,ldtestten@yopmail.com,99999999999,LDTestnine9*,,,Yes,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+LDXtras,UAT: https://ldextrasstage.azurewebsites.net/,,,,,,,,,,,,,,,
+Member ID,,Email address,,Password,,,,,,,,,,,,
+2505550199,,wiquapraciquou-7376@yopmail.com,,JTORTest1*,,,"Linked to LD account (wiquapraciquou-7376@yopmail.com, Pass: JTORTest1)",,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,6048888888@yopmail.com,,LDTest123*,,,,,,,,,,,,

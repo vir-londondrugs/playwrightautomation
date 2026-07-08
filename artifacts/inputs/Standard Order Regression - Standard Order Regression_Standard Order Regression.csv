@@ -1,0 +1,193 @@
+Title,Step Action,Step Expected,Order information,Order test,Question/Comment,
+BC - Levy,,,,,,
+British Colombia,Add item to cart that contains a levy,Item adds to cart,"L1111439
+L0669457",28553,"How does this get configured in Kibo?
+
+Levy Attribute at product level.",
+Ley es impuesto,"Proceed to checkout, provide a BC Address, Proceed to billing",On Billing page levy is reflected in subtotal,"710 Granville St
+Vancouver, BC, CA
+V6Z 1E4",,,
+,Complete checkout with Visa,Order exports to Kibo and creates shipments,,,Debe mostrar Levy en la seccion de Impuestos,
+,Fulfill shipment,Levy is charged and follows host item,,,,
+,Inspect Financials,Captures and Taxes are correct,,,,
+AB - PPP,,,,,,
+AB - Alberta,"Navigate to item with PPP, add to cart",intersticial pops offering PPP,"L1111439
+L1257299",,Check how the PPP is configured in Kibo.,
+,Accept PPP on intersticial,Host item adds to cart with PPP,,,,
+,"On cart page select ship to home, proceed",User taken to shipping page to enter shipping address,"301A-975 Fir St
+Sherwood Park, AB, CA
+T8A 4N5",,Debe mostrar la opcion de agregar Protection Plan en la PDP,
+,Complete checkout with AMEX,Order completes and exports to Kibo creating shipments,,28555,,
+,Fulfill order in Kibo,PPP remains in same shipment as host item,,,,
+,Inspect financials,Captures and Taxes are correct,,,,
+SK - SDD,,,,,,
+,Locate an item that is eligible for SDD (Expedited Delivery),"
+",attribute:sddenabled=true,KIBO,,
+,Check if in-stock at a store in Regina or Saskatoon,,"L0356904
+Store = Saskatoon",,Get it Delivered in 1-3 Days with Expedited Delivery,
+,Add to cart,"
+",,,,
+,Provide shipping address that is <10KM from store with stock in SK,On Shipping page Expedited Delivery is an option,"15 MacDonald Cres
+Jennifer Accept
+Saskatoon, SK, CA
+S7H 3G5
+Buzzer Number: #541",,,
+,"Select Expedited Delivery, complete checkout with Master Card",Order exports to Kibo and creates shipment,"L0669457
+
+Address:
+1527 2nd Ave N
+Saskatoon, SK, CA
+S7K 2E9",28585,Select a Delivery Method: $10 | Standard Ground Shipping Western Canada,
+,Fulfill Order,Location is within 10KM of customer. DoorDash order number is provide back to Kibo,,,,
+,Inspect Financials,Captures and Taxes are correct.,,,,
+MN - ODD,,,,,,
+,Add an item to cart for delivery that is eligible for DoorDash from a location in Winnipeg ,"
+","Stores: St. Vital Centre, Polo Park",,,
+,"Proceed to cart, select DoorDash for shipping","
+","St. Vital Centre
+L2571211",,,
+,Provide valid address <10KM from store,"
+","845 Dakota St #1
+Winnipeg R2M 5M3 MN",,,
+,Proceed through checkout,"
+",,,,
+,"Add a $2 tip, leave instructions for Dasher","
+",,,,
+,"Proceed through checkout, pay with Visa Debit","Funds captured upfront, order and shipments create in Kibo",,,,
+,Fulfill order,"ODD tip is associate to same shipment, selected delivery window is within time displayed on shipping label, delivery notes on shipping label, appropriate store is assigned the order",,,,
+,Inspect financials,Captures and taxes are correct.,,,,
+ON - OWL,,,,,,
+,"Add an OWL item to cart, excluding TV","
+","Item: 
+Store: St. Vital Centre
+L1740403",,,
+,"Proceed to checkout, ship to valid Ontario address, excluding air stage","
+","Address: 522 Government St, Dryden, ON P8N 2P7, Canadá",,Free shipping for most orders over $75.,
+,Complete checkout,Order exports to Kibo and shipments are created,,,,
+,Fulfill order,Shipment has appropriate shipping rate,$129.99 | Standard Toronto,,"Your order contains one or more over-sized or over-weight items, as a result extra transportation charges are required as noted above.",
+,Inspect financials,Captures and Taxes are correct,,,,
+PEI - Pre Order,,,,,,
+,Navigate to a pre-order product,PDP indicates pre-order and expected ship date,Product: L1494736,29238,Availability:,
+,"Add to cart, proceed to checkout, provide PEI address","
+","5 Ashton Lane, Cornwall, PE C0A 1H0, Canadá",,"Now available for pre-order! Expected to ship starting Dec 12, 2026",
+,Complete checkout,"Order created in Kibo, shipment assigned to CCQ",,,,
+,Fulfill order,"
+",,,,
+,Inspect Financials,Captures and Taxes are correct,,,,
+NS - Special Order / VDF,,,,,,
+,Navigate to PDP of a special order item,PDP indicates special order,"Special order: L0369835
+VDF: L0037001","Special order: 29241
+VDF: 29233",,Special Order Item.This is a special order item. Estimated delivery time is 3-6 weeks.
+,"Add to cart, ship to Nova Scotia",Checkout indicates 3rd party shipment,,,On the Delivery page shows: Your cart contains one or more items that are fulfilled by a 3rd party. You may experience an additional delay before these item(s) are shipped and they may arrive separately from the rest of your order.,
+,Complete checkout,"Order creates in Kibo, assigned to 101 (Special Order and Drop Ship)","6175 Almon St, Halifax, NS, CA, B3K 0A0",,,
+,Fulfill Order,"
+",,,,
+,Inspect Financials,Captures and Taxes are correct.,,,,
+,,,,,,
+NB - Subscription Start,,,,,,
+,Add an item to cart and choose to subscribe,User is redirected to Log in,L9722091,29232,radio button Subscribe for this product,
+,Create an account,Welcome email sent,,,Se crea una orden cada la cantidad de dias que se suscribio,
+,Log into account,User able to see my account sections,,,,
+,Add item to cart for subscription,"
+",,,,
+,"Provide NB shipping address, complete checkout","Order and subscription is created in Kibo, shipment assigned for fulfillment","2104 Route 133
+Grand-Barachois
+NB
+E4P 8K1",,,
+,Fulfill Order,"
+",,,,
+,Inspect Financials,Captures and Taxes are correct,,,,
+Subscription Replenishment,,,L9722091,,Cambiar al dia de hoy y verificar que se haya creado en KIBO la nueva orden,
+,Log into an account with active subscriptions,"
+",,,,
+,Change the next ship date to today,"
+",,,,
+,Continuity order creates at next interval,Order is created in Kibo and shipments created,,,,
+,Fulfill Order,"
+",,,,
+,Inspect Financials,Captures and Taxes are correct,,,,
+NL - Tax Exempt,,,L9722091,,Las Ordenes que estan en esa ubicacion no tienen Taxes,
+,Add an item to cart that is tax exempt,"
+",,,NL HST:,
+,"Proceed through checkout, provide a NL address","
+",,,$2.28,
+,"Pay with PayPal, complete checkout",Order creates in Kibo and shipments assigned,,,buscar en KIBO desde donde se configura,
+,Fulfill Order,"
+",,,,
+,Inspect Financials,Captures and Taxes correct,,,,
+BC - Bottle Deposit,,,,,Expedited SHipping $5 -delivery,
+,"Search for Pepsi, choose item that has SDD only in description","
+",L6307706,,Get it Delivered in 1-3 Days with Expedited Delivery,
+,Add to cart,"
+",,,,
+,Provide address within 10KM of store with stock,"
+",,,For only $5 if you order before 3:00 PM. Free for orders over $75*.,
+,Complete checkout with PayPal,Order creates in Kibo and allocated,,,Please select Expedited Delivery during checkout,
+,Fulfill order,Shipment assigned to an appropriate site for SDD,,,,
+,Inspect Financials,Captures and Taxes are correct,,,,
+AB - Partial LDx,,,,,Agregar un voucher,
+,Log into an account with LDx Vouchers,"
+",,,LDExtras Reward Voucher,
+,Add item to cart >$10,"
+",,,-$3.49,
+,"Proceed to cart, redeem LDx voucher","
+",,,,
+,"Continue through checkout, provide AB shipping address, complete order","Secondary payment taken for balance, order creates in Kibo, shipments allocated",,,,
+,Fulfill Order,"
+",,,,
+,Inspect Financials,"Taxes and Captures are correct,",,,,
+LDx Full,,,,,,
+,Log into account with LDx Vouchers,cuentas que estan aca https://londondrugslimited.sharepoint.com/:x:/r/sites/LD.comwithGlobant/Shared%20Documents/All%20things%20Konek/Testing%20central%20doc.xlsx?d=w4e93787e5fab4d02bfd63794bb61ca7a&csf=1&web=1&e=fkUZvd,,,,
+,Place tax exempt item in cart <$5,"
+",,,,
+,Choose in-store pick-up,"
+",,,,
+,Redeem voucher to cover the cost of order,"
+",,,,
+,Complete checkout.,$0 order,,,,
+,Fulfill Order,"
+",,,,
+,Inspect Financials,Captures and Taxes are correct for order type,,,,
+NU - Airstage,,,,,,
+,Build cart containing OWL items and non OWL items,"
+","OWL: L0985049
+NO-OWL: L3265972",29268,,
+,"Proceed to cart, provided Nunavut address, continue",No shipping methods found,,,"An error displays on screen: Missing or invalid parameter: Shipping method 'Standard Ground Shipping Eastern Canada' does not have valid rates (this may due to the weight, destination, or other factors). Please choose a different shipping method.",
+,Remove OWL,"
+",,,,
+,"Proceed to billing with Nunavut address, complete checkout","Order creates in Kibo, shipments allocated",,,"Delivery method: Remote NT, NU ($119.99)",
+,Fulfill Order,"
+",,,,
+,Inspect Financials,Captures and Taxes are correct,,,,
+NWT - GWP,,,Huggies de mas de 25 dolares,,,
+,"Navigate to Sharmin product, inspect washhands promo","
+",,,,
+,Add qualifier and GWP to cart,"
+",,,,
+,Apply coupon code,GWP is provided at $0,,,,
+,"Provide non airstage NWT address, complete checkout","Order creates in Kibo, shipments allocated",,,,
+,Fulfill Order,GWP in same shipment as Host,,,,
+,Inspect Financials,Taxes and Captures correct.,,,,
+Review - Approve,,,,29270,,
+,Add any item to cart,"
+",,,,
+,"Proceed to checkout, provide last name of Review","
+",,,,
+,Complete checkout,"Order exports to Kibo, shipments created but blocked (""Payment Error"")",,,Need to review because the order was created and the shipment does not show blocked,
+,Approve order in Cybersource,Shipment is unblocked in Kibo,,,,
+,Fulfill Order,"
+",,,,
+,Inspect Financials,Captures and Taxes are correct,,,,
+Review - Reject,,,,29272,,
+,Add item to cart,"
+",,,,
+,"Proceed to checkout, provide last name of Revrej","
+",,,,
+,Complete checkout,"Order creates in Kibo, shipment is blocked by a Cybersource review",,,Need to review if the order is cancelled,
+,Check order in 30 minutes,"Order is automatically rejected by Cybersource, Order cancelled.",,,,
+Reject,,,,29274,,
+,Add any item to cart,"
+",,,,
+,"Proceed to checkout, provide last name of Reject","
+",,,This was not rejected automatically,
+,Submit order,Order cannot be completed,,,Order was successfully created,

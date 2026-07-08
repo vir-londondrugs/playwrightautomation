@@ -1,0 +1,73 @@
+Order (Watch For Multiship),Province,Special Item,Fulfillment Type,Payment,Coupon,External Order Number,Kibo Order Number,Kibo Shipment Number,Expected Results,,Product in UAT,Comment,Locations,Explanation from Bill
+1,BC,Item With PPP,STH,Visa,,,,,Item and PPP ship in same shipment,,,,,
+2,BC,Item With PPP,ISP,MC,,,,,Item and PPP ship in same shipment,r,L1257299,"- Product with Only In Store Pïckup available
+ - In-Store Pickup when selecting Tillicum Centre store
+ - Why there is a discount applied in checkout?","068 - Royal Oak Centre - Alberta T3G 5T4
+ 022 - Jasper Gates - Alberta T5P 4W1
+ 054 - Tillicum Centre - British Columbia V9A 7C5
+ 076 - Westbank - British Columbia V4T 3E6
+ 052 - Ironwood Plaza - British Columbia V7A 5J3
+ WH01 - WH01 - Distribution Service Centre
+ 086 - Grasslands Plaza Saskatchewan S4W 0B7",
+3,BC,,STS,Debit,$ off,,,,Funds are captured upfront and final order total respects coupon value,,L1257299,"- Ship to Store in Saanich Centre (British Columbia, V8X 1J8)
+ - Coupon ???",,
+4,AB,Special Order,STH,PayPal,% off,,,,Funds are captured upfront and SO assigned to 101,,L0037363,"- Home Delivery at T3G 5T4
+ - FREE | Standard Ground Shipping Western Canada",,"You may also see SO (Special Order), this is similar to VDF, execpt is RSA fulfillment method #2. In this scenerio the vendor first ships the item to LD, and then LD to the customer. Stock is still assigned to 101, but the fulfillment method changes from DropShip to LondonDrugs, and an attribute/property isSpecialOrder becomes true.
+ 
+ Both VDF and SO trigger a message on the PDP and Shipping indicating the item is a special order, and to allow 3-6 weeks for delivery."
+4,AB,Multi QTY Bundle (Eg. 12 Pack),ISP,PayPal,% off,,,,Funds are captured upfront and final order total respects coupon value,,,,,
+5,SK,VDF,STH,Amex,,,,,Funds are captured upfront and VDF Assigned to 101,,,,,"VDF = vendor direct fulfillment. in this case LD does not have stock, and when ordered the vendor warehouse ships direct to the customer. These are known as an ""RSA Fulfillment method #1"" and will translate to Kibo as Shopping Limitation = OnlineOnly and fulfilment method = ""DropShip"" (amongst others) these items will have stock assigned to location 101 to support sales and allocations."
+5,SK,,SDD,Amex,,,,,Order assigned to appropriate store,,"L2571211
+ B/UNLIMITED FINGER POPS BAG","Postal Code: T2H 2V2
+ Store: B/UNLIMITED FINGER POPS BAG",,
+6,MN,Pre Order,STH,3DS Card,,,,,Pre-Order assigned to correct fulfillment site,,,,,
+6,MN,$3 Tip / Special Instructions,ODD,3DS Card,,,,,Order assigned to appropriate store with tip and instructions in DD API payload,,,,,
+7,ON,,STH,MC,GWP,,,,GWP is not charged and ships with at least one other shipment,,,,,
+8,NU,,STH,Debit,,,,,Air Stage shipping rate is charged,,,,,
+9,NS,Bundle,STH,PayPal,,,,,All components of bundle ship to customer,,,,,
+10,BC,Bottle Depost,ISP,Visa,$ off,,,,Bottle depolsit is attached to line level,,,,,
+10,BC,Tax Exempt,STH,Visa,,,,,Item is not assessed taxes,,,,,
+10,BC,OWL,SDD,Visa,,,,,Item is assigned to appropriate store and applicable shipping charge applied,,,,,"OWL stands for Overweight Limit, and is designed to help assgin higher shipping cost to items that are designated as over size/weight. Examples would be huge screen TVs, refrigerators, large furniture. There are 4 values for this, OWL-30, OWL-45, OWL-60, OWL-75 and they are assinged at the supply chain level and passed to Kibo by RSA. If you look in the custom API extensions there is a shipping section where these are referenced, along with the price upcharge for shipping. Important to note that items that have an OWL will not trigger free shipping if over $75"
+10,BC,Levy Item,STS,Visa,,,,,Levy is assigned to line level,,L2524624,"In-Store Pickup
+ Ironwood Plaza location
+ LEVY $0.60 for M0012004
+ $0.60",,
+10,BC,$2 Tip / Specific Pick-Up Time,ODD,Visa,,,,,Appropriate store is assinged. DD API call has appropriate pick-up time and tip.,,,,,
+11,AB,Bottle Depost,ISP,PayPal,% off,,,,Bottle depolsit is attached to line level,,,,,
+11,AB,Tax Exempt,STH,PayPal,,,,,Item is not assessed taxes,,,,,
+11,AB,OWL,SDD,PayPal,,,,,Item is assigned to appropriate store and applicable shipping charge applied,,L1740403,,,
+11,AB,Levy Item,STS,PayPal,,,,,Levy is assigned (if applicable) to line level,,,,,
+11,AB,$2 Tip / Specific Pick-Up Time,ODD,PayPal,,,,,Appropriate store is assinged. DD API call has appropriate pick-up time and tip.,,,,,
+12,SK,Bottle Depost,ISP,Debit,,,,,Bottle depolsit is attached to line level,,,,,
+12,SK,Tax Exempt,STH,Debit,,,,,Item is not assessed taxes,,,,,
+12,SK,OWL,SDD,Debit,,,,,Item is assigned to appropriate store and applicable shipping charge applied,,,,,
+12,SK,Levy Item,STS,Debit,,,,,Levy is assigned (if applicable) to line level,,,,,
+12,SK,$2 Tip / Specific Pick-Up Time,ODD,Debit,,,,,Appropriate store is assinged. DD API call has appropriate pick-up time and tip.,,,,,
+13,MN,Bottle Depost,ISP,3DS Card,,,,,Bottle depolsit is attached to line level,,,,,
+13,MN,Tax Exempt,STH,3DS Card,,,,,Item is not assessed taxes,,,,,
+13,MN,OWL,SDD,3DS Card,,,,,Item is assigned to appropriate store and applicable shipping charge applied,,,,,
+13,MN,Levy Item,STS,3DS Card,,,,,Levy is assigned to line level,,L1111439,,,
+13,MN,$2 Tip / Specific Pick-Up Time,ODD,3DS Card,,,,,Appropriate store is assinged. DD API call has appropriate pick-up time and tip.,,,,,
+14,ON,New Subscription,STH,Visa,,,,,Subscription created with expected cadence,,L3166675,,,
+15,BC,New Subscription,ISP,MC,,,,,Subscription created with expected cadence and selected store,,L0013612,,,
+16,ON,Replenishment Subscription,STH,Visa,,,,,Subscription replenished with expected cadence,,,,,
+17,BC,Replensihment Subscription,ISP,MC,,,,,Subscription replensished with expected cadence and selected store,,,,,
+18,AB,,STH,Visa + LDx,,,,,Correct handling of payments,,,,,
+19,SK,,ISP,LDx,,,,,Order is accepted and fully paid with LDx Voucher,,,,,
+20,ON,3 x any item + 3 x any item,STH,MC,,,,,"Drop item, Cancel item, fulfill rest. Correct reassignment of dropped item, payment charges equal 5 items as one is canceled.",,,,,
+21,BC,3 x any item + 3 x any item,STH,MC,,,,,"Drop item, fullfill all, return/refund one. Payments reflect initial charge of 6 items and a refund of 1",,,,,
+22,AB,3 x any item + 3 x any item,STH,Debit,,,,,"Drop item, Cancel item, fulfill rest. Correct reassignment of dropped item, payment charges equal 6 items upfront and 1 as a refund (credit)",,,,,
+23,BC,"Any item - Use ""Review"" as last name",Any,MC,,,,,Order enters Cybersource REVIEW que. - Kibo order is in Pending Review state - Accept order in DM - Kibo order is ready for fulfillment,,,,,
+24,BC,"Any item - Use ""Review"" as last name",Any,MC,,,,,Order enters Cybersource REVIEW que. - Kibo order is in Pending Review state - REJECT order in DM - Kibo order is cancelled.,,,,,
+25,BC,"Any item - Use ""Review"" as last name",Any,Visa Debit,,,,,Order enters Cybersource REVIEW que. - Kibo order is in Pending Review state - REJECT order in DM - Kibo order is cancelled - Pre captured funds returned to customer,,,,,
+26,BC,"Any item - Use ""Reject"" as last name",Any,MC,,,,,Order enters Cybersource and is declined. - Kibo order is cancelled.,,,,,
+26,BC,"Any item - Use ""Reject"" as last name",Any,Visa Debit,,,,,Order enters Cybersource and is declined. - Kibo order is cancelled. - Pre Captured funds retunred to customer,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,Important information about shipping and delivery:,https://www.londondrugs.com/shipping-and-delivery/shippinganddelivery,,,,,,,,,,
+,,,Subscriptions:,https://www.londondrugs.com/subscriptions,,,,,,,,,,
+,,,,,,,,,,,,,,
+"At the moment, UAT is now displaying the expected values correctly. The bundle is L2126214:",,,,,,,,,,,,,,
+Component L1156038 has 10 items,,,,,,,,,,,,,,
+Component L1769162 has 12 items,,,,,,,,,,,,,,
+Component L2078108 has 5 items,,,,,,,,,,,,,,

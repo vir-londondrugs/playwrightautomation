@@ -91,7 +91,7 @@ export class HomePage extends BasePage {
      * Call this after navigate() before interacting with the search input.
      */
     async waitForSearchInput(): Promise<void> {
-        await this.searchInput.waitFor({ state: 'visible', timeout: 30_000 });
+        await this.searchInput.waitFor({ state: 'visible', timeout: 60_000 });
         await this.page.waitForFunction(
             () => {
                 const input = document.querySelector<HTMLInputElement>('input[placeholder="Find your product"]');

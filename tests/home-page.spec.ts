@@ -212,6 +212,7 @@ test(
             // directly to the search URL produces a blank page. Use the search UI instead
             // (same approach as TC-83226) so client-side routing renders the results.
             await homePage.navigate(homePageData.urls.home);
+            await page.locator('body').click({ force: true });
             await homePage.waitForSearchInput();
             await homePage.search(miniCart.searchTerm);
             await page.waitForURL(/\/search/, { timeout: 20_000 });
@@ -258,6 +259,7 @@ test(
             // waitForSearchInput() waits for the search input to be enabled, which is a
             // reliable proxy for Builder.io/React hydration being complete on the homepage.
             // Without this, clicking the mini cart button may be a no-op.
+            await page.locator('body').click({ force: true });
             await homePage.waitForSearchInput();
         });
 
@@ -350,7 +352,7 @@ test(
 // ADO TC: 83231 | Priority: P1 | Type: Positive
 // Hrefs confirmed from live UAT DOM inspection (header element scope).
 // ---------------------------------------------------------------------------
-test.only(
+test(
     'TC-83231 — Header nav links for Deals, Services, Flyers and Gift Registry have correct hrefs @navigation @header',
     async ({ page }) => {
         const homePage = new HomePage(page);

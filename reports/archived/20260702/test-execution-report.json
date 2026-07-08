@@ -1,0 +1,1317 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/virginia.zambudio/PlaywrightAutomation/node_modules/.bin/playwright",
+      "test",
+      "--reporter=json"
+    ],
+    "configFile": "/Users/virginia.zambudio/PlaywrightAutomation/playwright.config.ts",
+    "rootDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/virginia.zambudio/PlaywrightAutomation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/virginia.zambudio/PlaywrightAutomation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/virginia.zambudio/PlaywrightAutomation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "home-page.spec.ts",
+      "file": "home-page.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-79593-01 — Logo click navigates to home @homepage @navigation @smoke",
+          "ok": true,
+          "tags": [
+            "homepage",
+            "navigation",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                    "line": 17,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-03T01:38:44.028Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                        "line": 17,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-c8a5434e4ae761f8a02f",
+          "file": "home-page.spec.ts",
+          "line": 17,
+          "column": 6
+        },
+        {
+          "title": "TC-79593-02-negative — Search with invalid term shows 'Nothing found!' @search @negative",
+          "ok": true,
+          "tags": [
+            "search",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                    "line": 51,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-03T01:38:44.028Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                        "line": 51,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-de340d55d572127a1bb1",
+          "file": "home-page.spec.ts",
+          "line": 51,
+          "column": 6
+        },
+        {
+          "title": "TC-79593-02-positive — Search returns relevant results for a valid term @search @positive @smoke",
+          "ok": true,
+          "tags": [
+            "search",
+            "positive",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                    "line": 91,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-03T01:38:44.028Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                        "line": 91,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-2fba08978febf45efd02",
+          "file": "home-page.spec.ts",
+          "line": 91,
+          "column": 6
+        },
+        {
+          "title": "TC-79593-03 — Store Locator opens and Find All Stores link works @store-locator @navigation",
+          "ok": true,
+          "tags": [
+            "store-locator",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 6646,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 3299
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 81
+                    },
+                    {
+                      "title": "Click 'Select Your Store' / stores link in header",
+                      "duration": 393
+                    },
+                    {
+                      "title": "Wait for Store Locator URL",
+                      "duration": 1131
+                    },
+                    {
+                      "title": "Verify 'Find a Store Near You' heading is visible",
+                      "duration": 40
+                    },
+                    {
+                      "title": "Click 'Find All Stores by Province' link",
+                      "duration": 117
+                    },
+                    {
+                      "title": "Wait for All Stores URL",
+                      "duration": 469
+                    },
+                    {
+                      "title": "Verify All Stores list is visible",
+                      "duration": 25
+                    }
+                  ],
+                  "startTime": "2026-07-03T01:38:44.335Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-9db03a4171f3af600c6f",
+          "file": "home-page.spec.ts",
+          "line": 138,
+          "column": 5
+        },
+        {
+          "title": "TC-79593-05 — Mini Cart opens and View Cart navigates to cart page @mini-cart @cart @navigation",
+          "ok": false,
+          "tags": [
+            "mini-cart",
+            "cart",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 23198,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:240:50\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:239:9",
+                    "location": {
+                      "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                      "column": 50,
+                      "line": 240
+                    },
+                    "snippet": "  238 |\n  239 |         await test.step('Wait for mini cart panel to open', async () => {\n> 240 |             await expect(homePage.miniCartPanel).toBeVisible({ timeout: 15_000 });\n      |                                                  ^\n  241 |         });\n  242 |\n  243 |         await test.step(\"Click 'View Cart' button in mini cart panel\", async () => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                        "column": 50,
+                        "line": 240
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n\n\n  238 |\n  239 |         await test.step('Wait for mini cart panel to open', async () => {\n> 240 |             await expect(homePage.miniCartPanel).toBeVisible({ timeout: 15_000 });\n      |                                                  ^\n  241 |         });\n  242 |\n  243 |         await test.step(\"Click 'View Cart' button in mini cart panel\", async () => {\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:240:50\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:239:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a product page to satisfy cart precondition",
+                      "duration": 3746
+                    },
+                    {
+                      "title": "Add product to cart",
+                      "duration": 1368
+                    },
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1047
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 25
+                    },
+                    {
+                      "title": "Click mini cart icon in header",
+                      "duration": 858
+                    },
+                    {
+                      "title": "Wait for mini cart panel to open",
+                      "duration": 15020,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:240:50\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:239:9",
+                        "location": {
+                          "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                          "column": 50,
+                          "line": 240
+                        },
+                        "snippet": "  238 |\n  239 |         await test.step('Wait for mini cart panel to open', async () => {\n> 240 |             await expect(homePage.miniCartPanel).toBeVisible({ timeout: 15_000 });\n      |                                                  ^\n  241 |         });\n  242 |\n  243 |         await test.step(\"Click 'View Cart' button in mini cart panel\", async () => {"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-03T01:38:44.332Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/virginia.zambudio/PlaywrightAutomation/test-results/home-page-TC-79593-05-—-Mi-90d91-e-mini-cart-cart-navigation-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                    "column": 50,
+                    "line": 240
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-427a3bd94434e5b2b8f7",
+          "file": "home-page.spec.ts",
+          "line": 199,
+          "column": 5
+        },
+        {
+          "title": "TC-79593-06 — Hamburger menu opens and displays category navigation @navigation @mega-menu @hamburger",
+          "ok": true,
+          "tags": [
+            "navigation",
+            "mega-menu",
+            "hamburger"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4135,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 2779
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 21
+                    },
+                    {
+                      "title": "Click hamburger / mega menu button",
+                      "duration": 358
+                    },
+                    {
+                      "title": "Verify mega menu is visible",
+                      "duration": 14
+                    },
+                    {
+                      "title": "Verify the hamburger button itself is still visible",
+                      "duration": 2
+                    }
+                  ],
+                  "startTime": "2026-07-03T01:38:44.337Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-05712624177849bb6dc4",
+          "file": "home-page.spec.ts",
+          "line": 265,
+          "column": 5
+        },
+        {
+          "title": "TC-79593-01 — Logo click navigates to home @homepage @navigation @smoke",
+          "ok": true,
+          "tags": [
+            "homepage",
+            "navigation",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                    "line": 17,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-03T01:38:44.029Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                        "line": 17,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-85a03a732a9c577707d9",
+          "file": "home-page.spec.ts",
+          "line": 17,
+          "column": 6
+        },
+        {
+          "title": "TC-79593-02-negative — Search with invalid term shows 'Nothing found!' @search @negative",
+          "ok": true,
+          "tags": [
+            "search",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                    "line": 51,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-03T01:38:44.029Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                        "line": 51,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-8073102ba8a9e23f7851",
+          "file": "home-page.spec.ts",
+          "line": 51,
+          "column": 6
+        },
+        {
+          "title": "TC-79593-02-positive — Search returns relevant results for a valid term @search @positive @smoke",
+          "ok": true,
+          "tags": [
+            "search",
+            "positive",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                    "line": 91,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-03T01:38:44.029Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                        "line": 91,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-50acbaccfe92f78d7bb2",
+          "file": "home-page.spec.ts",
+          "line": 91,
+          "column": 6
+        },
+        {
+          "title": "TC-79593-03 — Store Locator opens and Find All Stores link works @store-locator @navigation",
+          "ok": true,
+          "tags": [
+            "store-locator",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 13970,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 9304
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 363
+                    },
+                    {
+                      "title": "Click 'Select Your Store' / stores link in header",
+                      "duration": 642
+                    },
+                    {
+                      "title": "Wait for Store Locator URL",
+                      "duration": 497
+                    },
+                    {
+                      "title": "Verify 'Find a Store Near You' heading is visible",
+                      "duration": 68
+                    },
+                    {
+                      "title": "Click 'Find All Stores by Province' link",
+                      "duration": 271
+                    },
+                    {
+                      "title": "Wait for All Stores URL",
+                      "duration": 1050
+                    },
+                    {
+                      "title": "Verify All Stores list is visible",
+                      "duration": 161
+                    }
+                  ],
+                  "startTime": "2026-07-03T01:38:44.327Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-c5ae454ebe4867c1d0fa",
+          "file": "home-page.spec.ts",
+          "line": 138,
+          "column": 5
+        },
+        {
+          "title": "TC-79593-05 — Mini Cart opens and View Cart navigates to cart page @mini-cart @cart @navigation",
+          "ok": false,
+          "tags": [
+            "mini-cart",
+            "cart",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 22077,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:240:50\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:239:9",
+                    "location": {
+                      "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                      "column": 50,
+                      "line": 240
+                    },
+                    "snippet": "  238 |\n  239 |         await test.step('Wait for mini cart panel to open', async () => {\n> 240 |             await expect(homePage.miniCartPanel).toBeVisible({ timeout: 15_000 });\n      |                                                  ^\n  241 |         });\n  242 |\n  243 |         await test.step(\"Click 'View Cart' button in mini cart panel\", async () => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                        "column": 50,
+                        "line": 240
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n\n\n  238 |\n  239 |         await test.step('Wait for mini cart panel to open', async () => {\n> 240 |             await expect(homePage.miniCartPanel).toBeVisible({ timeout: 15_000 });\n      |                                                  ^\n  241 |         });\n  242 |\n  243 |         await test.step(\"Click 'View Cart' button in mini cart panel\", async () => {\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:240:50\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:239:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a product page to satisfy cart precondition",
+                      "duration": 1814
+                    },
+                    {
+                      "title": "Add product to cart",
+                      "duration": 1794
+                    },
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 795
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 161
+                    },
+                    {
+                      "title": "Click mini cart icon in header",
+                      "duration": 560
+                    },
+                    {
+                      "title": "Wait for mini cart panel to open",
+                      "duration": 15031,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:240:50\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:239:9",
+                        "location": {
+                          "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                          "column": 50,
+                          "line": 240
+                        },
+                        "snippet": "  238 |\n  239 |         await test.step('Wait for mini cart panel to open', async () => {\n> 240 |             await expect(homePage.miniCartPanel).toBeVisible({ timeout: 15_000 });\n      |                                                  ^\n  241 |         });\n  242 |\n  243 |         await test.step(\"Click 'View Cart' button in mini cart panel\", async () => {"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-03T01:38:50.181Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/virginia.zambudio/PlaywrightAutomation/test-results/home-page-TC-79593-05-—-Mi-90d91-e-mini-cart-cart-navigation-firefox/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                    "column": 50,
+                    "line": 240
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-dd0561b57314a167f445",
+          "file": "home-page.spec.ts",
+          "line": 199,
+          "column": 5
+        },
+        {
+          "title": "TC-79593-06 — Hamburger menu opens and displays category navigation @navigation @mega-menu @hamburger",
+          "ok": true,
+          "tags": [
+            "navigation",
+            "mega-menu",
+            "hamburger"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 4471,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1680
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 162
+                    },
+                    {
+                      "title": "Click hamburger / mega menu button",
+                      "duration": 435
+                    },
+                    {
+                      "title": "Verify mega menu is visible",
+                      "duration": 14
+                    },
+                    {
+                      "title": "Verify the hamburger button itself is still visible",
+                      "duration": 8
+                    }
+                  ],
+                  "startTime": "2026-07-03T01:38:53.441Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-04e0193573ed7357d348",
+          "file": "home-page.spec.ts",
+          "line": 265,
+          "column": 5
+        },
+        {
+          "title": "TC-79593-01 — Logo click navigates to home @homepage @navigation @smoke",
+          "ok": true,
+          "tags": [
+            "homepage",
+            "navigation",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                    "line": 17,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-03T01:38:59.021Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                        "line": 17,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-4e6680a3a439ad40eae5",
+          "file": "home-page.spec.ts",
+          "line": 17,
+          "column": 6
+        },
+        {
+          "title": "TC-79593-02-negative — Search with invalid term shows 'Nothing found!' @search @negative",
+          "ok": true,
+          "tags": [
+            "search",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                    "line": 51,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-03T01:38:59.021Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                        "line": 51,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-5815ac0c1a41f12668e9",
+          "file": "home-page.spec.ts",
+          "line": 51,
+          "column": 6
+        },
+        {
+          "title": "TC-79593-02-positive — Search returns relevant results for a valid term @search @positive @smoke",
+          "ok": true,
+          "tags": [
+            "search",
+            "positive",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                    "line": 91,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-03T01:38:59.021Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                        "line": 91,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-b6a19f712edbdf3287a9",
+          "file": "home-page.spec.ts",
+          "line": 91,
+          "column": 6
+        },
+        {
+          "title": "TC-79593-03 — Store Locator opens and Find All Stores link works @store-locator @navigation",
+          "ok": true,
+          "tags": [
+            "store-locator",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 10620,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 7316
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 67
+                    },
+                    {
+                      "title": "Click 'Select Your Store' / stores link in header",
+                      "duration": 148
+                    },
+                    {
+                      "title": "Wait for Store Locator URL",
+                      "duration": 428
+                    },
+                    {
+                      "title": "Verify 'Find a Store Near You' heading is visible",
+                      "duration": 21
+                    },
+                    {
+                      "title": "Click 'Find All Stores by Province' link",
+                      "duration": 76
+                    },
+                    {
+                      "title": "Wait for All Stores URL",
+                      "duration": 983
+                    },
+                    {
+                      "title": "Verify All Stores list is visible",
+                      "duration": 85
+                    }
+                  ],
+                  "startTime": "2026-07-03T01:39:00.170Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-bb45ca138837a87eaa91",
+          "file": "home-page.spec.ts",
+          "line": 138,
+          "column": 5
+        },
+        {
+          "title": "TC-79593-05 — Mini Cart opens and View Cart navigates to cart page @mini-cart @cart @navigation",
+          "ok": false,
+          "tags": [
+            "mini-cart",
+            "cart",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 20409,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:240:50\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:239:9",
+                    "location": {
+                      "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                      "column": 50,
+                      "line": 240
+                    },
+                    "snippet": "  238 |\n  239 |         await test.step('Wait for mini cart panel to open', async () => {\n> 240 |             await expect(homePage.miniCartPanel).toBeVisible({ timeout: 15_000 });\n      |                                                  ^\n  241 |         });\n  242 |\n  243 |         await test.step(\"Click 'View Cart' button in mini cart panel\", async () => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                        "column": 50,
+                        "line": 240
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n\n\n  238 |\n  239 |         await test.step('Wait for mini cart panel to open', async () => {\n> 240 |             await expect(homePage.miniCartPanel).toBeVisible({ timeout: 15_000 });\n      |                                                  ^\n  241 |         });\n  242 |\n  243 |         await test.step(\"Click 'View Cart' button in mini cart panel\", async () => {\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:240:50\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:239:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a product page to satisfy cart precondition",
+                      "duration": 1659
+                    },
+                    {
+                      "title": "Add product to cart",
+                      "duration": 1127
+                    },
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 720
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Click mini cart icon in header",
+                      "duration": 396
+                    },
+                    {
+                      "title": "Wait for mini cart panel to open",
+                      "duration": 15013,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('div[class*=\"z-50\"]:has(button.primary-button)').first()\u001b[22m\n\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:240:50\n    at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:239:9",
+                        "location": {
+                          "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                          "column": 50,
+                          "line": 240
+                        },
+                        "snippet": "  238 |\n  239 |         await test.step('Wait for mini cart panel to open', async () => {\n> 240 |             await expect(homePage.miniCartPanel).toBeVisible({ timeout: 15_000 });\n      |                                                  ^\n  241 |         });\n  242 |\n  243 |         await test.step(\"Click 'View Cart' button in mini cart panel\", async () => {"
+                      }
+                    }
+                  ],
+                  "startTime": "2026-07-03T01:39:00.331Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/virginia.zambudio/PlaywrightAutomation/test-results/home-page-TC-79593-05-—-Mi-90d91-e-mini-cart-cart-navigation-webkit/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts",
+                    "column": 50,
+                    "line": 240
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-bd62a65274c9904b50c5",
+          "file": "home-page.spec.ts",
+          "line": 199,
+          "column": 5
+        },
+        {
+          "title": "TC-79593-06 — Hamburger menu opens and displays category navigation @navigation @mega-menu @hamburger",
+          "ok": true,
+          "tags": [
+            "navigation",
+            "mega-menu",
+            "hamburger"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2489,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1306
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 46
+                    },
+                    {
+                      "title": "Click hamburger / mega menu button",
+                      "duration": 345
+                    },
+                    {
+                      "title": "Verify mega menu is visible",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Verify the hamburger button itself is still visible",
+                      "duration": 5
+                    }
+                  ],
+                  "startTime": "2026-07-03T01:39:08.670Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-beb5796eb8ac8b53081a",
+          "file": "home-page.spec.ts",
+          "line": 265,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-03T01:38:43.989Z",
+    "duration": 37096.997,
+    "expected": 6,
+    "skipped": 9,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}
