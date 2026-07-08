@@ -23,6 +23,7 @@ export default defineConfig({
     geolocation: { latitude: 49.2827, longitude: -123.1207 },
     permissions: ['geolocation'],
     launchOptions: {
+      slowMo: 800,
       args: [
         '--lang=en-CA',
         '--disable-features=Translate,TranslateUI',

@@ -353,7 +353,7 @@ test(
 // Hrefs confirmed from live UAT DOM inspection (header element scope).
 // ---------------------------------------------------------------------------
 test(
-    'TC-83231 — Header nav links for Deals, Services, Flyers and Gift Registry have correct hrefs @navigation @header',
+    'TC-83231 — Main navigation links (Deals, Services, Flyers, Gift Registry) are visible and redirect to the correct pages @navigation @header',
     async ({ page }) => {
         const homePage = new HomePage(page);
         const { headerNav } = homePageData;

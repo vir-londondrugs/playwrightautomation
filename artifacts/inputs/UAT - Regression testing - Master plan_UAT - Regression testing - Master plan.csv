@@ -53,7 +53,7 @@
 ,,,"3","Click hamburger / mega menu button (button[aria-label='Opens Mega Menu']:visible) after waiting for it to be visible (timeout 15s). NOTE: 3 DOM copies exist for breakpoints — :visible picks the rendered one at Desktop Chrome viewport.","Hamburger button found and clicked",,,
 ,,,"4","Verify mega menu container is visible: div[class*='bg-txtmegamenu-secondary'] (timeout 15s)","Mega menu container visible = True",,,
 ,,,"5","Verify the hamburger button itself is still visible after menu opens","button[aria-label='Opens Mega Menu'] still visible = True",,,
-"83231","Test Case","Home Page — Header navigation links for Deals, Services, Flyers and Gift Registry have correct href URLs",,,,,"LD.com - Globant","Virginia Zambudio (On Behalf of London Drugs) <VZambudio@londondrugs.com>","Design"
+"83231","Test Case","Home Page — Main navigation links (Deals, Services, Flyers, Gift Registry) are visible and redirect to the correct pages",,,,,"LD.com - Globant","Virginia Zambudio (On Behalf of London Drugs) <VZambudio@londondrugs.com>","Design"
 ,,,"1","Navigate to https://www.londondrugs.com","Page loads successfully",,,
 ,,,"2","Assert Deals and Events link exists with correct href (/category/deals-and-events/c/1027)","Deals and Events link is present",,,
 ,,,"3","Assert Services link exists with correct href (/our-services)","Services link is present",,,
