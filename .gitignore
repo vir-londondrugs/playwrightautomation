@@ -12,6 +12,8 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 auth/user.json
+# JUnit XML generated at runtime (consumed by publish-ado-results.py)
+results.xml
 
 # MCP Web Inspector - browser profile data (machine-specific, binary, noisy)
 .mcp-web-inspector/

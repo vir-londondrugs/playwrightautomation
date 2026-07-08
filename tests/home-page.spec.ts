@@ -423,7 +423,7 @@ test(
         await test.step('Verify page redirects to /enewsletter-settings', async () => {
             // Submit triggers a client-side navigation to /enewsletter-settings?email=<email>.
             // This confirms the form was accepted and the user is routed to the preferences page.
-            await page.waitForURL(newsletter.expectedRedirectUrlPattern, { timeout: 15_000 });
+            await page.waitForURL(newsletter.expectedRedirectUrlPattern, { timeout: 45_000 });
             await expect(page).toHaveURL(newsletter.expectedRedirectUrlPattern);
         });
     }

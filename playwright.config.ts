@@ -13,17 +13,23 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    /* JUnit XML -- consumed by publish-ado-results.py to push results to ADO Test Plans > Runs */
+    ['junit', { outputFile: 'results.xml' }],
+    /* Interactive HTML report (local drill-down + CI artifact) */
+    ['html', { open: 'never' }],
+  ],
   /* Shared settings for all the projects below. */
   use: {
-    /* Open browser window during test execution */
-    headless: false,
+    /* Headless in CI, visible window locally for manual observation */
+    headless: !!process.env.CI,
     /* Suppress browser permission/translate popups */
     locale: 'en-CA',
     geolocation: { latitude: 49.2827, longitude: -123.1207 },
     permissions: ['geolocation'],
     launchOptions: {
-      slowMo: 800,
+      /* slowMo only for local runs -- CI must run at full speed */
+      slowMo: process.env.CI ? 0 : 800,
       args: [
         '--lang=en-CA',
         '--disable-features=Translate,TranslateUI',
