@@ -14,6 +14,8 @@ node_modules/
 auth/user.json
 # JUnit XML generated at runtime (consumed by publish-ado-results.py)
 results.xml
+# Archived JUnit XMLs (moved here after each successful ADO publish)
+reports/archived/*.xml
 
 # MCP Web Inspector - browser profile data (machine-specific, binary, noisy)
 .mcp-web-inspector/

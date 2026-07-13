@@ -1,0 +1,87 @@
+- generic [ref=f9e1]:
+  - alert [ref=f9e2]
+  - article [ref=f9e3]:
+    - list [ref=f9e4]:
+      - listitem [ref=f9e5]:
+        - 'link "Customer Service: 1-888-991-2299" [ref=f9e6] [cursor=pointer]':
+          - /url: tel:18889912299
+        - generic [ref=f9e7]: "|"
+      - listitem [ref=f9e8]:
+        - link "Travel Essentials" [ref=f9e9] [cursor=pointer]:
+          - /url: /travel
+        - generic [ref=f9e10]: "|"
+      - listitem [ref=f9e11]:
+        - link "30-Day Price Match Guarantee" [ref=f9e12] [cursor=pointer]:
+          - /url: /our-guarantee/OurGuarantee
+  - banner [ref=f9e13]:
+    - generic [ref=f9e14]:
+      - generic [ref=f9e15]:
+        - link "London Drugs" [ref=f9e16] [cursor=pointer]:
+          - /url: /
+          - img "London Drugs" [ref=f9e17]
+        - generic [ref=f9e20]:
+          - textbox "Search for products" [active] [ref=f9e21]:
+            - /placeholder: Find your product
+          - img [ref=f9e22] [cursor=pointer]
+        - complementary [ref=f9e24]:
+          - list [ref=f9e25]:
+            - listitem [ref=f9e26]:
+              - link "Select Your Store" [ref=f9e27] [cursor=pointer]:
+                - /url: /stores
+                - img [ref=f9e28]
+                - text: Select Your Store
+          - complementary [ref=f9e31]:
+            - complementary [ref=f9e32]:
+              - button [ref=f9e34] [cursor=pointer]
+            - generic [ref=f9e36]:
+              - link "Show Wishlist Items" [ref=f9e37] [cursor=pointer]:
+                - /url: /myaccount/wishlist
+                - img [ref=f9e38]
+              - link "Show My List & Registry Items" [ref=f9e40] [cursor=pointer]:
+                - /url: /myaccount/wishlist#registry
+                - img "Add to Registry Icon" [ref=f9e41]
+            - button "Show Mini Cart Items" [ref=f9e44] [cursor=pointer]:
+              - img [ref=f9e45]
+      - generic [ref=f9e50]:
+        - generic [ref=f9e51]:
+          - button "Opens Mega Menu" [ref=f9e52] [cursor=pointer]:
+            - img [ref=f9e53]
+          - button "shop by category" [ref=f9e54] [cursor=pointer]: Shop by Category
+        - list [ref=f9e55]:
+          - listitem [ref=f9e56]:
+            - link "Deals & Events" [ref=f9e58] [cursor=pointer]:
+              - /url: /category/deals-and-events/c/1027
+          - listitem [ref=f9e59]:
+            - link "Services" [ref=f9e61] [cursor=pointer]:
+              - /url: /our-services
+          - listitem [ref=f9e62]:
+            - generic [ref=f9e63]:
+              - img "Pharmacy" [ref=f9e64]
+              - link "Pharmacy" [ref=f9e65] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com
+          - listitem [ref=f9e66]:
+            - generic [ref=f9e67]:
+              - img "PhotoLab" [ref=f9e68]
+              - link "PhotoLab" [ref=f9e69] [cursor=pointer]:
+                - /url: https://photolab.londondrugs.com
+          - listitem [ref=f9e70]:
+            - link "Gift Registry" [ref=f9e72] [cursor=pointer]:
+              - /url: /myaccount/wishlist#registry
+          - listitem [ref=f9e73]:
+            - link "LDExtras" [ref=f9e74] [cursor=pointer]:
+              - /url: https://www.ldextras.com
+              - generic [ref=f9e75]:
+                - strong [ref=f9e76]: LD
+                - emphasis [ref=f9e77]: Extras
+        - link "Flyers Logo Flyers" [ref=f9e78] [cursor=pointer]:
+          - /url: /flyer
+          - img "Flyers Logo" [ref=f9e79]
+          - text: Flyers
+  - main
+  - generic [ref=f9e81]:
+    - generic [ref=f9e82]:
+      - heading "Email Newsletter" [level=3] [ref=f9e83]
+      - paragraph [ref=f9e84]: Sign up and receive promotions and special offers by email
+    - textbox "Enter your email" [ref=f9e86]
+    - button "SIGN UP" [ref=f9e88] [cursor=pointer]
+  - contentinfo

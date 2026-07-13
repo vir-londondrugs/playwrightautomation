@@ -407,8 +407,11 @@ test(
         });
 
         await test.step('Scroll to footer newsletter form', async () => {
-            await homePage.newsletterEmailInput.scrollIntoViewIfNeeded();
-            await homePage.newsletterEmailInput.waitFor({ state: 'visible', timeout: 15_000 });
+            // The footer is lazy-rendered: the email input is not in the DOM until the
+            // page has scrolled near the bottom. Scroll there first, then wait for the
+            // element to mount before interacting.
+            await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+            await homePage.newsletterEmailInput.waitFor({ state: 'visible', timeout: 20_000 });
         });
 
         await test.step('Fill valid email in newsletter input', async () => {

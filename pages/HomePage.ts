@@ -75,10 +75,14 @@ export class HomePage extends BasePage {
         this.flyersLink = page.locator('header a[href="/flyer"]').first();
         this.giftRegistryLink = page.locator('header a[href="/myaccount/wishlist#registry"]').first();
 
-        // Footer newsletter signup -- confirmed from live UAT DOM inspection.
-        // The input is lazy-rendered in the footer; scroll to it before interacting.
-        this.newsletterEmailInput = page.locator('input[type="email"]').first();
-        this.newsletterSubmitButton = page.locator('button[type="submit"]').filter({ hasText: /sign up/i }).first();
+        // Newsletter signup section -- confirmed from live UAT DOM inspection (2026-07-08).
+        // The section is a <div class="...bg-primary..."> directly under <body> (NOT inside
+        // <footer>). The email input has placeholder "Enter your email" and type="email".
+        // The button text is "SIGN UP".
+        // The section is present in the DOM on page load but requires scrolling to become
+        // visible (intersection-observer driven rendering).
+        this.newsletterEmailInput = page.locator('div.bg-primary input[type="email"]').first();
+        this.newsletterSubmitButton = page.locator('div.bg-primary button[type="submit"]').filter({ hasText: /sign up/i }).first();
     }
 
     async clickLogo(): Promise<void> {
