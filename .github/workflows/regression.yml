@@ -3,10 +3,6 @@ name: Regression Tests
 # Trigger: push/PR to main or master (automated) + manual dispatch (UAT only).
 # Environment: UAT only. PROD regression is not supported -- use smoke.yml for PROD.
 on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
   workflow_dispatch:
     inputs:
       environment:
