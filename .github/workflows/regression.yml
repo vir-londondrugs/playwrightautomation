@@ -60,7 +60,7 @@ jobs:
       # Run full regression suite against UAT (all 4 browsers)
       # ---------------------------------------------------------------
       - name: Run Playwright Regression Tests
-        run: npx playwright test
+        run: npx playwright test --workers=4
         env:
           BASE_URL: ${{ env.BASE_URL }}
           TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
