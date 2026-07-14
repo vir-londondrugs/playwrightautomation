@@ -61,7 +61,7 @@ async function navigateToPLP(
 //   2. Wait for filter panel to load
 //   3. Apply first available filter option
 //   4. Wait for filtered results API response
-//   Assert: URL reflects active filter = True
+//   Assert: URL reflects active filter = True-
 // ---------------------------------------------------------------------------
 test(
     'TC-83233 FTC_02_01_01 -- Applying first available filter on lipstick search triggers API call and reflects filter in URL @plp @filter @positive',
