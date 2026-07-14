@@ -1,0 +1,88 @@
+name: Regression Tests
+
+# Trigger: push/PR to main or master (automated) + manual dispatch (UAT only).
+# Environment: UAT only. PROD regression is not supported -- use smoke.yml for PROD.
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Target environment (Regression is UAT-only)"
+        required: true
+        default: "UAT"
+        type: choice
+        options:
+          - UAT
+
+jobs:
+  regression:
+    name: Regression -- All Browsers (UAT)
+    timeout-minutes: 90
+    runs-on: ubuntu-latest
+
+    env:
+      # Regression always runs against UAT; input is accepted but only UAT is valid.
+      BASE_URL: "https://london-drugs-uat-origin.kibology.us/"
+
+    steps:
+      # ---------------------------------------------------------------
+      # Checkout and Node setup
+      # ---------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      # ---------------------------------------------------------------
+      # Install NPM dependencies
+      # ---------------------------------------------------------------
+      - name: Install dependencies
+        run: npm ci
+
+      # ---------------------------------------------------------------
+      # Install Playwright browsers
+      # Chromium, Firefox, WebKit installed with system deps.
+      # msedge installed separately (not available via --with-deps on ubuntu-latest).
+      # ---------------------------------------------------------------
+      - name: Install Playwright browsers (chromium, firefox, webkit)
+        run: npx playwright install --with-deps chromium firefox webkit
+
+      - name: Install Microsoft Edge (msedge channel)
+        run: npx playwright install msedge
+
+      # ---------------------------------------------------------------
+      # Run full regression suite against UAT (all 4 browsers)
+      # ---------------------------------------------------------------
+      - name: Run Playwright Regression Tests
+        run: npx playwright test
+        env:
+          BASE_URL: ${{ env.BASE_URL }}
+          TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
+          TEST_USER_PASSWORD: ${{ secrets.TEST_USER_PASSWORD }}
+          CI: true
+
+      # ---------------------------------------------------------------
+      # Publish test results to Azure DevOps Test Plans
+      # ---------------------------------------------------------------
+      - name: Publish results to ADO Test Plans
+        if: always()
+        env:
+          ADO_PAT: ${{ secrets.ADO_PAT }}
+        run: python3 scripts/publish-ado-results.py
+
+      # ---------------------------------------------------------------
+      # Upload interactive HTML report as pipeline artifact
+      # ---------------------------------------------------------------
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report-regression
+          path: playwright-report/
+          retention-days: 30

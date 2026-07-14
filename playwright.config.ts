@@ -21,6 +21,10 @@ export default defineConfig({
   ],
   /* Shared settings for all the projects below. */
   use: {
+    /* Base URL: driven by process.env.BASE_URL; falls back to UAT origin for local runs.
+       Smoke workflows pass BASE_URL=https://www.londondrugs.com/ for PROD runs.
+       Tests that call page.goto('/path') resolve relative to this base URL. */
+    baseURL: process.env.BASE_URL || 'https://london-drugs-uat-origin.kibology.us/',
     /* Headless in CI, visible window locally for manual observation */
     headless: !!process.env.CI,
     /* Suppress browser permission/translate popups */
@@ -62,6 +66,15 @@ export default defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
+    },
+
+    /* Microsoft Edge -- AD-09: 4th browser project added 2026-07-14.
+       Uses msedge channel; requires separate install step in CI:
+         npx playwright install msedge
+       (NOT included in --with-deps on ubuntu-latest) */
+    {
+      name: 'edge',
+      use: { ...devices['Desktop Chrome'], channel: 'msedge' },
     },
   ],
 });
