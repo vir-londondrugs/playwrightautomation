@@ -1,0 +1,569 @@
+- generic [ref=f4e1]:
+  - alert [ref=f4e2]
+  - link [ref=f4e92] [cursor=pointer]:
+    - /url: https://www.londondrugs.com/category/clearance/c/39
+    - paragraph [ref=f4e95]:
+      - strong [ref=f4e96]: "Last Chance Clearance:"
+    - paragraph [ref=f4e99]: new items are added weekly online and in-store. Shop now
+  - article [ref=f4e3]:
+    - list [ref=f4e4]:
+      - listitem [ref=f4e5]:
+        - 'link "Customer Service: 1-888-991-2299" [ref=f4e6] [cursor=pointer]':
+          - /url: tel:18889912299
+        - generic [ref=f4e7]: "|"
+      - listitem [ref=f4e8]:
+        - link "Travel Essentials" [ref=f4e9] [cursor=pointer]:
+          - /url: /travel
+        - generic [ref=f4e10]: "|"
+      - listitem [ref=f4e11]:
+        - link "30-Day Price Match Guarantee" [ref=f4e12] [cursor=pointer]:
+          - /url: /our-guarantee/OurGuarantee
+  - banner [ref=f4e13]:
+    - generic [ref=f4e14]:
+      - generic [ref=f4e15]:
+        - link [ref=f4e16] [cursor=pointer]:
+          - /url: /
+          - img "London Drugs" [ref=f4e17]
+        - textbox "Search for products" [active] [ref=f4e21]:
+          - /placeholder: Find your product
+        - complementary [ref=f4e24]:
+          - list [ref=f4e25]:
+            - listitem [ref=f4e26]:
+              - link "Select Your Store" [ref=f4e27] [cursor=pointer]:
+                - /url: /stores
+          - complementary [ref=f4e31]:
+            - complementary [ref=f4e32]:
+              - button [ref=f4e34] [cursor=pointer]
+            - generic [ref=f4e36]:
+              - link "Show Wishlist Items" [ref=f4e37] [cursor=pointer]:
+                - /url: /myaccount/wishlist
+              - link "Show My List & Registry Items" [ref=f4e40] [cursor=pointer]:
+                - /url: /myaccount/wishlist#registry
+                - img "Add to Registry Icon" [ref=f4e41]
+            - button "Show Mini Cart Items" [ref=f4e44] [cursor=pointer]
+      - generic [ref=f4e50]:
+        - generic [ref=f4e51]:
+          - button "Opens Mega Menu" [ref=f4e52] [cursor=pointer]
+          - button "shop by category" [ref=f4e54] [cursor=pointer]: Shop by Category
+        - list [ref=f4e55]:
+          - listitem [ref=f4e56]:
+            - link "Deals & Events" [ref=f4e58] [cursor=pointer]:
+              - /url: /category/deals-and-events/c/1027
+          - listitem [ref=f4e59]:
+            - link "Services" [ref=f4e61] [cursor=pointer]:
+              - /url: /our-services
+          - listitem [ref=f4e62]:
+            - generic [ref=f4e63]:
+              - img "Pharmacy" [ref=f4e64]
+              - link "Pharmacy" [ref=f4e65] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com
+          - listitem [ref=f4e66]:
+            - generic [ref=f4e67]:
+              - img "PhotoLab" [ref=f4e68]
+              - link "PhotoLab" [ref=f4e69] [cursor=pointer]:
+                - /url: https://photolab.londondrugs.com
+          - listitem [ref=f4e70]:
+            - link "Gift Registry" [ref=f4e72] [cursor=pointer]:
+              - /url: /myaccount/wishlist#registry
+          - listitem [ref=f4e73]:
+            - link [ref=f4e74] [cursor=pointer]:
+              - /url: https://www.ldextras.com
+              - generic [ref=f4e75]:
+                - strong [ref=f4e76]: LD
+                - emphasis [ref=f4e77]: Extras
+        - link [ref=f4e78] [cursor=pointer]:
+          - /url: /flyer
+          - img "Flyers Logo" [ref=f4e79]
+          - text: Flyers
+  - main [ref=f4e100]:
+    - generic [ref=f4e103]:
+      - generic [ref=f4e105]:
+        - link [ref=f4e108] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/outdoor-living/c/3
+          - img "Outdoor Living" [ref=f4e110]
+        - link [ref=f4e113] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/flyer
+          - img "Flyer" [ref=f4e115]
+      - link [ref=f4e116] [cursor=pointer]:
+        - /url: https://www.ldextras.com/sign-in
+        - img "LDExtras Perks" [ref=f4e117]
+      - generic [ref=f4e118]:
+        - link [ref=f4e119] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/deals-and-events/c/1027
+          - img "Value Campaign" [ref=f4e120]
+        - link [ref=f4e121] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/apple-products/c/1090
+          - img "Apple Showcase" [ref=f4e122]
+        - link [ref=f4e123] [cursor=pointer]:
+          - /url: https://photolab.londondrugs.com/film-developing
+          - img "PhotoLab" [ref=f4e124]
+        - link [ref=f4e125] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/sun-care/c/199
+          - img "Suncare" [ref=f4e126]
+        - link [ref=f4e127] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/travel
+          - img "travel ready" [ref=f4e128]
+        - link [ref=f4e129] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/myaccount/wishlist#registry
+          - img "gift registry" [ref=f4e130]
+        - link [ref=f4e131] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/gifts-for-grads/c/8854
+          - img "Grads" [ref=f4e132]
+        - link [ref=f4e133] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/search?q=allergy
+          - img "Allergy" [ref=f4e134]
+      - link [ref=f4e135] [cursor=pointer]:
+        - /url: https://www.bcaa.com/impact/wildfire-resilience/fireweed
+        - img "BCAA Wildflower" [ref=f4e136]
+      - article [ref=f4e138]:
+        - generic [ref=f4e139]:
+          - link "link to Air Conditioners & Fans" [ref=f4e140] [cursor=pointer]:
+            - /url: /category/air-conditioners-and-fans/c/52
+            - heading "Air Conditioners & Fans" [level=2] [ref=f4e141]
+          - button "Next button of product shelf" [ref=f4e142] [cursor=pointer]
+        - generic [ref=f4e148]:
+          - generic [ref=f4e152]:
+            - link [ref=f4e153] [cursor=pointer]:
+              - /url: /products/logiix-retro-air-usb-fan/p/M0010765?Variant%20Color=BLACK
+              - img "LOGiiX Retro Air USB Fan" [ref=f4e154]
+            - generic [ref=f4e155]:
+              - list [ref=f4e158]:
+                - listitem [ref=f4e159]:
+                  - img "BLACK" [ref=f4e161]
+                - listitem [ref=f4e162]:
+                  - img "BRONZE" [ref=f4e164]
+              - link [ref=f4e165] [cursor=pointer]:
+                - /url: /products/logiix-retro-air-usb-fan/p/M0010765?Variant%20Color=BLACK
+                - paragraph [ref=f4e166]: LOGIIX
+              - link [ref=f4e167] [cursor=pointer]:
+                - /url: /products/logiix-retro-air-usb-fan/p/M0010765?Variant%20Color=BLACK
+                - heading "LOGiiX Retro Air USB Fan - Black - LGX-13322" [level=3] [ref=f4e168]
+              - button "Adding to wishlist Button" [ref=f4e169] [cursor=pointer]
+              - link "$24.99" [ref=f4e172] [cursor=pointer]:
+                - /url: /products/logiix-retro-air-usb-fan/p/M0010765?Variant%20Color=BLACK
+          - generic [ref=f4e179]:
+            - link [ref=f4e180] [cursor=pointer]:
+              - /url: /products/logiix-retro-air-usb-fan/p/M0010766?Variant%20Color=BLACK
+              - img "LOGiiX Retro Air USB Fan" [ref=f4e181]
+            - generic [ref=f4e182]:
+              - list [ref=f4e185]:
+                - listitem [ref=f4e186]:
+                  - img "BLACK" [ref=f4e188]
+                - listitem [ref=f4e189]:
+                  - img "BRONZE" [ref=f4e191]
+              - link [ref=f4e192] [cursor=pointer]:
+                - /url: /products/logiix-retro-air-usb-fan/p/M0010766?Variant%20Color=BLACK
+                - paragraph [ref=f4e193]: LOGIIX
+              - link [ref=f4e194] [cursor=pointer]:
+                - /url: /products/logiix-retro-air-usb-fan/p/M0010766?Variant%20Color=BLACK
+                - heading "LOGiiX Retro Air USB Fan - Black - LGX-13324" [level=3] [ref=f4e195]
+              - button "Adding to wishlist Button" [ref=f4e196] [cursor=pointer]
+              - link "$29.99" [ref=f4e199] [cursor=pointer]:
+                - /url: /products/logiix-retro-air-usb-fan/p/M0010766?Variant%20Color=BLACK
+          - generic [ref=f4e206]:
+            - link [ref=f4e207] [cursor=pointer]:
+              - /url: /products/details-mini-portable-cooling-fan/p/L0755832
+              - img "TEST" [ref=f4e208]
+            - generic [ref=f4e209]:
+              - link [ref=f4e210] [cursor=pointer]:
+                - /url: /products/details-mini-portable-cooling-fan/p/L0755832
+                - paragraph [ref=f4e211]: DETAILS
+              - link [ref=f4e212] [cursor=pointer]:
+                - /url: /products/details-mini-portable-cooling-fan/p/L0755832
+                - heading "Details Mini Portable Cooling Fan" [level=3] [ref=f4e213]
+              - button "Adding to wishlist Button" [ref=f4e214] [cursor=pointer]
+              - link "$9.99 $4.99" [ref=f4e217] [cursor=pointer]:
+                - /url: /products/details-mini-portable-cooling-fan/p/L0755832
+                - generic [ref=f4e219]:
+                  - generic [ref=f4e220]: $9.99
+                  - generic [ref=f4e221]: $4.99
+          - generic [ref=f4e225]:
+            - link [ref=f4e226] [cursor=pointer]:
+              - /url: /products/dyson-purifier-cool-tp07-air-purifier-whitesilver-369679-01/p/L1426878
+              - img "Dyson Purifier Cool TP07 Air Purifier - White/Silver - 369679-01" [ref=f4e227]
+            - generic [ref=f4e228]:
+              - link [ref=f4e229] [cursor=pointer]:
+                - /url: /products/dyson-purifier-cool-tp07-air-purifier-whitesilver-369679-01/p/L1426878
+                - paragraph [ref=f4e230]: DYSON
+              - link [ref=f4e231] [cursor=pointer]:
+                - /url: /products/dyson-purifier-cool-tp07-air-purifier-whitesilver-369679-01/p/L1426878
+                - heading "Dyson Purifier Cool TP07 Air Purifier - White/Silver - 369679-01" [level=3] [ref=f4e232]
+              - button "Adding to wishlist Button" [ref=f4e233] [cursor=pointer]
+              - link "$799.99 $399.99" [ref=f4e236] [cursor=pointer]:
+                - /url: /products/dyson-purifier-cool-tp07-air-purifier-whitesilver-369679-01/p/L1426878
+                - generic [ref=f4e238]:
+                  - generic [ref=f4e239]: $799.99
+                  - generic [ref=f4e240]: $399.99
+      - generic [ref=f4e241]:
+        - link [ref=f4e242] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/products/earths-own-barista-edition-oat-milk-946ml/p/L1049985
+          - img "Earths Own" [ref=f4e243]
+        - link [ref=f4e244] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/search?q=purexjul10
+          - img "Purex" [ref=f4e245]
+        - link [ref=f4e246] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/search?q=therockjul10
+          - img "The Rock cookware" [ref=f4e247]
+        - link [ref=f4e248] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/products/certified-data-all-in-one-desktop-27in-black-lp2702ch61/p/L3275390
+          - img "Cdata desktop PC" [ref=f4e249]
+      - article [ref=f4e251]:
+        - generic [ref=f4e252]:
+          - link "link to Sun Care" [ref=f4e253] [cursor=pointer]:
+            - /url: /category/sun-care/c/199
+            - heading "Sun Care" [level=2] [ref=f4e254]
+          - button "Next button of product shelf" [ref=f4e255] [cursor=pointer]
+        - generic [ref=f4e261]:
+          - generic [ref=f4e265]:
+            - link [ref=f4e266] [cursor=pointer]:
+              - /url: /products/blistex-daily-condition-treatment-spf-20-7g/p/L0105015
+              - img "Blistex Daily Condition Treatment - SPF 20 - 7g" [ref=f4e267]
+            - generic [ref=f4e268]:
+              - link [ref=f4e269] [cursor=pointer]:
+                - /url: /products/blistex-daily-condition-treatment-spf-20-7g/p/L0105015
+                - paragraph [ref=f4e270]: BLISTEX
+              - link [ref=f4e271] [cursor=pointer]:
+                - /url: /products/blistex-daily-condition-treatment-spf-20-7g/p/L0105015
+                - heading "Blistex Daily Condition Treatment - SPF 20 - 7g" [level=3] [ref=f4e272]
+              - button "Adding to wishlist Button" [ref=f4e273] [cursor=pointer]
+              - link "$5.19" [ref=f4e276] [cursor=pointer]:
+                - /url: /products/blistex-daily-condition-treatment-spf-20-7g/p/L0105015
+          - generic [ref=f4e283]:
+            - link [ref=f4e284] [cursor=pointer]:
+              - /url: /products/vichy-ideal-soleil-self-tanning-body-lotion-100ml/p/L0237040
+              - img "Vichy Ideal Soleil Self-Tanning Body Lotion - 100ml" [ref=f4e285]
+            - generic [ref=f4e286]:
+              - link [ref=f4e287] [cursor=pointer]:
+                - /url: /products/vichy-ideal-soleil-self-tanning-body-lotion-100ml/p/L0237040
+                - paragraph [ref=f4e288]: VICHY IDEAL SOLEIL
+              - link [ref=f4e289] [cursor=pointer]:
+                - /url: /products/vichy-ideal-soleil-self-tanning-body-lotion-100ml/p/L0237040
+                - heading "Vichy Ideal Soleil Self-Tanning Body Lotion - 100ml" [level=3] [ref=f4e290]
+              - button "Adding to wishlist Button" [ref=f4e291] [cursor=pointer]
+              - link "$32.95" [ref=f4e294] [cursor=pointer]:
+                - /url: /products/vichy-ideal-soleil-self-tanning-body-lotion-100ml/p/L0237040
+          - generic [ref=f4e301]:
+            - link [ref=f4e302] [cursor=pointer]:
+              - /url: /products/loreal-sublime-bronze-tinted-self-tanning-lotion-medium-150ml/p/L0771089
+              - img "L'Oreal Sublime Bronze Tinted Self Tanning Lotion Medium - 150ml" [ref=f4e303]
+            - generic [ref=f4e304]:
+              - link [ref=f4e305] [cursor=pointer]:
+                - /url: /products/loreal-sublime-bronze-tinted-self-tanning-lotion-medium-150ml/p/L0771089
+                - paragraph [ref=f4e306]: L'OREAL SUBLIME SELF TANNER
+              - link [ref=f4e307] [cursor=pointer]:
+                - /url: /products/loreal-sublime-bronze-tinted-self-tanning-lotion-medium-150ml/p/L0771089
+                - heading "L'Oreal Sublime Bronze Tinted Self Tanning Lotion Medium - 150ml" [level=3] [ref=f4e308]
+              - button "Adding to wishlist Button" [ref=f4e309] [cursor=pointer]
+              - link "$17.99 $14.39" [ref=f4e312] [cursor=pointer]:
+                - /url: /products/loreal-sublime-bronze-tinted-self-tanning-lotion-medium-150ml/p/L0771089
+                - generic [ref=f4e314]:
+                  - generic [ref=f4e315]: $17.99
+                  - generic [ref=f4e316]: $14.39
+          - generic [ref=f4e320]:
+            - link [ref=f4e321] [cursor=pointer]:
+              - /url: /products/hawaiian-tropic-island-sport-sunscreen-spray-spf-50-170g/p/L0359849
+              - img "Hawaiian Tropic Island Sport Sunscreen Spray - SPF 50 - 170g" [ref=f4e322]
+            - generic [ref=f4e323]:
+              - link [ref=f4e324] [cursor=pointer]:
+                - /url: /products/hawaiian-tropic-island-sport-sunscreen-spray-spf-50-170g/p/L0359849
+                - paragraph [ref=f4e325]: HAWAIIAN TROPIC
+              - link [ref=f4e326] [cursor=pointer]:
+                - /url: /products/hawaiian-tropic-island-sport-sunscreen-spray-spf-50-170g/p/L0359849
+                - heading "Hawaiian Tropic Island Sport Sunscreen Spray - SPF 50 - 170g" [level=3] [ref=f4e327]
+              - button "Adding to wishlist Button" [ref=f4e328] [cursor=pointer]
+              - link "$16.99" [ref=f4e331] [cursor=pointer]:
+                - /url: /products/hawaiian-tropic-island-sport-sunscreen-spray-spf-50-170g/p/L0359849
+      - generic [ref=f4e335]:
+        - link [ref=f4e336] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/summer-clothing-and-shoes/c/24
+          - img "Summer Clothing" [ref=f4e337]
+        - link [ref=f4e338] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/products/sennheiser-rs-120-w-bluetooth-headphones-black-rs120w/p/L2071204
+          - img "Sennheiser headphones" [ref=f4e339]
+        - link [ref=f4e340] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/webber-naturals/c/1854
+          - img "Webber Naturals" [ref=f4e341]
+        - link [ref=f4e342] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/pacifica/c/1595
+          - img "Pacifica skin care" [ref=f4e343]
+      - article [ref=f4e345]:
+        - generic [ref=f4e346]:
+          - link "link to Last Chance" [ref=f4e347] [cursor=pointer]:
+            - /url: /category/clearance/c/39
+            - heading "Last Chance" [level=2] [ref=f4e348]
+          - button "Next button of product shelf" [ref=f4e349] [cursor=pointer]
+        - generic [ref=f4e355]:
+          - generic [ref=f4e359]:
+            - link [ref=f4e360] [cursor=pointer]:
+              - /url: /products/targus-versalink-dual-video-travel-docking-station-dsu100us/p/L0061991
+              - img "Targus VersaLink Dual Video Travel Docking Station - DSU100US" [ref=f4e361]
+            - generic [ref=f4e362]:
+              - link [ref=f4e363] [cursor=pointer]:
+                - /url: /products/targus-versalink-dual-video-travel-docking-station-dsu100us/p/L0061991
+                - paragraph [ref=f4e364]: TARGUS
+              - link [ref=f4e365] [cursor=pointer]:
+                - /url: /products/targus-versalink-dual-video-travel-docking-station-dsu100us/p/L0061991
+                - heading "Targus VersaLink Dual Video Travel Docking Station - DSU100US" [level=3] [ref=f4e366]
+              - button "Adding to wishlist Button" [ref=f4e367] [cursor=pointer]
+              - link "$149.99 $119.99" [ref=f4e370] [cursor=pointer]:
+                - /url: /products/targus-versalink-dual-video-travel-docking-station-dsu100us/p/L0061991
+                - generic [ref=f4e372]:
+                  - generic [ref=f4e373]: $149.99
+                  - generic [ref=f4e374]: $119.99
+          - generic [ref=f4e378]:
+            - link [ref=f4e379] [cursor=pointer]:
+              - /url: /products/pc-anthem/p/L0153624
+              - img "PC Anthem" [ref=f4e380]
+            - generic [ref=f4e381]:
+              - link [ref=f4e382] [cursor=pointer]:
+                - /url: /products/pc-anthem/p/L0153624
+                - paragraph [ref=f4e383]: ELECTRONIC ARTS
+              - link [ref=f4e384] [cursor=pointer]:
+                - /url: /products/pc-anthem/p/L0153624
+                - heading "PC Anthem" [level=3] [ref=f4e385]
+              - button "Adding to wishlist Button" [ref=f4e386] [cursor=pointer]
+              - link "$24.99 $0.99" [ref=f4e389] [cursor=pointer]:
+                - /url: /products/pc-anthem/p/L0153624
+                - generic [ref=f4e391]:
+                  - generic [ref=f4e392]: $24.99
+                  - generic [ref=f4e393]: $0.99
+          - generic [ref=f4e397]:
+            - link [ref=f4e398] [cursor=pointer]:
+              - /url: /products/garmin-vivofit-4-black-large-100184703/p/L0160056
+              - img "Garmin Vivofit 4 - Black - Large - 100184703" [ref=f4e399]
+            - generic [ref=f4e400]:
+              - link [ref=f4e401] [cursor=pointer]:
+                - /url: /products/garmin-vivofit-4-black-large-100184703/p/L0160056
+                - paragraph [ref=f4e402]: GARMIN
+              - link [ref=f4e403] [cursor=pointer]:
+                - /url: /products/garmin-vivofit-4-black-large-100184703/p/L0160056
+                - heading "Garmin Vivofit 4 - Black - Large - 100184703" [level=3] [ref=f4e404]
+              - button "Adding to wishlist Button" [ref=f4e405] [cursor=pointer]
+              - link "$99.99 $79.99" [ref=f4e408] [cursor=pointer]:
+                - /url: /products/garmin-vivofit-4-black-large-100184703/p/L0160056
+                - generic [ref=f4e410]:
+                  - generic [ref=f4e411]: $99.99
+                  - generic [ref=f4e412]: $79.99
+          - generic [ref=f4e416]:
+            - link [ref=f4e417] [cursor=pointer]:
+              - /url: /products/logiix-phantom-keyboard-shield-macbook-air-13-and-pro-1315-turquoise-lgx-12712/p/L0199692
+              - img "Logiix Phantom Keyboard Shield - MacBook Air 13 and Pro 13/15 - Turquoise - LGX-12712" [ref=f4e418]
+            - generic [ref=f4e419]:
+              - link [ref=f4e420] [cursor=pointer]:
+                - /url: /products/logiix-phantom-keyboard-shield-macbook-air-13-and-pro-1315-turquoise-lgx-12712/p/L0199692
+                - paragraph [ref=f4e421]: LOGIIX
+              - link [ref=f4e422] [cursor=pointer]:
+                - /url: /products/logiix-phantom-keyboard-shield-macbook-air-13-and-pro-1315-turquoise-lgx-12712/p/L0199692
+                - heading "Logiix Phantom Keyboard Shield - MacBook Air 13 and Pro 13/15 - Turquoise - LGX-12712" [level=3] [ref=f4e423]
+              - button "Adding to wishlist Button" [ref=f4e424] [cursor=pointer]
+              - link "$24.99 $4.88" [ref=f4e427] [cursor=pointer]:
+                - /url: /products/logiix-phantom-keyboard-shield-macbook-air-13-and-pro-1315-turquoise-lgx-12712/p/L0199692
+                - generic [ref=f4e429]:
+                  - generic [ref=f4e430]: $24.99
+                  - generic [ref=f4e431]: $4.88
+      - link [ref=f4e432] [cursor=pointer]:
+        - /url: /believe-in-better
+        - img "believe in better" [ref=f4e434]
+      - link [ref=f4e435] [cursor=pointer]:
+        - /url: https://www.londondrugs.com/every-child-matters
+        - img "raising awareness" [ref=f4e437]
+  - generic [ref=f4e440]:
+    - generic [ref=f4e441]:
+      - heading "Email Newsletter" [level=3] [ref=f4e442]
+      - paragraph [ref=f4e443]: Sign up and receive promotions and special offers by email
+    - textbox "Enter your email" [ref=f4e445]
+    - button "SIGN UP" [ref=f4e447] [cursor=pointer]
+  - contentinfo [ref=f4e448]:
+    - generic [ref=f4e453]:
+      - generic [ref=f4e455]:
+        - generic [ref=f4e457]:
+          - paragraph [ref=f4e462]: Our Blogs
+          - generic [ref=f4e463]:
+            - generic [ref=f4e465]:
+              - link [ref=f4e468] [cursor=pointer]:
+                - /url: https://blog.londondrugs.com
+              - link "londondrugs blog" [ref=f4e471] [cursor=pointer]:
+                - /url: https://blog.londondrugs.com
+                - paragraph [ref=f4e473]: LONDON DRUGS BLOG
+            - generic [ref=f4e475]:
+              - link [ref=f4e478] [cursor=pointer]:
+                - /url: http://www.greendeal.ca/blog
+              - link "greendeal-blog" [ref=f4e481] [cursor=pointer]:
+                - /url: http://www.greendeal.ca/blog
+                - paragraph [ref=f4e483]: GREEN DEAL BLOG
+        - generic [ref=f4e487]:
+          - generic [ref=f4e490]:
+            - generic "our-services" [ref=f4e492]: Our Services
+            - generic [ref=f4e494]:
+              - generic "presc" [ref=f4e495]:
+                - link [ref=f4e496] [cursor=pointer]:
+                  - /url: https://blog.londondrugs.com/pharmacy-services-and-information
+                  - generic "prescription-refills" [ref=f4e497]:
+                    - paragraph [ref=f4e499]: Prescription Refills
+              - link [ref=f4e501] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com/manage-prescriptions/delivery-and-pickup
+                - generic "prescription-delivery" [ref=f4e502]:
+                  - paragraph [ref=f4e504]: Prescription Delivery
+              - link [ref=f4e506] [cursor=pointer]:
+                - /url: /apple-service
+                - generic "apple-services" [ref=f4e507]:
+                  - paragraph [ref=f4e509]: Apple Service
+              - link [ref=f4e511] [cursor=pointer]:
+                - /url: /tech-services
+                - generic "tech-services" [ref=f4e512]:
+                  - paragraph [ref=f4e514]: TECH Services
+              - link [ref=f4e516] [cursor=pointer]:
+                - /url: /photography-services
+                - generic "photography-services" [ref=f4e517]:
+                  - paragraph [ref=f4e519]: Photography Services
+              - link [ref=f4e521] [cursor=pointer]:
+                - /url: https://www.ldinsurance.ca
+                - generic "insurance-services" [ref=f4e522]:
+                  - paragraph [ref=f4e524]: Insurance Services
+              - link [ref=f4e526] [cursor=pointer]:
+                - /url: /subscriptions
+                - generic "subscription-services" [ref=f4e527]:
+                  - paragraph [ref=f4e529]: Subscription Services
+              - link [ref=f4e531] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com/health-clinics/travel-clinic
+                - generic "travel-clinics" [ref=f4e532]:
+                  - paragraph [ref=f4e534]: Travel Clinics
+              - link [ref=f4e536] [cursor=pointer]:
+                - /url: /optical/optical-london-drugs-new
+                - generic "optical-london-drugs" [ref=f4e537]:
+                  - paragraph [ref=f4e539]: Optical London Drugs
+              - link [ref=f4e541] [cursor=pointer]:
+                - /url: /emergencies
+                - generic "emergency-preparedness" [ref=f4e542]:
+                  - paragraph [ref=f4e544]: Emergency Preparedness
+              - link [ref=f4e546] [cursor=pointer]:
+                - /url: /passportphoto
+                - generic "passport-photos" [ref=f4e547]:
+                  - paragraph [ref=f4e549]: Passport Photos
+              - link [ref=f4e551] [cursor=pointer]:
+                - /url: /postal-outlets-available-at-select-london-drugs-stores/LDPostalOutlets
+                - generic "postal-outlets" [ref=f4e552]:
+                  - paragraph [ref=f4e554]: Postal Outlets
+              - link [ref=f4e556] [cursor=pointer]:
+                - /url: https://www.tld.com
+                - generic "tld-computers" [ref=f4e557]:
+                  - paragraph [ref=f4e559]: TLD Computers
+          - generic [ref=f4e562]:
+            - generic "customer-care" [ref=f4e564]: Customer Care
+            - generic [ref=f4e566]:
+              - link [ref=f4e568] [cursor=pointer]:
+                - /url: /customer-service/customer-service-landing
+                - generic "customer-service" [ref=f4e569]:
+                  - paragraph [ref=f4e571]: Customer Service
+              - link [ref=f4e573] [cursor=pointer]:
+                - /url: /enewsletter-settings
+                - generic "email-subscription-settings" [ref=f4e574]:
+                  - paragraph [ref=f4e576]: Email Subscription Settings
+              - link [ref=f4e578] [cursor=pointer]:
+                - /url: /contact-us
+                - generic "contact-us" [ref=f4e579]:
+                  - paragraph [ref=f4e581]: Contact Us
+              - link [ref=f4e583] [cursor=pointer]:
+                - /url: /frequently-asked-questions/faqs
+                - generic "freq-asked" [ref=f4e584]:
+                  - paragraph [ref=f4e586]: Frequently Asked Questions
+              - link [ref=f4e588] [cursor=pointer]:
+                - /url: /our-guarantee
+                - generic "our-guarantee" [ref=f4e589]:
+                  - paragraph [ref=f4e591]: Our Guarantee
+              - link [ref=f4e593] [cursor=pointer]:
+                - /url: /purchase-protection-plan/purchase-protection-plan-introduction
+                - generic "purchase-protection-plans" [ref=f4e594]:
+                  - paragraph [ref=f4e596]: Purchase Protection Plan
+              - link [ref=f4e598] [cursor=pointer]:
+                - /url: /product-recalls-and-advisories/product-recall-and-advisories
+                - generic "product-refills-advisories" [ref=f4e599]:
+                  - paragraph [ref=f4e601]: Product Recalls & Advisories
+              - link [ref=f4e603] [cursor=pointer]:
+                - /url: /returns-and-exchanges
+                - generic "return-exchanges" [ref=f4e604]:
+                  - paragraph [ref=f4e606]: Return & Exchanges
+              - link [ref=f4e608] [cursor=pointer]:
+                - /url: /shipping-and-delivery/shippinganddelivery
+                - paragraph [ref=f4e611]: Shipping & Delivery
+              - link [ref=f4e613] [cursor=pointer]:
+                - /url: /faq-for-quick-refill
+                - paragraph [ref=f4e616]: FAQ for Quick Refill
+          - generic [ref=f4e619]:
+            - generic [ref=f4e620]: Company Info
+            - generic [ref=f4e623]:
+              - link [ref=f4e625] [cursor=pointer]:
+                - /url: /cyber-incident-update-employee-notice
+                - paragraph [ref=f4e628]: CYBER INCIDENT UPDATE - EMPLOYEE NOTICE
+              - link [ref=f4e630] [cursor=pointer]:
+                - /url: /believe-in-better
+                - paragraph [ref=f4e633]: Believe in Better
+              - link [ref=f4e635] [cursor=pointer]:
+                - /url: /corporate-information/corporate-info
+                - paragraph [ref=f4e638]: Corporate Info
+              - link [ref=f4e640] [cursor=pointer]:
+                - /url: /about-london-drugs/about-us
+                - paragraph [ref=f4e643]: London Drugs Story
+              - link [ref=f4e645] [cursor=pointer]:
+                - /url: /stores
+                - paragraph [ref=f4e648]: Our Locations
+              - link [ref=f4e650] [cursor=pointer]:
+                - /url: https://london-drugs-limited-jobs.careerplug.com/account
+                - generic "careers" [ref=f4e651]:
+                  - paragraph [ref=f4e653]: Careers
+              - link [ref=f4e655] [cursor=pointer]:
+                - /url: /london-drugs-in-your-community/cominvolve
+                - generic "community" [ref=f4e656]:
+                  - paragraph [ref=f4e658]: Community
+              - link [ref=f4e660] [cursor=pointer]:
+                - /url: /news-and-events/news-and-events
+                - generic "news-events" [ref=f4e661]:
+                  - paragraph [ref=f4e663]: News & Events
+              - link [ref=f4e665] [cursor=pointer]:
+                - /url: /influencers
+                - generic "news-events" [ref=f4e666]:
+                  - paragraph [ref=f4e668]: Influencers
+              - link [ref=f4e670] [cursor=pointer]:
+                - /url: https://blog.londondrugs.com/employment-recruitment-scam-advisory
+                - generic "avoid-recruitment-fraud" [ref=f4e671]:
+                  - paragraph [ref=f4e673]: Avoid Recruitment Fraud
+              - link [ref=f4e675] [cursor=pointer]:
+                - /url: https://cdn.builder.io/o/assets%2F062164fc6d8546c68b6329a2b6a851f1%2Feb834c26acec46178c53dc20c4484293?alt=media&token=80adc0f7-10fd-4c11-b184-b0dce7a8c427&apiKey=062164fc6d8546c68b6329a2b6a851f1
+                - paragraph [ref=f4e678]: Pay Transparency Report
+              - link "commitment-against-slavery" [ref=f4e681] [cursor=pointer]:
+                - /url: https://www.londondrugs.com/commitment-against-slavery
+                - paragraph [ref=f4e683]: COMMITMENT AGAINST SLAVERY
+      - generic [ref=f4e684]:
+        - generic [ref=f4e685]:
+          - generic "connect-with-us" [ref=f4e686]:
+            - paragraph [ref=f4e688]: Connect With Us
+          - generic [ref=f4e689]:
+            - link "londondrugs-facebook" [ref=f4e690] [cursor=pointer]:
+              - /url: https://www.facebook.com/LondonDrugs
+            - link "londondrugs-twitter" [ref=f4e692] [cursor=pointer]:
+              - /url: https://x.com/LondonDrugs/
+            - link "londondrugs-pininterest" [ref=f4e694] [cursor=pointer]:
+              - /url: https://ca.pinterest.com/londondrugs/
+            - link "londondrugs-instagram" [ref=f4e696] [cursor=pointer]:
+              - /url: https://www.instagram.com/londondrugs/
+            - link "londondrugs-youtube" [ref=f4e698] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/LondonDrugsLtd
+            - link "londondrugs-tiktok" [ref=f4e700] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@londondrugs
+        - generic [ref=f4e702]:
+          - img "London Drugs Logo" [ref=f4e704]
+          - generic [ref=f4e705]:
+            - generic [ref=f4e706]:
+              - strong [ref=f4e709]:
+                - link "Legal Terms" [ref=f4e710] [cursor=pointer]:
+                  - /url: /legal-terms-of-use/TermsConditions
+              - strong [ref=f4e713]:
+                - link "Privacy Policy" [ref=f4e714] [cursor=pointer]:
+                  - /url: /london-drugs-privacy-policy/privacy-policy
+              - strong [ref=f4e717]:
+                - link "Security Policy & Cookie Notice" [ref=f4e718] [cursor=pointer]:
+                  - /url: /security-policy-and-cookie-notice/privacy-security
+              - strong [ref=f4e721]:
+                - link "Sitemap" [ref=f4e722] [cursor=pointer]:
+                  - /url: /sitemap/
+            - paragraph [ref=f4e725]: © 2026 London Drugs. All rights reserved.

@@ -93,9 +93,22 @@ export class HomePage extends BasePage {
     /**
      * Waits for the search input to be visible and enabled (React hydration complete).
      * Call this after navigate() before interacting with the search input.
+     *
+     * Uses a try/catch fallback to handle cross-browser timing differences
+     * (Edge, WebKit) where React hydration may delay the locator resolution.
      */
     async waitForSearchInput(): Promise<void> {
-        await this.searchInput.waitFor({ state: 'visible', timeout: 60_000 });
+        try {
+            await this.searchInput.waitFor({ state: 'visible', timeout: 60_000 });
+        } catch {
+            // Fallback for browsers where the Playwright locator resolves late:
+            // wait directly on the DOM for the input to exist and be interactive.
+            await this.page.waitForSelector('input[placeholder="Find your product"]', {
+                state: 'visible',
+                timeout: 60_000,
+            });
+        }
+        // Final check: confirm the input is not disabled (hydration complete).
         await this.page.waitForFunction(
             () => {
                 const input = document.querySelector<HTMLInputElement>('input[placeholder="Find your product"]');

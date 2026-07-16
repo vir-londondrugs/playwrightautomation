@@ -1,0 +1,188 @@
+[
+  {
+    "execution_id": "34099284-17bf-4fc6-8537-7728dccef38e",
+    "step_id": "analyze-test-cases",
+    "version_sequence": 1,
+    "session_name": "test-automation__pli-20260715-x4uy1o__qewa-001",
+    "capability_name": "quality-engineering-web-automation",
+    "started_at": "2026-07-15T16:31:11.037Z",
+    "completed_at": "2026-07-15T16:41:19.825Z",
+    "duration_seconds": 609,
+    "status": "Success",
+    "request_type": "Generation",
+    "executor": "coda-batch",
+    "run_id": "1784133071037-b1kv2tkb",
+    "model": "anthropic/claude-sonnet-4-6",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": false,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 9520926,
+      "output_tokens": 24206,
+      "cost_usd": 9.356017
+    },
+    "items_spawned": 1,
+    "artifact_group_id": "aa97844d-b171-4906-9854-1b29233738c9"
+  },
+  {
+    "execution_id": "69fdc4aa-7082-48eb-ab0e-0b7d1556960a",
+    "step_id": "web-discovery",
+    "version_sequence": 1,
+    "session_name": "test-automation__pli-20260715-x4uy1o__qewa-001",
+    "capability_name": "quality-engineering-web-automation",
+    "started_at": "2026-07-15T16:44:41.839Z",
+    "completed_at": "2026-07-15T17:13:19.604Z",
+    "duration_seconds": 1718,
+    "status": "Success",
+    "request_type": "Generation",
+    "executor": "coda-batch",
+    "run_id": "1784133881839-1k97eswj",
+    "model": "anthropic/claude-sonnet-4-6",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": false,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 22530251,
+      "output_tokens": 31506,
+      "cost_usd": 22.778419
+    },
+    "items_spawned": 3,
+    "artifact_group_id": "be7fa293-772d-4d31-969e-d8e1c9865074"
+  },
+  {
+    "execution_id": "6dbd6fc8-5fde-481d-ab2b-53d13a276aad",
+    "step_id": "framework-exploration",
+    "version_sequence": 1,
+    "session_name": "test-automation__pli-20260715-x4uy1o__qewa-001",
+    "capability_name": "quality-engineering-web-automation",
+    "started_at": "2026-07-15T17:14:29.454Z",
+    "completed_at": "2026-07-15T17:22:34.765Z",
+    "duration_seconds": 485,
+    "status": "Success",
+    "request_type": "Generation",
+    "executor": "coda-batch",
+    "run_id": "1784135669454-1xl6t869",
+    "model": "anthropic/claude-sonnet-4-6",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": false,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 6916009,
+      "output_tokens": 17809,
+      "cost_usd": 6.641942
+    },
+    "items_spawned": 3,
+    "artifact_group_id": "44d2f63a-6317-4844-972e-c5e7346c2f43"
+  },
+  {
+    "execution_id": "c1001cde-9658-429a-916d-079ac62c2326",
+    "step_id": "automation-planning",
+    "version_sequence": 1,
+    "session_name": "test-automation__pli-20260715-x4uy1o__qewa-001",
+    "capability_name": "quality-engineering-web-automation",
+    "started_at": "2026-07-15T17:22:36.281Z",
+    "completed_at": "2026-07-15T17:26:57.205Z",
+    "duration_seconds": 261,
+    "status": "Success",
+    "request_type": "Generation",
+    "executor": "coda-batch",
+    "run_id": "1784136156281-b4ewi35b",
+    "model": "anthropic/claude-sonnet-4-6",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": false,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 2879832,
+      "output_tokens": 13040,
+      "cost_usd": 2.153714
+    },
+    "items_spawned": 3,
+    "artifact_group_id": "3dc86693-c8c0-4db8-8dde-af769879ab82"
+  },
+  {
+    "execution_id": "dcf290c1-9929-495e-a7ab-53f7acae5951",
+    "step_id": "automation-code-generation",
+    "version_sequence": 1,
+    "session_name": "test-automation__pli-20260715-x4uy1o__qewa-001",
+    "capability_name": "quality-engineering-web-automation",
+    "started_at": "2026-07-15T18:45:31.376Z",
+    "completed_at": "2026-07-15T18:58:56.693Z",
+    "duration_seconds": 805,
+    "status": "Success",
+    "request_type": "Generation",
+    "executor": "coda-batch",
+    "run_id": "1784141131376-5jy5bs52",
+    "model": "anthropic/claude-sonnet-4-6",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": false,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 12924835,
+      "output_tokens": 33122,
+      "cost_usd": 13.39129
+    },
+    "items_spawned": 1,
+    "artifact_group_id": "01597905-cd0c-4ca1-be1d-0a33dd6c304f"
+  },
+  {
+    "execution_id": "5ed014f8-0e41-4b66-880a-34ea69ed719a",
+    "step_id": "automation-test-execution",
+    "version_sequence": 1,
+    "session_name": "test-automation__pli-20260715-x4uy1o__qewa-001",
+    "capability_name": "quality-engineering-web-automation",
+    "started_at": "2026-07-15T19:05:28.802Z",
+    "completed_at": "2026-07-15T21:34:21.345Z",
+    "duration_seconds": 8933,
+    "status": "Success",
+    "request_type": "Generation",
+    "executor": "coda-batch",
+    "run_id": "1784142328802-9bkguww2",
+    "model": "anthropic/claude-sonnet-4-6",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": false,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 16000614,
+      "output_tokens": 23373,
+      "cost_usd": 25.606867
+    },
+    "items_spawned": 1,
+    "artifact_group_id": "257a0731-d687-4211-bbd5-6ae7b8603189"
+  }
+]

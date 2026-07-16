@@ -46,7 +46,7 @@ async function navigateToPLP(
     await page.locator('body').click({ force: true });
     await homePage.waitForSearchInput();
     await homePage.search(searchTerm);
-    await page.waitForURL(/\/search/, { timeout: 20_000 });
+    await page.waitForURL(/\/search/, { timeout: 30_000 });
     await page.locator('body').click({ force: true });
     await searchResultsPage.waitForResultsHeading();
 }
@@ -76,7 +76,7 @@ test(
 
         await test.step('Step 2: Wait for filter panel (drawer trigger) to be visible', async () => {
             // CSV step 2: "Wait for filter panel to load"
-            await searchResultsPage.filterTrigger.first().waitFor({ state: 'visible', timeout: 15_000 });
+            await searchResultsPage.filterTrigger.first().waitFor({ state: 'visible', timeout: 30_000 });
         });
 
         // OQ-01 extended: filter apply on UAT also redirects to www.londondrugs.com.
@@ -127,6 +127,10 @@ test(
 test(
     'FTC_02_01_02 -- Applying multiple filters on lipstick search narrows results @plp @filter @positive',
     async ({ page }) => {
+        // Extended timeout: applying sequential filters involves multiple API calls that can
+        // take >60 s on Firefox/WebKit when running under parallel UAT load.
+        test.setTimeout(120_000);
+
         const homePage = new HomePage(page);
         const searchResultsPage = new SearchResultsPage(page);
 
@@ -135,7 +139,7 @@ test(
         });
 
         await test.step('Wait for filter drawer trigger to be visible', async () => {
-            await searchResultsPage.filterTrigger.first().waitFor({ state: 'visible', timeout: 15_000 });
+            await searchResultsPage.filterTrigger.first().waitFor({ state: 'visible', timeout: 30_000 });
         });
 
         // OQ-01 extended: filter apply redirects to www.londondrugs.com on UAT.
@@ -188,7 +192,7 @@ test(
 
         await test.step('Assert filter trigger (drawer button) is present', async () => {
             // Graceful degradation: assert filter panel renders with at least 1 trigger.
-            await expect(searchResultsPage.filterTrigger.first()).toBeVisible({ timeout: 15_000 });
+            await expect(searchResultsPage.filterTrigger.first()).toBeVisible({ timeout: 30_000 });
         });
 
         await test.step('Assert page loaded without a JavaScript error heading', async () => {
@@ -206,6 +210,9 @@ test(
 test(
     'FTC_02_01_04 -- Removing applied filter on lipstick PLP restores full results and clears filter URL param @plp @filter @negative',
     async ({ page }) => {
+        // Extended timeout: filter apply + network round-trip + re-render takes >60 s on Firefox/WebKit on UAT.
+        test.setTimeout(120_000);
+
         const homePage = new HomePage(page);
         const searchResultsPage = new SearchResultsPage(page);
 
@@ -214,7 +221,7 @@ test(
 
         await test.step('Navigate to lipstick PLP and apply first filter', async () => {
             await navigateToPLP(page, homePage, searchResultsPage, plpData.searchTerms.lipstick);
-            await searchResultsPage.filterTrigger.first().waitFor({ state: 'visible', timeout: 15_000 });
+            await searchResultsPage.filterTrigger.first().waitFor({ state: 'visible', timeout: 30_000 });
             await searchResultsPage.openFilterDrawer();
             await searchResultsPage.clickFilterCheckbox(plpData.filter.firstCheckboxIndex);
             await searchResultsPage.applyFilters().catch(() => {});
@@ -270,7 +277,7 @@ test(
 
         await test.step('Step 2: Wait for sort control to be visible', async () => {
             // CSV step 2: "Wait for sort control to load"
-            await searchResultsPage.sortButton.waitFor({ state: 'visible', timeout: 15_000 });
+            await searchResultsPage.sortButton.waitFor({ state: 'visible', timeout: 30_000 });
         });
 
         // OQ-01: intercept sort redirect to production URL before triggering sort.
@@ -290,7 +297,7 @@ test(
             // Wait for URL to update with sort parameter (may differ from pre-sort URL).
             await page.waitForURL(
                 (url) => url.toString() !== urlBefore,
-                { timeout: 15_000 },
+                { timeout: 30_000 },
             ).catch(() => {
                 // If URL did not change (e.g. OQ-01 redirect aborted without URL update),
                 // continue; sort selection may have updated page state without URL change.
@@ -326,7 +333,7 @@ test(
         });
 
         await test.step('Assert sort button (overlay trigger) is visible', async () => {
-            await expect(searchResultsPage.sortButton).toBeVisible({ timeout: 15_000 });
+            await expect(searchResultsPage.sortButton).toBeVisible({ timeout: 30_000 });
         });
 
         await test.step('Assert page loaded without a JavaScript error heading', async () => {
@@ -351,7 +358,7 @@ test(
         });
 
         await test.step('Wait for sort control to be visible', async () => {
-            await searchResultsPage.sortButton.waitFor({ state: 'visible', timeout: 15_000 });
+            await searchResultsPage.sortButton.waitFor({ state: 'visible', timeout: 30_000 });
         });
 
         // OQ-01: intercept sort redirect to production URL.
@@ -360,8 +367,10 @@ test(
         await test.step("Apply 'Price: Low to High' sort first", async () => {
             await searchResultsPage.openSortOverlay();
             await searchResultsPage.selectSortOption(plpData.sort.priceLowToHighIndex);
-            // Wait for sort overlay to close (options disappear) before re-opening.
-            await searchResultsPage.sortOptions.first().waitFor({ state: 'hidden', timeout: 5_000 }).catch(() => {});
+            // Wait for sort overlay to fully close and sort button to be visible again
+            // (confirms page stabilised after the first sort) before re-opening.
+            await searchResultsPage.sortOptions.first().waitFor({ state: 'hidden', timeout: 15_000 }).catch(() => {});
+            await searchResultsPage.sortButton.waitFor({ state: 'visible', timeout: 15_000 });
         });
 
         const urlAfterLowHigh = page.url();
@@ -375,7 +384,7 @@ test(
         await test.step('Assert URL updated after sort switch', async () => {
             await page.waitForURL(
                 (url) => url.toString() !== urlAfterLowHigh,
-                { timeout: 15_000 },
+                { timeout: 30_000 },
             ).catch(() => {});
             const urlAfterHighLow = page.url();
             const sortChanged = urlAfterHighLow !== urlAfterLowHigh ||

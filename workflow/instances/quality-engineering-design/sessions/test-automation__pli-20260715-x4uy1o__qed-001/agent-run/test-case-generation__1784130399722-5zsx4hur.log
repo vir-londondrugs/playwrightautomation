@@ -1,0 +1,308 @@
+===== EXECUTION START =====
+timestamp: 2026-07-15T15:46:41.795Z
+capability: quality-engineering-design
+session: test-automation__pli-20260715-x4uy1o__qed-001
+stepId: test-case-generation
+model: anthropic/claude-sonnet-4-6
+executor: coda-batch
+runId: 1784130399722-5zsx4hur
+===== STDIN (prompt) =====
+# Quality Engineering Test Cases Generation
+
+**YOUR MISSION**
+Generate comprehensive functional test case suites for all in-scope epics using
+FIC methodology. Read user stories and acceptance criteria from `/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/product-delivery/user-stories`,
+optionally enrich with PRD business rules from `/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/product-definition/prd`, epic context from
+`/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/product-definition/epics`, strategic guidelines from `/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-planning/qa-test-strategy`, and risk
+priorities from `/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-planning/qa-master-test-plan`. Write one Gherkin suite file per epic
+plus a coverage manifest to `/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-design/test-cases`.
+
+Read inputs from: /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/product-delivery/user-stories
+Write outputs to: /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-design/test-cases
+
+**Mode:** BUILD (default) · REPAIR when `failure_feedback` is non-empty.
+
+## Parameters
+| Name | Type | Required | Description | Default |
+|------|------|----------|-------------|---------|
+| project_name | string | Yes | Project identifier used across all phases | project |
+| user_stories_path | string | Yes | Path to user stories folder or file for the target epic | /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/product-delivery/user-stories |
+| test_cases_path | string | No | Output path for functional test cases. Falls back to default if not provided. | /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-design/test-cases |
+| test_strategy_path | string | No | Path to test strategy document. Defaults to Gherkin format if absent. | /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-planning/qa-test-strategy |
+| master_test_plan_path | string | No | Path to master test plan. All epics treated as MVP if absent. | /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-planning/qa-master-test-plan |
+| prd_path | string | No | Path to PRD output folder. PRD business rules cross-reference skipped if absent. | /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/product-definition/prd |
+| epics_path | string | No | Path to epics output folder. Epic context derived from user stories if absent. | /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/product-definition/epics |
+| adrs_path | string | No | Path to ADR collection. | /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/software-architecture/adrs |
+| failure_feedback | string | No | Feedback from a prior quality gate rejection. Triggers REPAIR mode when non-empty. |  |
+
+## Constraints
+- Never invent test cases not derived from source acceptance criteria or business rules.
+- Generate positive, negative, and boundary test cases for every story in scope.
+- MVP epics (Must Have in MTP) must receive extra negative depth (injection, concurrency, dependency failures).
+- Domain tag on each test case MUST match the source story domain tag ([BE] / [FE]).
+- Use declarative business language in Gherkin steps — no framework-specific tooling references.
+- Apply Write-Flush-Forget: write each epic suite to disk immediately after generation; do not batch.
+- In REPAIR mode, rewrite only the targeted epic suites identified in `failure_feedback`; preserve all others.
+
+
+Expected Output:
+test_cases_path: string
+
+capability = 'quality-engineering-design'
+
+## CONTEXT-PACK (read on demand)
+
+Files available in `/Users/virginia.zambudio/PlaywrightAutomation/context-pack`. Use `cat <path>` when an index entry is not enough.
+
+- `context-pack/system/execution-protocol.md` (472 lines) → ROUTING (read first) — ROUTING: This file is self-routing. Read only the sections your skill needs,
+
+## Skills
+Use only these skills (invoke as slash commands, e.g. `/generating-test-cases` — not via the stepwise CLI):
+- generating-test-cases
+
+## Mandatory pre-flight read
+
+Before invoking the skill or making any tool call against the workspace,
+you MUST Read every file in the CONTEXT-PACK manifest above that is
+marked `→ ROUTING (read first)`. Those files are routing indexes — they
+map the current skill to the small set of context-pack sections that are
+load-bearing for this step. Read those sections lazily, only as each one
+becomes relevant. Do not preload non-routing files.
+
+If you skip a routing read, downstream contracts (output sidecar,
+non-ASCII handling, section-shape generation) will not be honored and
+this step will fail review.
+
+# Agent Behavior Add-ons
+
+## AI Pods operating rules (always in effect)
+
+Running INSIDE active Stepwise execution. Completion + step navigation automatic — finish response → step completes, next starts.
+
+- NO calls: `stepwise session exec`, `stepwise session complete`, `stepwise session next`, `stepwise session previous` — they fail or kill your process. Use only commands under "Allowed commands" in Run metadata.
+- Non-interactive — no human watching. Never ask. Proceed with sensible defaults / open questions, or `stepwise session exec-fail --message "<reason>"` if truly stuck.
+- Zero-Invention: never fabricate values, identifiers, APIs, file paths, schemas, requirements not grounded in inputs or actual code. Explicit upstream details = binding — never silently rename, simplify, reorder, substitute. Unknown → open question or `exec-fail`. Never guess.
+- Heartbeat: FIRST ACTION — write `_progress.json` (`status: RUNNING`) to the output folder before any other file write; prevents orchestrator SIGINT. LAST ACTION before final response — set `status: COMPLETED` + `completed_at` (or `FAILED` if it failed). Full lifecycle: execution-protocol §2.
+- Output sidecar: before final response, write required JSON to exact `output_file` path from Run metadata, with declared keys VERBATIM — never reconstruct or rename. But each output **path value** = the actual on-disk path you wrote (resolved/nested folder), NOT the flat input token — echoing the input param breaks the downstream step.
+- No completion claim / final summary until required artifacts exist on disk. Verify, then finish.
+- Never expose, log, or commit secrets, credentials, API keys, tokens, `.env` — not in code, artifacts, outputs, commits, or logs.
+---
+Precedence: on any conflict, the step's task instructions, Zero-Invention, and source/spec fidelity win over brevity or any add-on guidance above.
+
+
+## Stepwise runtime rules
+
+You are running INSIDE an active stepwise execution. Completion and step navigation are automatic — when you finish your response, the step is marked complete and the next step starts.
+
+Do NOT call: `stepwise session exec`, `stepwise session complete`, `stepwise session next`, `stepwise session previous`. They will fail or kill your own process.
+
+The only allowed CLI calls are listed under "Allowed commands" in the Run metadata block at the bottom of this prompt. Use those commands verbatim (do not substitute placeholders manually).
+
+Parallel delegation: UNAVAILABLE — use the execution-protocol §14 inline sequential fallback (identical output, one unit at a time).
+
+## Output parameters
+
+Write a JSON object with these exact keys to the `output_file` path declared in the Run metadata block at the bottom of this prompt:
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| test_cases_path | string | yes |  |
+
+Mandatory final file write:
+- Before final_response, write the sidecar JSON to the exact `output_file` path from Run metadata.
+- Include every key in the table above.
+- Do not reconstruct or rename the path. Do not write only to `_outputs.json` unless the explicit `output_file` path is unavailable.
+- If this sidecar is missing and no fallback exists, Stepwise records outputs as `{}` and downstream artifact review/refinement cannot find target artifacts.
+
+Run `stepwise session show` (see Run metadata for the full command) if you need to confirm parameter names at runtime.
+
+## Run metadata
+
+session = 'test-automation__pli-20260715-x4uy1o__qed-001'
+output_file = '/Users/virginia.zambudio/PlaywrightAutomation/_stepwise_outputs_1784130399722-5zsx4hur.json'
+
+Allowed commands (run-specific):
+- `stepwise session show --session test-automation__pli-20260715-x4uy1o__qed-001 quality-engineering-design` — full session/step state and output-parameter definitions.
+- `stepwise session status --session test-automation__pli-20260715-x4uy1o__qed-001 quality-engineering-design` — concise progress summary.
+- `stepwise session exec-fail --session test-automation__pli-20260715-x4uy1o__qed-001 quality-engineering-design --message "<reason>"` — only if you cannot recover.
+
+## Runtime Human Guidance
+
+A human operator may add guidance while this run is executing. Treat applicable guidance as live user instruction for this run, unless it conflicts with system/developer instructions or safety rules.
+
+Guidance file: `/Users/virginia.zambudio/PlaywrightAutomation/workflow/instances/quality-engineering-design/sessions/test-automation__pli-20260715-x4uy1o__qed-001/agent-run/1784130399722-5zsx4hur/human-guidance.jsonl`
+Acknowledgement file: `/Users/virginia.zambudio/PlaywrightAutomation/workflow/instances/quality-engineering-design/sessions/test-automation__pli-20260715-x4uy1o__qed-001/agent-run/1784130399722-5zsx4hur/human-guidance-acks.jsonl`
+
+You MUST check the guidance file:
+1. as your first action after reading this prompt
+2. before starting any named phase, plan phase, implementation phase, or review phase
+3. before advancing from one phase to the next phase
+4. before starting any large edit, file-write batch, or irreversible change
+5. before running long commands or test suites
+6. after any command/test/build failure
+7. after each meaningful subtask
+8. before your final response
+9. at least every 5 minutes during long-running work
+
+For multi-phase skills and plans, this is a hard phase-boundary checkpoint: do not begin a new phase, resume a next pending phase, or loop from one phase back into execution until you have checked guidance and acknowledged every new message.
+
+When checking guidance, read all messages in the guidance file and compare them with messages already acknowledged in the acknowledgement file. For each new message you process, append one JSON object line to the acknowledgement file:
+`{"message_id":"<id>","ack_at":"<ISO timestamp>","status":"seen|applied|rejected|deferred","note":"<short note>"}`
+
+Use `applied` when you changed behavior because of the guidance. Use `seen` when no change was needed. Use `rejected` or `deferred` when the guidance is not applicable, conflicts with higher-priority instructions, or cannot be handled yet; include the reason in `note`.
+
+If a new guidance message changes scope, priority, constraints, or acceptance criteria, update your active plan/progress notes before continuing. If guidance tells you to pause, stop, hold, cancel, or wait for confirmation, stop at the next safe point and report that the run is paused by human guidance instead of continuing silently.
+
+Recommended check command:
+`test -f '/Users/virginia.zambudio/PlaywrightAutomation/workflow/instances/quality-engineering-design/sessions/test-automation__pli-20260715-x4uy1o__qed-001/agent-run/1784130399722-5zsx4hur/human-guidance.jsonl' && tail -n 100 '/Users/virginia.zambudio/PlaywrightAutomation/workflow/instances/quality-engineering-design/sessions/test-automation__pli-20260715-x4uy1o__qed-001/agent-run/1784130399722-5zsx4hur/human-guidance.jsonl' || true`
+
+Recommended acknowledgement command:
+`printf '%s\n' '{"message_id":"<id>","ack_at":"<ISO timestamp>","status":"applied","note":"<short note>"}' >> '/Users/virginia.zambudio/PlaywrightAutomation/workflow/instances/quality-engineering-design/sessions/test-automation__pli-20260715-x4uy1o__qed-001/agent-run/1784130399722-5zsx4hur/human-guidance-acks.jsonl'`
+
+Do not finish the run without doing one final guidance check. If these files are not accessible in your execution environment, continue normally and mention that limitation in the log.
+
+## Additional Instructions
+
+Playlist global context:
+FIx this issues   1) [chromium] › tests/home-page.spec.ts:399:5 › TC-83232 — Newsletter signup in footer accepts valid email and redirects to confirmation @newsletter @footer › Scroll to footer newsletter form 
+
+    TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('div.bg-primary input[type="email"]').first() to be visible
+
+
+      412 |             // element to mount before interacting.
+      413 |             await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    > 414 |             await homePage.newsletterEmailInput.waitFor({ state: 'visible', timeout: 30_000 });
+          |                                                 ^
+      415 |         });
+      416 |
+      417 |         await test.step('Fill valid email in newsletter input', async () => {
+        at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:414:49
+        at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:409:9
+
+    Error Context: test-results/home-page-TC-83232-—-Newsl-ed9bb-firmation-newsletter-footer-chromium/error-context.md
+
+  2) [chromium] › tests/pdp.spec.ts:255:5 › TC-83240 — Authenticated user adds product to wishlist and API call confirms the action @pdp @wishlist @authenticated › Log in with test user credentials 
+
+    TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('input[name="email"][type="email"]').first() to be visible
+
+
+       at ../pages/LoginPage.ts:28
+
+      26 |     async login(email: string, password: string): Promise<void> {
+      27 |         await this.navigate('/myaccount');
+    > 28 |         await this.emailInput.waitFor({ state: 'visible', timeout: 15_000 });
+         |                               ^
+      29 |         await this.emailInput.fill(email);
+      30 |         await this.passwordInput.fill(password);
+      31 |         await this.loginButton.click();
+        at LoginPage.login (/Users/virginia.zambudio/PlaywrightAutomation/pages/LoginPage.ts:28:31)
+        at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:265:13
+        at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:264:9
+
+    Error Context: test-results/pdp-TC-83240-—-Authenticat-f8435--pdp-wishlist-authenticated-chromium/error-context.md
+
+  3) [firefox] › tests/pdp.spec.ts:151:5 › TC-83238 — Add to cart with In-Store Pickup (postal V6B 1A1) increments mini cart counter @pdp @cart @in-store-pickup › Open store selector dialog and set store using postal code V6B 1A1 
+
+    TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('p.cursor-pointer.text-primary').filter({ hasText: /set your store/i }).first() to be visible
+
+
+       at ../pages/ProductDetailPage.ts:262
+
+      260 |      */
+      261 |     async openStoreSelectorDialog(): Promise<void> {
+    > 262 |         await this.setYourStoreLink.waitFor({ state: 'visible', timeout: 15_000 });
+          |                                     ^
+      263 |         await this.setYourStoreLink.click();
+      264 |         await this.storeSelectorDialog.waitFor({ state: 'visible', timeout: 10_000 });
+      265 |     }
+        at ProductDetailPage.openStoreSelectorDialog (/Users/virginia.zambudio/PlaywrightAutomation/pages/ProductDetailPage.ts:262:37)
+        at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:171:27
+        at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:170:9
+
+    Error Context: test-results/pdp-TC-83238-—-Add-to-cart-7ba04-er-pdp-cart-in-store-pickup-firefox/error-context.md
+
+  4) [webkit] › tests/pdp.spec.ts:151:5 › TC-83238 — Add to cart with In-Store Pickup (postal V6B 1A1) increments mini cart counter @pdp @cart @in-store-pickup › Open store selector dialog and set store using postal code V6B 1A1 
+
+    TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('p.cursor-pointer.text-primary').filter({ hasText: /set your store/i }).first() to be visible
+
+
+       at ../pages/ProductDetailPage.ts:262
+
+      260 |      */
+      261 |     async openStoreSelectorDialog(): Promise<void> {
+    > 262 |         await this.setYourStoreLink.waitFor({ state: 'visible', timeout: 15_000 });
+          |                                     ^
+      263 |         await this.setYourStoreLink.click();
+      264 |         await this.storeSelectorDialog.waitFor({ state: 'visible', timeout: 10_000 });
+      265 |     }
+        at ProductDetailPage.openStoreSelectorDialog (/Users/virginia.zambudio/PlaywrightAutomation/pages/ProductDetailPage.ts:262:37)
+        at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:171:27
+        at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:170:9
+
+    Error Context: test-results/pdp-TC-83238-—-Add-to-cart-7ba04-er-pdp-cart-in-store-pickup-webkit/error-context.md
+
+  5) [edge] › tests/home-page.spec.ts:399:5 › TC-83232 — Newsletter signup in footer accepts valid email and redirects to confirmation @newsletter @footer › Scroll to footer newsletter form 
+
+    TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for locator('div.bg-primary input[type="email"]').first() to be visible
+
+
+      412 |             // element to mount before interacting.
+      413 |             await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    > 414 |             await homePage.newsletterEmailInput.waitFor({ state: 'visible', timeout: 30_000 });
+          |                                                 ^
+      415 |         });
+      416 |
+      417 |         await test.step('Fill valid email in newsletter input', async () => {
+        at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:414:49
+        at /Users/virginia.zambudio/PlaywrightAutomation/tests/home-page.spec.ts:409:9
+
+    Error Context: test-results/home-page-TC-83232-—-Newsl-ed9bb-firmation-newsletter-footer-edge/error-context.md
+
+  6) [edge] › tests/pdp.spec.ts:255:5 › TC-83240 — Authenticated user adds product to wishlist and API call confirms the action @pdp @wishlist @authenticated › Log in with test user credentials 
+
+    TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('input[name="email"][type="email"]').first() to be visible
+
+
+       at ../pages/LoginPage.ts:28
+
+      26 |     async login(email: string, password: string): Promise<void> {
+      27 |         await this.navigate('/myaccount');
+    > 28 |         await this.emailInput.waitFor({ state: 'visible', timeout: 15_000 });
+         |                               ^
+      29 |         await this.emailInput.fill(email);
+      30 |         await this.passwordInput.fill(password);
+      31 |         await this.loginButton.click();
+        at LoginPage.login (/Users/virginia.zambudio/PlaywrightAutomation/pages/LoginPage.ts:28:31)
+        at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:265:13
+        at /Users/virginia.zambudio/PlaywrightAutomation/tests/pdp.spec.ts:264:9
+
+    Error Context: test-results/pdp-TC-83240-—-Authenticat-f8435--pdp-wishlist-authenticated-edge/error-context.md
+
+Error: worker-16 process did not exit within 300000ms after stop, force-killed it
+  6 failed
+    [chromium] › tests/home-page.spec.ts:399:5 › TC-83232 — Newsletter signup in footer accepts valid email and redirects to confirmation @newsletter @footer 
+    [chromium] › tests/pdp.spec.ts:255:5 › TC-83240 — Authenticated user adds product to wishlist and API call confirms the action @pdp @wishlist @authenticated 
+    [firefox] › tests/pdp.spec.ts:151:5 › TC-83238 — Add to cart with In-Store Pickup (postal V6B 1A1) increments mini cart counter @pdp @cart @in-store-pickup 
+    [webkit] › tests/pdp.spec.ts:151:5 › TC-83238 — Add to cart with In-Store Pickup (postal V6B 1A1) increments mini cart counter @pdp @cart @in-store-pickup 
+    [edge] › tests/home-page.spec.ts:399:5 › TC-83232 — Newsletter signup in footer accepts valid email and redirects to confirmation @newsletter @footer 
+    [edge] › tests/pdp.spec.ts:255:5 › TC-83240 — Authenticated user adds product to wishlist and API call confirms the action @pdp @wishlist @authenticated 
+  78 passed (10.5m)
+  1 error was not a part of any test, see above for details
+
+===== OUTPUT =====
+
+2026-07-15 12:46:42.692 | DEBUG    | coda_core.config.settings:_sync_env_file:333 - Environment variables are already in sync
+2026-07-15 12:46:42.696 | INFO     | coda_core.config.settings:_load_env:375 - Environment variables loaded from /Users/virginia.zambudio/.coda/.env
+Updated model settings to anthropic/claude-sonnet-4-6

@@ -1,0 +1,798 @@
+- generic [active] [ref=f39e1]:
+  - alert [ref=f39e4]
+  - link [ref=f39e8] [cursor=pointer]:
+    - /url: https://www.londondrugs.com/category/clearance/c/39
+    - paragraph [ref=f39e11]:
+      - strong [ref=f39e12]: "Last Chance Clearance:"
+    - paragraph [ref=f39e15]: new items are added weekly online and in-store. Shop now
+  - article [ref=f39e16]:
+    - list [ref=f39e17]:
+      - listitem [ref=f39e18]:
+        - 'link "Customer Service: 1-888-991-2299" [ref=f39e19] [cursor=pointer]':
+          - /url: tel:18889912299
+        - generic [ref=f39e20]: "|"
+      - listitem [ref=f39e21]:
+        - link "Travel Essentials" [ref=f39e22] [cursor=pointer]:
+          - /url: /travel
+        - generic [ref=f39e23]: "|"
+      - listitem [ref=f39e24]:
+        - link "30-Day Price Match Guarantee" [ref=f39e25] [cursor=pointer]:
+          - /url: /our-guarantee/OurGuarantee
+  - banner [ref=f39e26]:
+    - generic [ref=f39e27]:
+      - generic [ref=f39e28]:
+        - link [ref=f39e29] [cursor=pointer]:
+          - /url: /
+          - img "London Drugs" [ref=f39e30]
+        - textbox "Search for products" [ref=f39e34]:
+          - /placeholder: Find your product
+        - complementary [ref=f39e37]:
+          - list [ref=f39e38]:
+            - listitem [ref=f39e39]:
+              - link "Select Your Store" [ref=f39e40] [cursor=pointer]:
+                - /url: /stores
+          - complementary [ref=f39e44]:
+            - complementary [ref=f39e45]:
+              - button [ref=f39e47] [cursor=pointer]
+            - generic [ref=f39e49]:
+              - link "Show Wishlist Items" [ref=f39e50] [cursor=pointer]:
+                - /url: /myaccount/wishlist
+              - link "Show My List & Registry Items" [ref=f39e53] [cursor=pointer]:
+                - /url: /myaccount/wishlist#registry
+                - img "Add to Registry Icon" [ref=f39e54]
+            - button "Show Mini Cart Items" [ref=f39e57] [cursor=pointer]
+      - generic [ref=f39e64]:
+        - generic [ref=f39e65]:
+          - button "Opens Mega Menu" [ref=f39e66] [cursor=pointer]
+          - button "shop by category" [ref=f39e68] [cursor=pointer]: Shop by Category
+        - list [ref=f39e69]:
+          - listitem [ref=f39e70]:
+            - link "Deals & Events" [ref=f39e72] [cursor=pointer]:
+              - /url: /category/deals-and-events/c/1027
+          - listitem [ref=f39e73]:
+            - link "Services" [ref=f39e75] [cursor=pointer]:
+              - /url: /our-services
+          - listitem [ref=f39e76]:
+            - generic [ref=f39e77]:
+              - img "Pharmacy" [ref=f39e78]
+              - link "Pharmacy" [ref=f39e79] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com
+          - listitem [ref=f39e80]:
+            - generic [ref=f39e81]:
+              - img "PhotoLab" [ref=f39e82]
+              - link "PhotoLab" [ref=f39e83] [cursor=pointer]:
+                - /url: https://photolab.londondrugs.com
+          - listitem [ref=f39e84]:
+            - link "Gift Registry" [ref=f39e86] [cursor=pointer]:
+              - /url: /myaccount/wishlist#registry
+          - listitem [ref=f39e87]:
+            - link [ref=f39e88] [cursor=pointer]:
+              - /url: https://www.ldextras.com
+              - generic [ref=f39e89]:
+                - strong [ref=f39e90]: LD
+                - emphasis [ref=f39e91]: Extras
+        - link [ref=f39e92] [cursor=pointer]:
+          - /url: /flyer
+          - img "Flyers Logo" [ref=f39e93]
+          - text: Flyers
+  - main [ref=f39e94]:
+    - generic [ref=f39e95]:
+      - generic [ref=f39e100]:
+        - link [ref=f39e101] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/air-fryers-and-fryers/c/57?tenant~subClass-map=air_fryers&tenant~subClass-map=air_fryer
+          - paragraph [ref=f39e105]: Air Fryers & Fryers
+        - link [ref=f39e106] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/multi-cookers/c/58
+          - paragraph [ref=f39e110]: Multi Cookers
+        - link [ref=f39e111] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/rice-cookers/c/59
+          - paragraph [ref=f39e115]: Rice Cookers
+        - link [ref=f39e116] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/grills/c/61
+          - paragraph [ref=f39e120]: Grills
+        - link [ref=f39e121] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/roasters-and-skillets/c/62
+          - paragraph [ref=f39e125]: Roasters & Skillets
+        - link [ref=f39e126] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/sous-vide/c/60
+          - paragraph [ref=f39e130]: Sous Vide
+      - navigation [ref=f39e131]:
+        - list [ref=f39e132]:
+          - listitem [ref=f39e133]:
+            - link "Home" [ref=f39e134] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f39e135]:
+            - link "Appliances" [ref=f39e136] [cursor=pointer]:
+              - /url: /category/appliances/c/50
+          - listitem [ref=f39e137]:
+            - generic [ref=f39e138]: Cookers & Grills
+      - heading "Cookers & Grills" [level=1] [ref=f39e139]
+      - paragraph [ref=f39e140]: 78 Products
+    - complementary [ref=f39e141]:
+      - generic [ref=f39e143]:
+        - checkbox "Filters close sidebar"
+        - generic [ref=f39e145]:
+          - checkbox "close sidebar"
+          - generic [ref=f39e147]:
+            - generic [ref=f39e148]:
+              - button "Proudly Canadian" [ref=f39e149] [cursor=pointer]
+              - button "FREE in store pickup" [ref=f39e156] [cursor=pointer]
+              - button "Ship to Me" [ref=f39e157] [cursor=pointer]
+            - generic [ref=f39e158]:
+              - generic [ref=f39e159]: Filters
+              - button [ref=f39e164] [cursor=pointer]:
+                - paragraph [ref=f39e169]: "Sort by: Recommended"
+          - generic:
+            - generic "close sidebar"
+            - generic:
+              - generic:
+                - heading "Categories" [level=2]
+                - button "close-button"
+              - separator
+              - generic:
+                - generic:
+                  - generic:
+                    - heading "Air Fryers & Fryers" [level=3]
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Show All":
+                          - /url: /category/air-fryers-and-fryers/c/57
+                  - separator
+                - generic:
+                  - generic:
+                    - heading "Multi Cookers" [level=3]
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Show All":
+                          - /url: /category/multi-cookers/c/58
+                  - separator
+                - generic:
+                  - generic:
+                    - heading "Rice Cookers" [level=3]
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Show All":
+                          - /url: /category/rice-cookers/c/59
+                  - separator
+                - generic:
+                  - generic:
+                    - heading "Sous Vide" [level=3]
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Show All":
+                          - /url: /category/sous-vide/c/60
+                  - separator
+                - generic:
+                  - generic:
+                    - heading "Grills" [level=3]
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Show All":
+                          - /url: /category/grills/c/61
+                  - separator
+                - generic:
+                  - generic:
+                    - heading "Roasters & Skillets" [level=3]
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Show All":
+                          - /url: /category/roasters-and-skillets/c/62
+                  - separator
+        - generic:
+          - generic "close sidebar"
+          - generic:
+            - generic:
+              - heading "Filter By:" [level=2]
+              - button "close-button"
+            - separator
+            - generic:
+              - checkbox
+              - heading "Category" [level=3]
+            - separator
+            - generic:
+              - checkbox
+              - heading "Sub Department" [level=3]
+            - separator
+            - generic:
+              - checkbox
+              - heading "Sub Class" [level=3]
+            - separator
+            - generic:
+              - checkbox
+              - heading "Tax Class" [level=3]
+            - separator
+            - generic:
+              - checkbox
+              - heading "Sub Class Mapping" [level=3]
+            - separator
+            - generic:
+              - checkbox
+              - heading "Colour" [level=3]
+            - separator
+            - generic:
+              - checkbox
+              - heading "Brand" [level=3]
+            - separator
+            - generic:
+              - checkbox
+              - heading "Item Type" [level=3]
+            - separator
+            - generic:
+              - checkbox
+              - heading "Proudly Canadian" [level=3]
+            - separator
+            - generic:
+              - checkbox
+              - heading "Price" [level=3]
+            - generic:
+              - button "Clear"
+              - button "Show results"
+    - generic [ref=f39e174]:
+      - generic [ref=f39e175]:
+        - generic [ref=f39e176]:
+          - link [ref=f39e177] [cursor=pointer]:
+            - /url: /products/zojirushi-commercial-rice-cooker-andamp-warmer-nyc-36/p/L1939690
+            - img "Zojirushi Commercial Rice Cooker &amp; Warmer - NYC-36" [ref=f39e178]
+          - generic [ref=f39e179]:
+            - link [ref=f39e180] [cursor=pointer]:
+              - /url: /products/zojirushi-commercial-rice-cooker-andamp-warmer-nyc-36/p/L1939690
+              - paragraph [ref=f39e181]: ZOJIRUSHI
+            - link [ref=f39e182] [cursor=pointer]:
+              - /url: /products/zojirushi-commercial-rice-cooker-andamp-warmer-nyc-36/p/L1939690
+              - heading "Zojirushi Commercial Rice Cooker &amp; Warmer - NYC-36" [level=3] [ref=f39e183]
+            - button "Adding to wishlist Button" [ref=f39e184] [cursor=pointer]
+            - link "$599.99" [ref=f39e187] [cursor=pointer]:
+              - /url: /products/zojirushi-commercial-rice-cooker-andamp-warmer-nyc-36/p/L1939690
+            - link "0.0 out of 5 stars." [ref=f39e193]:
+              - /url: /products/zojirushi-commercial-rice-cooker-andamp-warmer-nyc-36/p/L1939690
+              - generic [ref=f39e207]: (0)
+            - link [ref=f39e211] [cursor=pointer]:
+              - /url: /products/zojirushi-commercial-rice-cooker-andamp-warmer-nyc-36/p/L1939690
+              - paragraph [ref=f39e212]: Check Nearby Availability
+        - generic [ref=f39e213]:
+          - link [ref=f39e214] [cursor=pointer]:
+            - /url: /products/zojirushi-commercial-electric-rice-warmer-tha-603sa/p/L1939724
+            - img "Zojirushi Commercial Electric Rice Warmer - THA-603SA" [ref=f39e215]
+          - generic [ref=f39e216]:
+            - link [ref=f39e217] [cursor=pointer]:
+              - /url: /products/zojirushi-commercial-electric-rice-warmer-tha-603sa/p/L1939724
+              - paragraph [ref=f39e218]: ZOJIRUSHI
+            - link [ref=f39e219] [cursor=pointer]:
+              - /url: /products/zojirushi-commercial-electric-rice-warmer-tha-603sa/p/L1939724
+              - heading "Zojirushi Commercial Electric Rice Warmer - THA-603SA" [level=3] [ref=f39e220]
+            - button "Adding to wishlist Button" [ref=f39e221] [cursor=pointer]
+            - link "$479.99" [ref=f39e224] [cursor=pointer]:
+              - /url: /products/zojirushi-commercial-electric-rice-warmer-tha-603sa/p/L1939724
+            - link "0.0 out of 5 stars." [ref=f39e230]:
+              - /url: /products/zojirushi-commercial-electric-rice-warmer-tha-603sa/p/L1939724
+              - generic [ref=f39e244]: (0)
+            - link [ref=f39e248] [cursor=pointer]:
+              - /url: /products/zojirushi-commercial-electric-rice-warmer-tha-603sa/p/L1939724
+              - paragraph [ref=f39e249]: Check Nearby Availability
+        - generic [ref=f39e250]:
+          - link [ref=f39e251] [cursor=pointer]:
+            - /url: /products/zojirushi-commercial-electric-rice-warmer-tha-803sa/p/L1939732
+            - img "Zojirushi Commercial Electric Rice Warmer - THA-803SA" [ref=f39e252]
+          - generic [ref=f39e253]:
+            - link [ref=f39e254] [cursor=pointer]:
+              - /url: /products/zojirushi-commercial-electric-rice-warmer-tha-803sa/p/L1939732
+              - paragraph [ref=f39e255]: ZOJIRUSHI
+            - link [ref=f39e256] [cursor=pointer]:
+              - /url: /products/zojirushi-commercial-electric-rice-warmer-tha-803sa/p/L1939732
+              - heading "Zojirushi Commercial Electric Rice Warmer - THA-803SA" [level=3] [ref=f39e257]
+            - button "Adding to wishlist Button" [ref=f39e258] [cursor=pointer]
+            - link "$529.99" [ref=f39e261] [cursor=pointer]:
+              - /url: /products/zojirushi-commercial-electric-rice-warmer-tha-803sa/p/L1939732
+            - link "0.0 out of 5 stars." [ref=f39e267]:
+              - /url: /products/zojirushi-commercial-electric-rice-warmer-tha-803sa/p/L1939732
+              - generic [ref=f39e281]: (0)
+            - link [ref=f39e285] [cursor=pointer]:
+              - /url: /products/zojirushi-commercial-electric-rice-warmer-tha-803sa/p/L1939732
+              - paragraph [ref=f39e286]: Check Nearby Availability
+        - generic [ref=f39e287]:
+          - link [ref=f39e288] [cursor=pointer]:
+            - /url: /products/hamilton-beach-dual-breakfast-sandwich-maker-silver-25490c/p/L8364598
+            - img "Hamilton Beach Dual Breakfast Sandwich Maker - Silver - 25490C" [ref=f39e289]
+          - generic [ref=f39e290]:
+            - link [ref=f39e291] [cursor=pointer]:
+              - /url: /products/hamilton-beach-dual-breakfast-sandwich-maker-silver-25490c/p/L8364598
+              - paragraph [ref=f39e292]: HAMILTON BEACH
+            - link [ref=f39e293] [cursor=pointer]:
+              - /url: /products/hamilton-beach-dual-breakfast-sandwich-maker-silver-25490c/p/L8364598
+              - heading "Hamilton Beach Dual Breakfast Sandwich Maker - Silver - 25490C" [level=3] [ref=f39e294]
+            - button "Adding to wishlist Button" [ref=f39e295] [cursor=pointer]
+            - link "$79.99 $49.99" [ref=f39e298] [cursor=pointer]:
+              - /url: /products/hamilton-beach-dual-breakfast-sandwich-maker-silver-25490c/p/L8364598
+              - generic [ref=f39e300]:
+                - generic [ref=f39e301]: $79.99
+                - generic [ref=f39e302]: $49.99
+            - link "0.0 out of 5 stars." [ref=f39e305]:
+              - /url: /products/hamilton-beach-dual-breakfast-sandwich-maker-silver-25490c/p/L8364598
+              - generic [ref=f39e319]: (0)
+            - link [ref=f39e323] [cursor=pointer]:
+              - /url: /products/hamilton-beach-dual-breakfast-sandwich-maker-silver-25490c/p/L8364598
+              - paragraph [ref=f39e324]: Check Nearby Availability
+        - generic [ref=f39e325]:
+          - link [ref=f39e326] [cursor=pointer]:
+            - /url: /products/salton-infrared-cook-range-hp1502/p/L8892317
+            - img "Salton Infrared Cook Range - HP1502" [ref=f39e327]
+          - generic [ref=f39e328]:
+            - link [ref=f39e329] [cursor=pointer]:
+              - /url: /products/salton-infrared-cook-range-hp1502/p/L8892317
+              - paragraph [ref=f39e330]: SALTON
+            - link [ref=f39e331] [cursor=pointer]:
+              - /url: /products/salton-infrared-cook-range-hp1502/p/L8892317
+              - heading "Salton Infrared Cook Range - HP1502" [level=3] [ref=f39e332]
+            - button "Adding to wishlist Button" [ref=f39e333] [cursor=pointer]
+            - link "$69.99" [ref=f39e336] [cursor=pointer]:
+              - /url: /products/salton-infrared-cook-range-hp1502/p/L8892317
+            - link "4.0 out of 5 stars. 25 reviews" [ref=f39e342]:
+              - /url: /products/salton-infrared-cook-range-hp1502/p/L8892317
+              - generic [ref=f39e356]: (25)
+            - link [ref=f39e360] [cursor=pointer]:
+              - /url: /products/salton-infrared-cook-range-hp1502/p/L8892317
+              - paragraph [ref=f39e361]: Check Nearby Availability
+        - generic [ref=f39e362]:
+          - link [ref=f39e363] [cursor=pointer]:
+            - /url: /products/salton-induction-cooktop-id1350/p/L8892325
+            - img "Salton Induction Cooktop - ID1350" [ref=f39e364]
+          - generic [ref=f39e365]:
+            - link [ref=f39e366] [cursor=pointer]:
+              - /url: /products/salton-induction-cooktop-id1350/p/L8892325
+              - paragraph [ref=f39e367]: SALTON
+            - link [ref=f39e368] [cursor=pointer]:
+              - /url: /products/salton-induction-cooktop-id1350/p/L8892325
+              - heading "Salton Induction Cooktop - ID1350" [level=3] [ref=f39e369]
+            - button "Adding to wishlist Button" [ref=f39e370] [cursor=pointer]
+            - link "$119.99 $69.99" [ref=f39e373] [cursor=pointer]:
+              - /url: /products/salton-induction-cooktop-id1350/p/L8892325
+              - generic [ref=f39e375]:
+                - generic [ref=f39e376]: $119.99
+                - generic [ref=f39e377]: $69.99
+            - link "4.2 out of 5 stars. 15 reviews" [ref=f39e380]:
+              - /url: /products/salton-induction-cooktop-id1350/p/L8892325
+              - generic [ref=f39e394]: (15)
+            - link [ref=f39e398] [cursor=pointer]:
+              - /url: /products/salton-induction-cooktop-id1350/p/L8892325
+              - paragraph [ref=f39e399]: Check Nearby Availability
+        - generic [ref=f39e400]:
+          - link [ref=f39e401] [cursor=pointer]:
+            - /url: /products/tiger-rice/p/M0011574?Variant%20Color=STAINLESS_STEEL&Variant%20Size=3_CUPS
+            - img "Tiger Rice" [ref=f39e402]
+          - generic [ref=f39e403]:
+            - generic [ref=f39e404]:
+              - link "View 6 product options" [ref=f39e405] [cursor=pointer]:
+                - /url: /products/tiger-rice/p/M0011574?Variant%20Color=STAINLESS_STEEL&Variant%20Size=3_CUPS
+                - text: Select Options
+              - generic [ref=f39e406]: + 6 options
+            - link [ref=f39e407] [cursor=pointer]:
+              - /url: /products/tiger-rice/p/M0011574?Variant%20Color=STAINLESS_STEEL&Variant%20Size=3_CUPS
+              - paragraph [ref=f39e408]: TIGER
+            - link [ref=f39e409] [cursor=pointer]:
+              - /url: /products/tiger-rice/p/M0011574?Variant%20Color=STAINLESS_STEEL&Variant%20Size=3_CUPS
+              - heading "Tiger Rice" [level=3] [ref=f39e410]
+            - button "Adding to wishlist Button" [ref=f39e411] [cursor=pointer]
+            - link "$179.99 - $219.99" [ref=f39e414] [cursor=pointer]:
+              - /url: /products/tiger-rice/p/M0011574?Variant%20Color=STAINLESS_STEEL&Variant%20Size=3_CUPS
+              - generic [ref=f39e416]:
+                - generic [ref=f39e417]: $179.99
+                - generic [ref=f39e419]: "-"
+                - generic [ref=f39e420]: $219.99
+            - link "0.0 out of 5 stars." [ref=f39e424]:
+              - /url: /products/tiger-rice/p/M0011574?Variant%20Color=STAINLESS_STEEL&Variant%20Size=3_CUPS
+              - generic [ref=f39e438]: (0)
+            - link [ref=f39e442] [cursor=pointer]:
+              - /url: /products/tiger-rice/p/M0011574?Variant%20Color=STAINLESS_STEEL&Variant%20Size=3_CUPS
+              - paragraph [ref=f39e443]: Check Nearby Availability
+        - generic [ref=f39e444]:
+          - link [ref=f39e445] [cursor=pointer]:
+            - /url: /products/crock-pot-lunch-crock-cooker/p/M0011991?Variant%20Color=PINK&Variant%20Size=20OZ
+            - img "Crock Pot Lunch Crock Cooker" [ref=f39e446]
+          - generic [ref=f39e447]:
+            - generic [ref=f39e448]:
+              - link "View 2 product options" [ref=f39e449] [cursor=pointer]:
+                - /url: /products/crock-pot-lunch-crock-cooker/p/M0011991?Variant%20Color=PINK&Variant%20Size=20OZ
+                - text: Select Options
+              - generic [ref=f39e450]: + 2 options
+            - link [ref=f39e451] [cursor=pointer]:
+              - /url: /products/crock-pot-lunch-crock-cooker/p/M0011991?Variant%20Color=PINK&Variant%20Size=20OZ
+              - paragraph [ref=f39e452]: CROCK-POT
+            - link [ref=f39e453] [cursor=pointer]:
+              - /url: /products/crock-pot-lunch-crock-cooker/p/M0011991?Variant%20Color=PINK&Variant%20Size=20OZ
+              - heading "Crock Pot Lunch Crock Cooker" [level=3] [ref=f39e454]
+            - button "Adding to wishlist Button" [ref=f39e455] [cursor=pointer]
+            - link "$44.99" [ref=f39e458] [cursor=pointer]:
+              - /url: /products/crock-pot-lunch-crock-cooker/p/M0011991?Variant%20Color=PINK&Variant%20Size=20OZ
+            - link "0.0 out of 5 stars." [ref=f39e464]:
+              - /url: /products/crock-pot-lunch-crock-cooker/p/M0011991?Variant%20Color=PINK&Variant%20Size=20OZ
+              - generic [ref=f39e478]: (0)
+            - link [ref=f39e482] [cursor=pointer]:
+              - /url: /products/crock-pot-lunch-crock-cooker/p/M0011991?Variant%20Color=PINK&Variant%20Size=20OZ
+              - paragraph [ref=f39e483]: Check Nearby Availability
+        - generic [ref=f39e484]:
+          - link [ref=f39e485] [cursor=pointer]:
+            - /url: /products/cuckoo-6-cup-rice-cooker-redwhite-cr-0655f/p/L0478169
+            - img "Cuckoo 6 cup Rice Cooker - Red/White - CR-0655F" [ref=f39e486]
+          - generic [ref=f39e487]:
+            - link [ref=f39e488] [cursor=pointer]:
+              - /url: /products/cuckoo-6-cup-rice-cooker-redwhite-cr-0655f/p/L0478169
+              - paragraph [ref=f39e489]: CUCKOO
+            - link [ref=f39e490] [cursor=pointer]:
+              - /url: /products/cuckoo-6-cup-rice-cooker-redwhite-cr-0655f/p/L0478169
+              - heading "Cuckoo 6 cup Rice Cooker - Red/White - CR-0655F" [level=3] [ref=f39e491]
+            - button "Adding to wishlist Button" [ref=f39e492] [cursor=pointer]
+            - link "$129.99" [ref=f39e495] [cursor=pointer]:
+              - /url: /products/cuckoo-6-cup-rice-cooker-redwhite-cr-0655f/p/L0478169
+            - link "0.0 out of 5 stars." [ref=f39e501]:
+              - /url: /products/cuckoo-6-cup-rice-cooker-redwhite-cr-0655f/p/L0478169
+              - generic [ref=f39e515]: (0)
+            - link [ref=f39e519] [cursor=pointer]:
+              - /url: /products/cuckoo-6-cup-rice-cooker-redwhite-cr-0655f/p/L0478169
+              - paragraph [ref=f39e520]: Check Nearby Availability
+        - generic [ref=f39e521]:
+          - link:
+            - /url: /products/hamilton-beach-air-fry-toaster-oven-metallic-slate-31324c/p/L1110449
+          - generic [ref=f39e522]:
+            - link [ref=f39e523] [cursor=pointer]:
+              - /url: /products/hamilton-beach-air-fry-toaster-oven-metallic-slate-31324c/p/L1110449
+              - paragraph [ref=f39e524]: HAMILTON BEACH
+            - link [ref=f39e525] [cursor=pointer]:
+              - /url: /products/hamilton-beach-air-fry-toaster-oven-metallic-slate-31324c/p/L1110449
+              - heading "Hamilton Beach Air Fry Toaster Oven - Metallic Slate - 31324C" [level=3] [ref=f39e526]
+            - button "Adding to wishlist Button" [ref=f39e527] [cursor=pointer]
+            - link "$129.99" [ref=f39e530] [cursor=pointer]:
+              - /url: /products/hamilton-beach-air-fry-toaster-oven-metallic-slate-31324c/p/L1110449
+            - link "0.0 out of 5 stars." [ref=f39e536]:
+              - /url: /products/hamilton-beach-air-fry-toaster-oven-metallic-slate-31324c/p/L1110449
+              - generic [ref=f39e550]: (0)
+            - link [ref=f39e554] [cursor=pointer]:
+              - /url: /products/hamilton-beach-air-fry-toaster-oven-metallic-slate-31324c/p/L1110449
+              - paragraph [ref=f39e555]: Check Nearby Availability
+        - generic [ref=f39e556]:
+          - link [ref=f39e557] [cursor=pointer]:
+            - /url: /products/chefman-air-fryermulti-function-oven-rj38-10-rdo-v2-ca/p/L1125199
+            - img "Chefman Air Fryer/Multi-Function Oven - RJ38-10-RDO-V2-CA" [ref=f39e558]
+          - generic [ref=f39e559]:
+            - link [ref=f39e560] [cursor=pointer]:
+              - /url: /products/chefman-air-fryermulti-function-oven-rj38-10-rdo-v2-ca/p/L1125199
+              - paragraph [ref=f39e561]: CHEFMAN
+            - link [ref=f39e562] [cursor=pointer]:
+              - /url: /products/chefman-air-fryermulti-function-oven-rj38-10-rdo-v2-ca/p/L1125199
+              - heading "Chefman Air Fryer/Multi-Function Oven - RJ38-10-RDO-V2-CA" [level=3] [ref=f39e563]
+            - button "Adding to wishlist Button" [ref=f39e564] [cursor=pointer]
+            - link "$169.99" [ref=f39e567] [cursor=pointer]:
+              - /url: /products/chefman-air-fryermulti-function-oven-rj38-10-rdo-v2-ca/p/L1125199
+            - link "4.0 out of 5 stars. 3 reviews" [ref=f39e573]:
+              - /url: /products/chefman-air-fryermulti-function-oven-rj38-10-rdo-v2-ca/p/L1125199
+              - generic [ref=f39e587]: (3)
+            - link [ref=f39e591] [cursor=pointer]:
+              - /url: /products/chefman-air-fryermulti-function-oven-rj38-10-rdo-v2-ca/p/L1125199
+              - paragraph [ref=f39e592]: Check Nearby Availability
+        - generic [ref=f39e593]:
+          - link [ref=f39e594] [cursor=pointer]:
+            - /url: /products/crock-pot-mytime-slow-cooker-6qt-2162617/p/L1200101
+            - img "Crock-Pot Mytime Slow Cooker - 6qt - 2162617" [ref=f39e595]
+          - generic [ref=f39e596]:
+            - link [ref=f39e597] [cursor=pointer]:
+              - /url: /products/crock-pot-mytime-slow-cooker-6qt-2162617/p/L1200101
+              - paragraph [ref=f39e598]: CROCK-POT
+            - link [ref=f39e599] [cursor=pointer]:
+              - /url: /products/crock-pot-mytime-slow-cooker-6qt-2162617/p/L1200101
+              - heading "Crock-Pot Mytime Slow Cooker - 6qt - 2162617" [level=3] [ref=f39e600]
+            - button "Adding to wishlist Button" [ref=f39e601] [cursor=pointer]
+            - link "$139.99" [ref=f39e604] [cursor=pointer]:
+              - /url: /products/crock-pot-mytime-slow-cooker-6qt-2162617/p/L1200101
+            - link "0.0 out of 5 stars." [ref=f39e610]:
+              - /url: /products/crock-pot-mytime-slow-cooker-6qt-2162617/p/L1200101
+              - generic [ref=f39e624]: (0)
+            - link [ref=f39e628] [cursor=pointer]:
+              - /url: /products/crock-pot-mytime-slow-cooker-6qt-2162617/p/L1200101
+              - paragraph [ref=f39e629]: Check Nearby Availability
+        - generic [ref=f39e630]:
+          - link [ref=f39e631] [cursor=pointer]:
+            - /url: /products/instant-pot-vortex-air-fryer-2qt-140-3009-02/p/L1315842
+            - img "Instant Pot Vortex Air Fryer - 2QT - 140-3009-02" [ref=f39e632]
+          - generic [ref=f39e633]:
+            - link [ref=f39e634] [cursor=pointer]:
+              - /url: /products/instant-pot-vortex-air-fryer-2qt-140-3009-02/p/L1315842
+              - paragraph [ref=f39e635]: INSTANT
+            - link [ref=f39e636] [cursor=pointer]:
+              - /url: /products/instant-pot-vortex-air-fryer-2qt-140-3009-02/p/L1315842
+              - heading "Instant Pot Vortex Air Fryer - 2QT - 140-3009-02" [level=3] [ref=f39e637]
+            - button "Adding to wishlist Button" [ref=f39e638] [cursor=pointer]
+            - link "$99.99 $39.99" [ref=f39e641] [cursor=pointer]:
+              - /url: /products/instant-pot-vortex-air-fryer-2qt-140-3009-02/p/L1315842
+              - generic [ref=f39e643]:
+                - generic [ref=f39e644]: $99.99
+                - generic [ref=f39e645]: $39.99
+            - link "0.0 out of 5 stars." [ref=f39e648]:
+              - /url: /products/instant-pot-vortex-air-fryer-2qt-140-3009-02/p/L1315842
+              - generic [ref=f39e662]: (0)
+            - link [ref=f39e666] [cursor=pointer]:
+              - /url: /products/instant-pot-vortex-air-fryer-2qt-140-3009-02/p/L1315842
+              - paragraph [ref=f39e667]: Check Nearby Availability
+        - generic [ref=f39e668]:
+          - link [ref=f39e669] [cursor=pointer]:
+            - /url: /products/hamilton-beach-digital-simplicity-rice-cooker-and-steamer-stainless-steel-37541c/p/L1566798
+            - img "Hamilton Beach Digital Simplicity Rice Cooker and Steamer - Stainless Steel - 37541C" [ref=f39e670]
+          - generic [ref=f39e671]:
+            - link [ref=f39e672] [cursor=pointer]:
+              - /url: /products/hamilton-beach-digital-simplicity-rice-cooker-and-steamer-stainless-steel-37541c/p/L1566798
+              - paragraph [ref=f39e673]: HAMILTON BEACH
+            - link [ref=f39e674] [cursor=pointer]:
+              - /url: /products/hamilton-beach-digital-simplicity-rice-cooker-and-steamer-stainless-steel-37541c/p/L1566798
+              - heading "Hamilton Beach Digital Simplicity Rice Cooker and Steamer - Stainless Steel - 37541C" [level=3] [ref=f39e675]
+            - button "Adding to wishlist Button" [ref=f39e676] [cursor=pointer]
+            - link "$79.99 $59.99" [ref=f39e679] [cursor=pointer]:
+              - /url: /products/hamilton-beach-digital-simplicity-rice-cooker-and-steamer-stainless-steel-37541c/p/L1566798
+              - generic [ref=f39e681]:
+                - generic [ref=f39e682]: $79.99
+                - generic [ref=f39e683]: $59.99
+            - link "0.0 out of 5 stars." [ref=f39e686]:
+              - /url: /products/hamilton-beach-digital-simplicity-rice-cooker-and-steamer-stainless-steel-37541c/p/L1566798
+              - generic [ref=f39e700]: (0)
+            - link [ref=f39e704] [cursor=pointer]:
+              - /url: /products/hamilton-beach-digital-simplicity-rice-cooker-and-steamer-stainless-steel-37541c/p/L1566798
+              - paragraph [ref=f39e705]: Check Nearby Availability
+        - generic [ref=f39e706]:
+          - link [ref=f39e707] [cursor=pointer]:
+            - /url: /products/tiger-5c-ih-rice-cooker-jkt-d10u/p/L1602702
+            - img "Tiger 5c Ih Rice Cooker - JKT-D10U" [ref=f39e708]
+          - generic [ref=f39e709]:
+            - link [ref=f39e710] [cursor=pointer]:
+              - /url: /products/tiger-5c-ih-rice-cooker-jkt-d10u/p/L1602702
+              - paragraph [ref=f39e711]: TIGER
+            - link [ref=f39e712] [cursor=pointer]:
+              - /url: /products/tiger-5c-ih-rice-cooker-jkt-d10u/p/L1602702
+              - heading "Tiger 5c Ih Rice Cooker - JKT-D10U" [level=3] [ref=f39e713]
+            - button "Adding to wishlist Button" [ref=f39e714] [cursor=pointer]
+            - link "$429.99" [ref=f39e717] [cursor=pointer]:
+              - /url: /products/tiger-5c-ih-rice-cooker-jkt-d10u/p/L1602702
+            - link "0.0 out of 5 stars." [ref=f39e723]:
+              - /url: /products/tiger-5c-ih-rice-cooker-jkt-d10u/p/L1602702
+              - generic [ref=f39e737]: (0)
+            - link [ref=f39e741] [cursor=pointer]:
+              - /url: /products/tiger-5c-ih-rice-cooker-jkt-d10u/p/L1602702
+              - paragraph [ref=f39e742]: Check Nearby Availability
+        - generic [ref=f39e743]:
+          - link [ref=f39e744] [cursor=pointer]:
+            - /url: /products/tiger-10c-ih-rice-cooker-jkt-d18u/p/L1602710
+            - img "Tiger 10c Ih Rice Cooker - JKT-D18U" [ref=f39e745]
+          - generic [ref=f39e746]:
+            - link [ref=f39e747] [cursor=pointer]:
+              - /url: /products/tiger-10c-ih-rice-cooker-jkt-d18u/p/L1602710
+              - paragraph [ref=f39e748]: TIGER
+            - link [ref=f39e749] [cursor=pointer]:
+              - /url: /products/tiger-10c-ih-rice-cooker-jkt-d18u/p/L1602710
+              - heading "Tiger 10c Ih Rice Cooker - JKT-D18U" [level=3] [ref=f39e750]
+            - button "Adding to wishlist Button" [ref=f39e751] [cursor=pointer]
+            - link "$449.99" [ref=f39e754] [cursor=pointer]:
+              - /url: /products/tiger-10c-ih-rice-cooker-jkt-d18u/p/L1602710
+            - link "0.0 out of 5 stars." [ref=f39e760]:
+              - /url: /products/tiger-10c-ih-rice-cooker-jkt-d18u/p/L1602710
+              - generic [ref=f39e774]: (0)
+            - link [ref=f39e778] [cursor=pointer]:
+              - /url: /products/tiger-10c-ih-rice-cooker-jkt-d18u/p/L1602710
+              - paragraph [ref=f39e779]: Check Nearby Availability
+      - generic [ref=f39e782]:
+        - generic [ref=f39e783]: LOADING
+        - button [ref=f39e785] [cursor=pointer]:
+          - img "loading" [ref=f39e786]
+      - generic [ref=f39e787]: Showing 16 out of 78 items
+    - generic [ref=f39e790]:
+      - generic [ref=f39e791]: Shop With Confidence
+      - generic [ref=f39e794]:
+        - link [ref=f39e797] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/shipping-and-delivery/shippinganddelivery
+        - link [ref=f39e801] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/category/proudly-canadian/c/8555
+        - link [ref=f39e805] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/our-guarantee
+        - link [ref=f39e809] [cursor=pointer]:
+          - /url: https://www.londondrugs.com/returns-and-exchanges
+  - generic [ref=f39e812]:
+    - generic [ref=f39e813]:
+      - heading "Email Newsletter" [level=3] [ref=f39e814]
+      - paragraph [ref=f39e815]: Sign up and receive promotions and special offers by email
+    - textbox "Enter your email" [ref=f39e817]
+    - button "SIGN UP" [ref=f39e819] [cursor=pointer]
+  - contentinfo [ref=f39e820]:
+    - generic [ref=f39e825]:
+      - generic [ref=f39e827]:
+        - generic [ref=f39e829]:
+          - paragraph [ref=f39e834]: Our Blogs
+          - generic [ref=f39e835]:
+            - generic [ref=f39e837]:
+              - link [ref=f39e840] [cursor=pointer]:
+                - /url: https://blog.londondrugs.com
+              - link "londondrugs blog" [ref=f39e843] [cursor=pointer]:
+                - /url: https://blog.londondrugs.com
+                - paragraph [ref=f39e845]: LONDON DRUGS BLOG
+            - generic [ref=f39e847]:
+              - link [ref=f39e850] [cursor=pointer]:
+                - /url: http://www.greendeal.ca/blog
+              - link "greendeal-blog" [ref=f39e853] [cursor=pointer]:
+                - /url: http://www.greendeal.ca/blog
+                - paragraph [ref=f39e855]: GREEN DEAL BLOG
+        - generic [ref=f39e859]:
+          - generic [ref=f39e862]:
+            - generic "our-services" [ref=f39e864]: Our Services
+            - generic [ref=f39e866]:
+              - generic "presc" [ref=f39e867]:
+                - link [ref=f39e868] [cursor=pointer]:
+                  - /url: https://blog.londondrugs.com/pharmacy-services-and-information
+                  - generic "prescription-refills" [ref=f39e869]:
+                    - paragraph [ref=f39e871]: Prescription Refills
+              - link [ref=f39e873] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com/manage-prescriptions/delivery-and-pickup
+                - generic "prescription-delivery" [ref=f39e874]:
+                  - paragraph [ref=f39e876]: Prescription Delivery
+              - link [ref=f39e878] [cursor=pointer]:
+                - /url: /apple-service
+                - generic "apple-services" [ref=f39e879]:
+                  - paragraph [ref=f39e881]: Apple Service
+              - link [ref=f39e883] [cursor=pointer]:
+                - /url: /tech-services
+                - generic "tech-services" [ref=f39e884]:
+                  - paragraph [ref=f39e886]: TECH Services
+              - link [ref=f39e888] [cursor=pointer]:
+                - /url: /photography-services
+                - generic "photography-services" [ref=f39e889]:
+                  - paragraph [ref=f39e891]: Photography Services
+              - link [ref=f39e893] [cursor=pointer]:
+                - /url: https://www.ldinsurance.ca
+                - generic "insurance-services" [ref=f39e894]:
+                  - paragraph [ref=f39e896]: Insurance Services
+              - link [ref=f39e898] [cursor=pointer]:
+                - /url: /subscriptions
+                - generic "subscription-services" [ref=f39e899]:
+                  - paragraph [ref=f39e901]: Subscription Services
+              - link [ref=f39e903] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com/health-clinics/travel-clinic
+                - generic "travel-clinics" [ref=f39e904]:
+                  - paragraph [ref=f39e906]: Travel Clinics
+              - link [ref=f39e908] [cursor=pointer]:
+                - /url: /optical/optical-london-drugs-new
+                - generic "optical-london-drugs" [ref=f39e909]:
+                  - paragraph [ref=f39e911]: Optical London Drugs
+              - link [ref=f39e913] [cursor=pointer]:
+                - /url: /emergencies
+                - generic "emergency-preparedness" [ref=f39e914]:
+                  - paragraph [ref=f39e916]: Emergency Preparedness
+              - link [ref=f39e918] [cursor=pointer]:
+                - /url: /passportphoto
+                - generic "passport-photos" [ref=f39e919]:
+                  - paragraph [ref=f39e921]: Passport Photos
+              - link [ref=f39e923] [cursor=pointer]:
+                - /url: /postal-outlets-available-at-select-london-drugs-stores/LDPostalOutlets
+                - generic "postal-outlets" [ref=f39e924]:
+                  - paragraph [ref=f39e926]: Postal Outlets
+              - link [ref=f39e928] [cursor=pointer]:
+                - /url: https://www.tld.com
+                - generic "tld-computers" [ref=f39e929]:
+                  - paragraph [ref=f39e931]: TLD Computers
+          - generic [ref=f39e934]:
+            - generic "customer-care" [ref=f39e936]: Customer Care
+            - generic [ref=f39e938]:
+              - link [ref=f39e940] [cursor=pointer]:
+                - /url: /customer-service/customer-service-landing
+                - generic "customer-service" [ref=f39e941]:
+                  - paragraph [ref=f39e943]: Customer Service
+              - link [ref=f39e945] [cursor=pointer]:
+                - /url: /enewsletter-settings
+                - generic "email-subscription-settings" [ref=f39e946]:
+                  - paragraph [ref=f39e948]: Email Subscription Settings
+              - link [ref=f39e950] [cursor=pointer]:
+                - /url: /contact-us
+                - generic "contact-us" [ref=f39e951]:
+                  - paragraph [ref=f39e953]: Contact Us
+              - link [ref=f39e955] [cursor=pointer]:
+                - /url: /frequently-asked-questions/faqs
+                - generic "freq-asked" [ref=f39e956]:
+                  - paragraph [ref=f39e958]: Frequently Asked Questions
+              - link [ref=f39e960] [cursor=pointer]:
+                - /url: /our-guarantee
+                - generic "our-guarantee" [ref=f39e961]:
+                  - paragraph [ref=f39e963]: Our Guarantee
+              - link [ref=f39e965] [cursor=pointer]:
+                - /url: /purchase-protection-plan/purchase-protection-plan-introduction
+                - generic "purchase-protection-plans" [ref=f39e966]:
+                  - paragraph [ref=f39e968]: Purchase Protection Plan
+              - link [ref=f39e970] [cursor=pointer]:
+                - /url: /product-recalls-and-advisories/product-recall-and-advisories
+                - generic "product-refills-advisories" [ref=f39e971]:
+                  - paragraph [ref=f39e973]: Product Recalls & Advisories
+              - link [ref=f39e975] [cursor=pointer]:
+                - /url: /returns-and-exchanges
+                - generic "return-exchanges" [ref=f39e976]:
+                  - paragraph [ref=f39e978]: Return & Exchanges
+              - link [ref=f39e980] [cursor=pointer]:
+                - /url: /shipping-and-delivery/shippinganddelivery
+                - paragraph [ref=f39e983]: Shipping & Delivery
+              - link [ref=f39e985] [cursor=pointer]:
+                - /url: /faq-for-quick-refill
+                - paragraph [ref=f39e988]: FAQ for Quick Refill
+          - generic [ref=f39e991]:
+            - generic [ref=f39e992]: Company Info
+            - generic [ref=f39e995]:
+              - link [ref=f39e997] [cursor=pointer]:
+                - /url: /cyber-incident-update-employee-notice
+                - paragraph [ref=f39e1000]: CYBER INCIDENT UPDATE - EMPLOYEE NOTICE
+              - link [ref=f39e1002] [cursor=pointer]:
+                - /url: /believe-in-better
+                - paragraph [ref=f39e1005]: Believe in Better
+              - link [ref=f39e1007] [cursor=pointer]:
+                - /url: /corporate-information/corporate-info
+                - paragraph [ref=f39e1010]: Corporate Info
+              - link [ref=f39e1012] [cursor=pointer]:
+                - /url: /about-london-drugs/about-us
+                - paragraph [ref=f39e1015]: London Drugs Story
+              - link [ref=f39e1017] [cursor=pointer]:
+                - /url: /stores
+                - paragraph [ref=f39e1020]: Our Locations
+              - link [ref=f39e1022] [cursor=pointer]:
+                - /url: https://london-drugs-limited-jobs.careerplug.com/account
+                - generic "careers" [ref=f39e1023]:
+                  - paragraph [ref=f39e1025]: Careers
+              - link [ref=f39e1027] [cursor=pointer]:
+                - /url: /london-drugs-in-your-community/cominvolve
+                - generic "community" [ref=f39e1028]:
+                  - paragraph [ref=f39e1030]: Community
+              - link [ref=f39e1032] [cursor=pointer]:
+                - /url: /news-and-events/news-and-events
+                - generic "news-events" [ref=f39e1033]:
+                  - paragraph [ref=f39e1035]: News & Events
+              - link [ref=f39e1037] [cursor=pointer]:
+                - /url: /influencers
+                - generic "news-events" [ref=f39e1038]:
+                  - paragraph [ref=f39e1040]: Influencers
+              - link [ref=f39e1042] [cursor=pointer]:
+                - /url: https://blog.londondrugs.com/employment-recruitment-scam-advisory
+                - generic "avoid-recruitment-fraud" [ref=f39e1043]:
+                  - paragraph [ref=f39e1045]: Avoid Recruitment Fraud
+              - link [ref=f39e1047] [cursor=pointer]:
+                - /url: https://cdn.builder.io/o/assets%2F062164fc6d8546c68b6329a2b6a851f1%2Feb834c26acec46178c53dc20c4484293?alt=media&token=80adc0f7-10fd-4c11-b184-b0dce7a8c427&apiKey=062164fc6d8546c68b6329a2b6a851f1
+                - paragraph [ref=f39e1050]: Pay Transparency Report
+              - link "commitment-against-slavery" [ref=f39e1053] [cursor=pointer]:
+                - /url: https://www.londondrugs.com/commitment-against-slavery
+                - paragraph [ref=f39e1055]: COMMITMENT AGAINST SLAVERY
+      - generic [ref=f39e1056]:
+        - generic [ref=f39e1057]:
+          - generic "connect-with-us" [ref=f39e1058]:
+            - paragraph [ref=f39e1060]: Connect With Us
+          - generic [ref=f39e1061]:
+            - link "londondrugs-facebook" [ref=f39e1062] [cursor=pointer]:
+              - /url: https://www.facebook.com/LondonDrugs
+            - link "londondrugs-twitter" [ref=f39e1063] [cursor=pointer]:
+              - /url: https://x.com/LondonDrugs/
+            - link "londondrugs-pininterest" [ref=f39e1064] [cursor=pointer]:
+              - /url: https://ca.pinterest.com/londondrugs/
+            - link "londondrugs-instagram" [ref=f39e1065] [cursor=pointer]:
+              - /url: https://www.instagram.com/londondrugs/
+            - link "londondrugs-youtube" [ref=f39e1066] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/LondonDrugsLtd
+            - link "londondrugs-tiktok" [ref=f39e1067] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@londondrugs
+        - generic [ref=f39e1068]:
+          - img "London Drugs Logo" [ref=f39e1070]
+          - generic [ref=f39e1071]:
+            - generic [ref=f39e1072]:
+              - strong [ref=f39e1075]:
+                - link "Legal Terms" [ref=f39e1076] [cursor=pointer]:
+                  - /url: /legal-terms-of-use/TermsConditions
+              - strong [ref=f39e1079]:
+                - link "Privacy Policy" [ref=f39e1080] [cursor=pointer]:
+                  - /url: /london-drugs-privacy-policy/privacy-policy
+              - strong [ref=f39e1083]:
+                - link "Security Policy & Cookie Notice" [ref=f39e1084] [cursor=pointer]:
+                  - /url: /security-policy-and-cookie-notice/privacy-security
+              - strong [ref=f39e1087]:
+                - link "Sitemap" [ref=f39e1088] [cursor=pointer]:
+                  - /url: /sitemap/
+            - paragraph [ref=f39e1091]: © 2026 London Drugs. All rights reserved.

@@ -1,0 +1,504 @@
+{
+  "capability": {
+    "name": "quality-engineering-design",
+    "version": "1.0.0",
+    "instance_id": "qua-20260715-1pketct",
+    "sdlc_phase": "testing"
+  },
+  "session_name": "test-automation__pli-20260715-x4uy1o__qed-001",
+  "status": "completed",
+  "current_step": "test-case-generation-validation",
+  "current_step_index": 1,
+  "started_at": "2026-07-15T14:29:34.571Z",
+  "steps": {
+    "test-case-generation": {
+      "status": "completed",
+      "notes": "",
+      "exec_log_latest_path": "/Users/virginia.zambudio/PlaywrightAutomation/workflow/instances/quality-engineering-design/sessions/test-automation__pli-20260715-x4uy1o__qed-001/agent-run/test-case-generation__1784130646213-7gft2sd5.log",
+      "exec_log_latest_run_id": "1784130646213-7gft2sd5",
+      "exec_log_latest_model": "anthropic/claude-sonnet-4-6",
+      "exec_log_latest_started_at": "2026-07-15T15:50:46.213Z",
+      "exec_log_latest_executor": "coda-batch",
+      "started_at": "2026-07-15T15:50:40.637Z",
+      "exec_log_latest_session_resume": {
+        "resumed": false,
+        "cold_reason": "first_run"
+      },
+      "completed_at": "2026-07-15T16:01:32.716Z",
+      "completed_by_user": true,
+      "outputs": {
+        "test_cases_path": "./artifacts/outputs/quality-engineering-design/test-cases"
+      },
+      "archetype": "generate",
+      "artifact_group_id": "6eeb5daa-a34f-46a3-96a5-c0416626502d",
+      "exec_log_latest_completed_at": "2026-07-15T16:01:32.706Z"
+    },
+    "test-case-generation-validation": {
+      "status": "completed",
+      "notes": "",
+      "started_at": "2026-07-15T16:01:32.809Z",
+      "review": {
+        "document_path": "./artifacts/outputs/quality-engineering-design/test-cases",
+        "review_started_at": "2026-07-15T16:23:04.517Z",
+        "review_id": "39be69f6-0b8f-42c8-ad2f-fff746b21e62",
+        "reviewed_at": "2026-07-15T16:24:04.561Z",
+        "validation_action": "Approved",
+        "operator_id": "virginia.zambudio@globant.com"
+      },
+      "billing_state": "approved",
+      "completed_at": "2026-07-15T16:24:04.561Z",
+      "completed_by_user": true,
+      "outputs": {},
+      "archetype": "gate"
+    }
+  },
+  "navigation_history": [
+    {
+      "timestamp": "2026-07-15T14:29:34.571Z",
+      "action": "started_capability",
+      "step": "test-case-generation"
+    },
+    {
+      "timestamp": "2026-07-15T14:29:45.760Z",
+      "action": "executed_step",
+      "step": "test-case-generation",
+      "reason": "Execution interrupted by SIGINT — cancelled by user",
+      "metrics": {
+        "duration_seconds": 11,
+        "model": "anthropic/claude-sonnet-4-6",
+        "executor": "coda-batch",
+        "model_tier": "worker",
+        "started_at": "2026-07-15T14:29:34.653Z",
+        "succeeded": false,
+        "session_resume": {
+          "resumed": false,
+          "cold_reason": "first_run"
+        },
+        "parallel_delegation": {
+          "available": false,
+          "used": false,
+          "count": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-15T14:41:12.729Z",
+      "action": "executed_step",
+      "step": "test-case-generation",
+      "reason": "Step 'test-case-generation' exited successfully but produced incomplete outputs:\n  - required output 'test_cases_path' is an empty directory (no non-empty files): /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-design/test-cases",
+      "metrics": {
+        "duration_seconds": 550,
+        "model": "anthropic/claude-sonnet-4-6",
+        "executor": "coda-batch",
+        "model_tier": "worker",
+        "token_usage": {
+          "input_tokens": 8664219,
+          "output_tokens": 17354,
+          "cost_usd": 7.192837
+        },
+        "started_at": "2026-07-15T14:32:02.987Z",
+        "succeeded": false,
+        "session_resume": {
+          "resumed": false,
+          "cold_reason": "first_run"
+        },
+        "parallel_delegation": {
+          "available": false,
+          "used": false,
+          "count": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-15T15:44:34.653Z",
+      "action": "executed_step",
+      "step": "test-case-generation",
+      "reason": "Step 'test-case-generation' exited successfully but produced incomplete outputs:\n  - required output 'test_cases_path' is an empty directory (no non-empty files): /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-design/test-cases",
+      "metrics": {
+        "duration_seconds": 249,
+        "model": "anthropic/claude-sonnet-4-6",
+        "executor": "coda-batch",
+        "model_tier": "worker",
+        "token_usage": {
+          "input_tokens": 2872258,
+          "output_tokens": 10140,
+          "cost_usd": 2.604635
+        },
+        "started_at": "2026-07-15T15:40:26.001Z",
+        "succeeded": false,
+        "session_resume": {
+          "resumed": false,
+          "cold_reason": "first_run"
+        },
+        "parallel_delegation": {
+          "available": false,
+          "used": false,
+          "count": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-15T15:46:54.261Z",
+      "action": "executed_step",
+      "step": "test-case-generation",
+      "reason": "Execution interrupted by SIGINT — cancelled by user",
+      "metrics": {
+        "duration_seconds": 15,
+        "model": "anthropic/claude-sonnet-4-6",
+        "executor": "coda-batch",
+        "model_tier": "worker",
+        "started_at": "2026-07-15T15:46:39.722Z",
+        "succeeded": false,
+        "session_resume": {
+          "resumed": false,
+          "cold_reason": "first_run"
+        },
+        "parallel_delegation": {
+          "available": false,
+          "used": false,
+          "count": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-15T15:50:40.638Z",
+      "action": "reset_to_pending",
+      "step": "test-case-generation"
+    },
+    {
+      "timestamp": "2026-07-15T16:01:32.713Z",
+      "action": "executed_step",
+      "step": "test-case-generation",
+      "metrics": {
+        "duration_seconds": 646,
+        "model": "anthropic/claude-sonnet-4-6",
+        "executor": "coda-batch",
+        "model_tier": "worker",
+        "token_usage": {
+          "input_tokens": 8512634,
+          "output_tokens": 37691,
+          "cost_usd": 9.24012
+        },
+        "started_at": "2026-07-15T15:50:46.213Z",
+        "succeeded": true,
+        "session_resume": {
+          "resumed": false,
+          "cold_reason": "first_run"
+        },
+        "parallel_delegation": {
+          "available": false,
+          "used": false,
+          "count": 0
+        },
+        "items_spawned": 9
+      }
+    },
+    {
+      "timestamp": "2026-07-15T16:01:32.717Z",
+      "action": "completed_step",
+      "step": "test-case-generation"
+    },
+    {
+      "timestamp": "2026-07-15T16:01:32.809Z",
+      "action": "navigated_forward",
+      "to_step": "test-case-generation-validation",
+      "from_step": "test-case-generation"
+    },
+    {
+      "timestamp": "2026-07-15T16:24:04.561Z",
+      "action": "reviewed_step",
+      "step": "test-case-generation-validation",
+      "review": {
+        "document_path": "./artifacts/outputs/quality-engineering-design/test-cases",
+        "review_started_at": "2026-07-15T16:23:04.517Z",
+        "review_id": "39be69f6-0b8f-42c8-ad2f-fff746b21e62",
+        "reviewed_at": "2026-07-15T16:24:04.561Z",
+        "validation_action": "Approved",
+        "operator_id": "virginia.zambudio@globant.com"
+      },
+      "review_action": "approve",
+      "review_operator_id": "virginia.zambudio@globant.com",
+      "reason": "approve (validation_action=Approved, billing_state=approved)"
+    },
+    {
+      "timestamp": "2026-07-15T16:24:04.561Z",
+      "action": "completed_step",
+      "step": "test-case-generation-validation",
+      "review": {
+        "document_path": "./artifacts/outputs/quality-engineering-design/test-cases",
+        "review_started_at": "2026-07-15T16:23:04.517Z",
+        "review_id": "39be69f6-0b8f-42c8-ad2f-fff746b21e62",
+        "reviewed_at": "2026-07-15T16:24:04.561Z",
+        "validation_action": "Approved",
+        "operator_id": "virginia.zambudio@globant.com"
+      }
+    }
+  ],
+  "parameters": {
+    "input_folder": "/Users/virginia.zambudio/PlaywrightAutomation/artifacts/inputs",
+    "output_folder": "/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-design",
+    "project_name": "project",
+    "prd_path": "/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/product-definition/prd",
+    "epics_path": "/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/product-definition/epics",
+    "adrs_path": "/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/software-architecture/adrs",
+    "user_stories_path": "/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/product-delivery/user-stories",
+    "test_strategy_path": "/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-planning/qa-test-strategy",
+    "master_test_plan_path": "/Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-planning/qa-master-test-plan",
+    "test_cases_path": "./artifacts/outputs/quality-engineering-design/test-cases",
+    "criteria_base_path": "./criteria",
+    "artifacts_path": "",
+    "quality_criteria_path": "",
+    "playlist_instance": {
+      "playlist_slug": "test-automation",
+      "playlist_name": "Test Automation",
+      "instance_id": "pli-20260715-x4uy1o",
+      "capability_session_name": "test-automation__pli-20260715-x4uy1o__qed-001",
+      "source_session_id": "qed-001"
+    }
+  },
+  "updated_at": "2026-07-15T16:24:04.578Z",
+  "seq": 19,
+  "archetype_summary": {
+    "by_archetype": {
+      "gate": {
+        "step_count": 1,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "synthesize": {
+        "step_count": 0,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "generate": {
+        "step_count": 1,
+        "billable_step_count": 1,
+        "raw": {
+          "input_tokens": 8512634,
+          "output_tokens": 37691,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 9.24012
+        },
+        "supervised_tokens": 8701089,
+        "billable_supervised_tokens": 8701089,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 11563971,
+        "mode1_overhead_cost_usd": 9.797471999999999,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "discover-internal": {
+        "step_count": 0,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "discover-deliverable": {
+        "step_count": 0,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "review": {
+        "step_count": 0,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "transform": {
+        "step_count": 0,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "excursion": {
+        "step_count": 0,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      },
+      "refinement": {
+        "step_count": 0,
+        "billable_step_count": 0,
+        "raw": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_tokens": 0,
+          "cache_read_tokens": 0,
+          "cost_usd": 0
+        },
+        "supervised_tokens": 0,
+        "billable_supervised_tokens": 0,
+        "held_supervised_tokens": 0,
+        "mode1_overhead": 0,
+        "mode1_overhead_cost_usd": 0,
+        "mode2_discarded": 0,
+        "mode2_discarded_cost_usd": 0,
+        "iteration_overhead": 0,
+        "iteration_overhead_cost_usd": 0,
+        "iteration_supervised_tokens": 0,
+        "iteration_billable_supervised_tokens": 0,
+        "iteration_billable_cost_usd": 0
+      }
+    },
+    "totals": {
+      "supervised_tokens": 8701089,
+      "billable_supervised_tokens": 8701089,
+      "held_supervised_tokens": 0,
+      "cost_usd": 19.037591999999997,
+      "supervised_cost_usd": 9.24012,
+      "billable_cost_usd": 9.24012,
+      "mode1_overhead_supervised_tokens": 11563971,
+      "mode1_overhead_cost_usd": 9.797471999999999,
+      "mode2_discarded_supervised_tokens": 0,
+      "mode2_discarded_cost_usd": 0,
+      "iteration_overhead_supervised_tokens": 0,
+      "iteration_overhead_cost_usd": 0,
+      "iteration_supervised_tokens": 0,
+      "iteration_billable_supervised_tokens": 0,
+      "iteration_billable_cost_usd": 0,
+      "management_supervised_tokens": 0,
+      "management_cost_usd": 0
+    },
+    "audit_flags": [
+      {
+        "code": "process_instability",
+        "step_id": "test-case-generation",
+        "detail": "retries=4"
+      },
+      {
+        "code": "retry_overhead_high",
+        "detail": "135%"
+      }
+    ],
+    "last_computed_at": "2026-07-15T16:24:04.565Z"
+  },
+  "completed_at": "2026-07-15T16:24:04.564Z"
+}

@@ -1,0 +1,278 @@
+- generic [ref=f18e1]:
+  - alert [ref=f18e2]
+  - link [ref=f18e94] [cursor=pointer]:
+    - /url: https://www.londondrugs.com/category/clearance/c/39
+    - paragraph [ref=f18e97]:
+      - strong [ref=f18e98]: "Last Chance Clearance:"
+    - paragraph [ref=f18e101]: new items are added weekly online and in-store. Shop now
+  - article [ref=f18e3]:
+    - list [ref=f18e4]:
+      - listitem [ref=f18e5]:
+        - 'link "Customer Service: 1-888-991-2299" [ref=f18e6] [cursor=pointer]':
+          - /url: tel:18889912299
+        - generic [ref=f18e7]: "|"
+      - listitem [ref=f18e8]:
+        - link "Travel Essentials" [ref=f18e9] [cursor=pointer]:
+          - /url: /travel
+        - generic [ref=f18e10]: "|"
+      - listitem [ref=f18e11]:
+        - link "30-Day Price Match Guarantee" [ref=f18e12] [cursor=pointer]:
+          - /url: /our-guarantee/OurGuarantee
+  - banner [ref=f18e13]:
+    - generic [ref=f18e14]:
+      - generic [ref=f18e15]:
+        - link [ref=f18e16] [cursor=pointer]:
+          - /url: /
+          - img "London Drugs" [ref=f18e17]
+        - textbox "Search for products" [active] [ref=f18e21]:
+          - /placeholder: Find your product
+        - complementary [ref=f18e24]:
+          - list [ref=f18e25]:
+            - listitem [ref=f18e26]:
+              - link "Select Your Store" [ref=f18e27] [cursor=pointer]:
+                - /url: /stores
+          - complementary [ref=f18e31]:
+            - complementary [ref=f18e32]:
+              - button [ref=f18e34] [cursor=pointer]
+            - generic [ref=f18e36]:
+              - link "Show Wishlist Items" [ref=f18e37] [cursor=pointer]:
+                - /url: /myaccount/wishlist
+              - link "Show My List & Registry Items" [ref=f18e40] [cursor=pointer]:
+                - /url: /myaccount/wishlist#registry
+                - img "Add to Registry Icon" [ref=f18e41]
+            - button "Show Mini Cart Items" [ref=f18e44] [cursor=pointer]
+      - generic [ref=f18e51]:
+        - generic [ref=f18e52]:
+          - button "Opens Mega Menu" [ref=f18e53] [cursor=pointer]
+          - button "shop by category" [ref=f18e55] [cursor=pointer]: Shop by Category
+        - list [ref=f18e56]:
+          - listitem [ref=f18e57]:
+            - link "Deals & Events" [ref=f18e59] [cursor=pointer]:
+              - /url: /category/deals-and-events/c/1027
+          - listitem [ref=f18e60]:
+            - link "Services" [ref=f18e62] [cursor=pointer]:
+              - /url: /our-services
+          - listitem [ref=f18e63]:
+            - generic [ref=f18e64]:
+              - img "Pharmacy" [ref=f18e65]
+              - link "Pharmacy" [ref=f18e66] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com
+          - listitem [ref=f18e67]:
+            - generic [ref=f18e68]:
+              - img "PhotoLab" [ref=f18e69]
+              - link "PhotoLab" [ref=f18e70] [cursor=pointer]:
+                - /url: https://photolab.londondrugs.com
+          - listitem [ref=f18e71]:
+            - link "Gift Registry" [ref=f18e73] [cursor=pointer]:
+              - /url: /myaccount/wishlist#registry
+          - listitem [ref=f18e74]:
+            - link [ref=f18e75] [cursor=pointer]:
+              - /url: https://www.ldextras.com
+              - generic [ref=f18e76]:
+                - strong [ref=f18e77]: LD
+                - emphasis [ref=f18e78]: Extras
+        - link [ref=f18e79] [cursor=pointer]:
+          - /url: /flyer
+          - img "Flyers Logo" [ref=f18e80]
+          - text: Flyers
+  - heading "Nothing found!" [level=2] [ref=f18e81]
+  - generic [ref=f18e83]:
+    - generic [ref=f18e84]:
+      - heading "Email Newsletter" [level=3] [ref=f18e85]
+      - paragraph [ref=f18e86]: Sign up and receive promotions and special offers by email
+    - textbox "Enter your email" [ref=f18e88]
+    - button "SIGN UP" [ref=f18e90] [cursor=pointer]
+  - contentinfo [ref=f18e102]:
+    - generic [ref=f18e107]:
+      - generic [ref=f18e109]:
+        - generic [ref=f18e111]:
+          - paragraph [ref=f18e116]: Our Blogs
+          - generic [ref=f18e117]:
+            - generic [ref=f18e119]:
+              - link [ref=f18e122] [cursor=pointer]:
+                - /url: https://blog.londondrugs.com
+              - link "londondrugs blog" [ref=f18e125] [cursor=pointer]:
+                - /url: https://blog.londondrugs.com
+                - paragraph [ref=f18e127]: LONDON DRUGS BLOG
+            - generic [ref=f18e129]:
+              - link [ref=f18e132] [cursor=pointer]:
+                - /url: http://www.greendeal.ca/blog
+              - link "greendeal-blog" [ref=f18e135] [cursor=pointer]:
+                - /url: http://www.greendeal.ca/blog
+                - paragraph [ref=f18e137]: GREEN DEAL BLOG
+        - generic [ref=f18e141]:
+          - generic [ref=f18e144]:
+            - generic "our-services" [ref=f18e146]: Our Services
+            - generic [ref=f18e148]:
+              - generic "presc" [ref=f18e149]:
+                - link [ref=f18e150] [cursor=pointer]:
+                  - /url: https://blog.londondrugs.com/pharmacy-services-and-information
+                  - generic "prescription-refills" [ref=f18e151]:
+                    - paragraph [ref=f18e153]: Prescription Refills
+              - link [ref=f18e155] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com/manage-prescriptions/delivery-and-pickup
+                - generic "prescription-delivery" [ref=f18e156]:
+                  - paragraph [ref=f18e158]: Prescription Delivery
+              - link [ref=f18e160] [cursor=pointer]:
+                - /url: /apple-service
+                - generic "apple-services" [ref=f18e161]:
+                  - paragraph [ref=f18e163]: Apple Service
+              - link [ref=f18e165] [cursor=pointer]:
+                - /url: /tech-services
+                - generic "tech-services" [ref=f18e166]:
+                  - paragraph [ref=f18e168]: TECH Services
+              - link [ref=f18e170] [cursor=pointer]:
+                - /url: /photography-services
+                - generic "photography-services" [ref=f18e171]:
+                  - paragraph [ref=f18e173]: Photography Services
+              - link [ref=f18e175] [cursor=pointer]:
+                - /url: https://www.ldinsurance.ca
+                - generic "insurance-services" [ref=f18e176]:
+                  - paragraph [ref=f18e178]: Insurance Services
+              - link [ref=f18e180] [cursor=pointer]:
+                - /url: /subscriptions
+                - generic "subscription-services" [ref=f18e181]:
+                  - paragraph [ref=f18e183]: Subscription Services
+              - link [ref=f18e185] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com/health-clinics/travel-clinic
+                - generic "travel-clinics" [ref=f18e186]:
+                  - paragraph [ref=f18e188]: Travel Clinics
+              - link [ref=f18e190] [cursor=pointer]:
+                - /url: /optical/optical-london-drugs-new
+                - generic "optical-london-drugs" [ref=f18e191]:
+                  - paragraph [ref=f18e193]: Optical London Drugs
+              - link [ref=f18e195] [cursor=pointer]:
+                - /url: /emergencies
+                - generic "emergency-preparedness" [ref=f18e196]:
+                  - paragraph [ref=f18e198]: Emergency Preparedness
+              - link [ref=f18e200] [cursor=pointer]:
+                - /url: /passportphoto
+                - generic "passport-photos" [ref=f18e201]:
+                  - paragraph [ref=f18e203]: Passport Photos
+              - link [ref=f18e205] [cursor=pointer]:
+                - /url: /postal-outlets-available-at-select-london-drugs-stores/LDPostalOutlets
+                - generic "postal-outlets" [ref=f18e206]:
+                  - paragraph [ref=f18e208]: Postal Outlets
+              - link [ref=f18e210] [cursor=pointer]:
+                - /url: https://www.tld.com
+                - generic "tld-computers" [ref=f18e211]:
+                  - paragraph [ref=f18e213]: TLD Computers
+          - generic [ref=f18e216]:
+            - generic "customer-care" [ref=f18e218]: Customer Care
+            - generic [ref=f18e220]:
+              - link [ref=f18e222] [cursor=pointer]:
+                - /url: /customer-service/customer-service-landing
+                - generic "customer-service" [ref=f18e223]:
+                  - paragraph [ref=f18e225]: Customer Service
+              - link [ref=f18e227] [cursor=pointer]:
+                - /url: /enewsletter-settings
+                - generic "email-subscription-settings" [ref=f18e228]:
+                  - paragraph [ref=f18e230]: Email Subscription Settings
+              - link [ref=f18e232] [cursor=pointer]:
+                - /url: /contact-us
+                - generic "contact-us" [ref=f18e233]:
+                  - paragraph [ref=f18e235]: Contact Us
+              - link [ref=f18e237] [cursor=pointer]:
+                - /url: /frequently-asked-questions/faqs
+                - generic "freq-asked" [ref=f18e238]:
+                  - paragraph [ref=f18e240]: Frequently Asked Questions
+              - link [ref=f18e242] [cursor=pointer]:
+                - /url: /our-guarantee
+                - generic "our-guarantee" [ref=f18e243]:
+                  - paragraph [ref=f18e245]: Our Guarantee
+              - link [ref=f18e247] [cursor=pointer]:
+                - /url: /purchase-protection-plan/purchase-protection-plan-introduction
+                - generic "purchase-protection-plans" [ref=f18e248]:
+                  - paragraph [ref=f18e250]: Purchase Protection Plan
+              - link [ref=f18e252] [cursor=pointer]:
+                - /url: /product-recalls-and-advisories/product-recall-and-advisories
+                - generic "product-refills-advisories" [ref=f18e253]:
+                  - paragraph [ref=f18e255]: Product Recalls & Advisories
+              - link [ref=f18e257] [cursor=pointer]:
+                - /url: /returns-and-exchanges
+                - generic "return-exchanges" [ref=f18e258]:
+                  - paragraph [ref=f18e260]: Return & Exchanges
+              - link [ref=f18e262] [cursor=pointer]:
+                - /url: /shipping-and-delivery/shippinganddelivery
+                - paragraph [ref=f18e265]: Shipping & Delivery
+              - link [ref=f18e267] [cursor=pointer]:
+                - /url: /faq-for-quick-refill
+                - paragraph [ref=f18e270]: FAQ for Quick Refill
+          - generic [ref=f18e273]:
+            - generic [ref=f18e274]: Company Info
+            - generic [ref=f18e277]:
+              - link [ref=f18e279] [cursor=pointer]:
+                - /url: /cyber-incident-update-employee-notice
+                - paragraph [ref=f18e282]: CYBER INCIDENT UPDATE - EMPLOYEE NOTICE
+              - link [ref=f18e284] [cursor=pointer]:
+                - /url: /believe-in-better
+                - paragraph [ref=f18e287]: Believe in Better
+              - link [ref=f18e289] [cursor=pointer]:
+                - /url: /corporate-information/corporate-info
+                - paragraph [ref=f18e292]: Corporate Info
+              - link [ref=f18e294] [cursor=pointer]:
+                - /url: /about-london-drugs/about-us
+                - paragraph [ref=f18e297]: London Drugs Story
+              - link [ref=f18e299] [cursor=pointer]:
+                - /url: /stores
+                - paragraph [ref=f18e302]: Our Locations
+              - link [ref=f18e304] [cursor=pointer]:
+                - /url: https://london-drugs-limited-jobs.careerplug.com/account
+                - generic "careers" [ref=f18e305]:
+                  - paragraph [ref=f18e307]: Careers
+              - link [ref=f18e309] [cursor=pointer]:
+                - /url: /london-drugs-in-your-community/cominvolve
+                - generic "community" [ref=f18e310]:
+                  - paragraph [ref=f18e312]: Community
+              - link [ref=f18e314] [cursor=pointer]:
+                - /url: /news-and-events/news-and-events
+                - generic "news-events" [ref=f18e315]:
+                  - paragraph [ref=f18e317]: News & Events
+              - link [ref=f18e319] [cursor=pointer]:
+                - /url: /influencers
+                - generic "news-events" [ref=f18e320]:
+                  - paragraph [ref=f18e322]: Influencers
+              - link [ref=f18e324] [cursor=pointer]:
+                - /url: https://blog.londondrugs.com/employment-recruitment-scam-advisory
+                - generic "avoid-recruitment-fraud" [ref=f18e325]:
+                  - paragraph [ref=f18e327]: Avoid Recruitment Fraud
+              - link [ref=f18e329] [cursor=pointer]:
+                - /url: https://cdn.builder.io/o/assets%2F062164fc6d8546c68b6329a2b6a851f1%2Feb834c26acec46178c53dc20c4484293?alt=media&token=80adc0f7-10fd-4c11-b184-b0dce7a8c427&apiKey=062164fc6d8546c68b6329a2b6a851f1
+                - paragraph [ref=f18e332]: Pay Transparency Report
+              - link "commitment-against-slavery" [ref=f18e335] [cursor=pointer]:
+                - /url: https://www.londondrugs.com/commitment-against-slavery
+                - paragraph [ref=f18e337]: COMMITMENT AGAINST SLAVERY
+      - generic [ref=f18e338]:
+        - generic [ref=f18e339]:
+          - generic "connect-with-us" [ref=f18e340]:
+            - paragraph [ref=f18e342]: Connect With Us
+          - generic [ref=f18e343]:
+            - link "londondrugs-facebook" [ref=f18e344] [cursor=pointer]:
+              - /url: https://www.facebook.com/LondonDrugs
+            - link "londondrugs-twitter" [ref=f18e345] [cursor=pointer]:
+              - /url: https://x.com/LondonDrugs/
+            - link "londondrugs-pininterest" [ref=f18e346] [cursor=pointer]:
+              - /url: https://ca.pinterest.com/londondrugs/
+            - link "londondrugs-instagram" [ref=f18e347] [cursor=pointer]:
+              - /url: https://www.instagram.com/londondrugs/
+            - link "londondrugs-youtube" [ref=f18e348] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/LondonDrugsLtd
+            - link "londondrugs-tiktok" [ref=f18e349] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@londondrugs
+        - generic [ref=f18e350]:
+          - img "London Drugs Logo" [ref=f18e352]
+          - generic [ref=f18e353]:
+            - generic [ref=f18e354]:
+              - strong [ref=f18e357]:
+                - link "Legal Terms" [ref=f18e358] [cursor=pointer]:
+                  - /url: /legal-terms-of-use/TermsConditions
+              - strong [ref=f18e361]:
+                - link "Privacy Policy" [ref=f18e362] [cursor=pointer]:
+                  - /url: /london-drugs-privacy-policy/privacy-policy
+              - strong [ref=f18e365]:
+                - link "Security Policy & Cookie Notice" [ref=f18e366] [cursor=pointer]:
+                  - /url: /security-policy-and-cookie-notice/privacy-security
+              - strong [ref=f18e369]:
+                - link "Sitemap" [ref=f18e370] [cursor=pointer]:
+                  - /url: /sitemap/
+            - paragraph [ref=f18e373]: © 2026 London Drugs. All rights reserved.

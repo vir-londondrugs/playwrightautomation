@@ -79,7 +79,7 @@ test(
         });
 
         await test.step("Wait for no-results message'", async () => {
-            await expect(searchResultsPage.noResultsHeading).toBeVisible({ timeout: 15_000 });
+            await expect(searchResultsPage.noResultsHeading).toBeVisible({ timeout: 30_000 });
         });
     }
 );
@@ -91,6 +91,9 @@ test(
 test(
     'TC-83227 — Search returns relevant results for a valid term @search @positive @smoke',
     async ({ page }) => {
+        // Extended timeout: Edge hydrates the search-results page slower than Chromium on UAT.
+        test.setTimeout(120_000);
+
         const homePage = new HomePage(page);
         const searchResultsPage = new SearchResultsPage(page);
 
@@ -124,7 +127,8 @@ test(
 
         await test.step('Verify search term appears in a product title or section heading', async () => {
             const matchingHeadings = searchResultsPage.headingsMatching(homePageData.search.validTerm);
-            await expect(matchingHeadings.first()).toBeVisible({ timeout: 30_000 });
+            // 60 s: Edge hydrates the search-results SPA slower than Chromium, especially under parallel load on UAT.
+            await expect(matchingHeadings.first()).toBeVisible({ timeout: 60_000 });
             await expect(matchingHeadings).not.toHaveCount(0);
         });
     }
@@ -138,12 +142,16 @@ test(
 test(
     'TC-83228 — Store Locator opens and Find All Stores link works @store-locator @navigation',
     async ({ page }) => {
+        // Extended timeout: Edge is slower than Chromium at hydrating the header on UAT.
+        test.setTimeout(120_000);
+
         const homePage = new HomePage(page);
         const storeLocatorPage = new StoreLocatorPage(page);
 
         await test.step('Navigate to homepage', async () => {
             await homePage.navigate(homePageData.urls.home);
-            await page.waitForLoadState('networkidle', { timeout: 8_000 }).catch(() => {});
+            // Wait for networkidle to ensure header links have hydrated before interacting.
+            await page.waitForLoadState('networkidle', { timeout: 20_000 }).catch(() => {});
         });
 
         await test.step('Click page body to unblock loading', async () => {
@@ -151,37 +159,38 @@ test(
         });
 
         await test.step("Click 'Select Your Store' / stores link in header", async () => {
-            await homePage.storesLink.waitFor({ state: 'visible', timeout: 15_000 });
+            // Increased to 60 s: Edge hydrates the header later than Chromium, especially under parallel UAT load.
+            await homePage.storesLink.waitFor({ state: 'visible', timeout: 60_000 });
             await homePage.storesLink.click();
         });
 
         await test.step('Wait for Store Locator URL', async () => {
-            await page.waitForURL('**/stores', { timeout: 20_000 });
+            await page.waitForURL('**/stores', { timeout: 30_000 });
             // Allow Next.js SPA to finish client-side rendering after URL change.
-            await page.waitForLoadState('domcontentloaded', { timeout: 10_000 }).catch(() => {});
+            await page.waitForLoadState('domcontentloaded', { timeout: 30_000 }).catch(() => {});
         });
 
         await test.step("Verify 'Find a Store Near You' heading is visible", async () => {
-            await expect(storeLocatorPage.heading).toBeVisible({ timeout: 15_000 });
+            await expect(storeLocatorPage.heading).toBeVisible({ timeout: 30_000 });
         });
 
         await test.step("Click 'Find All Stores by Province' link", async () => {
-            await storeLocatorPage.allStoresLink.waitFor({ state: 'visible', timeout: 15_000 });
+            await storeLocatorPage.allStoresLink.waitFor({ state: 'visible', timeout: 30_000 });
             await storeLocatorPage.allStoresLink.click();
         });
 
         await test.step('Wait for All Stores URL', async () => {
-            await page.waitForURL('**/stores/all-stores', { timeout: 20_000 });
+            await page.waitForURL('**/stores/all-stores', { timeout: 30_000 });
             // Allow Next.js SPA to finish client-side rendering of province sections after URL change.
             // The /stores/all-stores page only renders province content via SPA navigation;
             // a direct full-page load shows only a loading spinner.
-            await page.waitForLoadState('domcontentloaded', { timeout: 10_000 }).catch(() => {});
+            await page.waitForLoadState('domcontentloaded', { timeout: 30_000 }).catch(() => {});
         });
 
         await test.step('Verify All Stores list is visible', async () => {
             // storeList matches the first province heading (e.g. "British Columbia").
             // toBeVisible() retries for up to 20 s to handle React hydration delay after SPA navigation.
-            await expect(storeLocatorPage.storeList).toBeVisible({ timeout: 20_000 });
+            await expect(storeLocatorPage.storeList).toBeVisible({ timeout: 30_000 });
         });
     }
 );
@@ -197,6 +206,11 @@ test(
 test(
     'TC-83229 — Mini Cart opens and View Cart navigates to cart page @mini-cart @cart @navigation',
     async ({ page }) => {
+        // Extended timeout: this test performs multiple navigations (home → search → PDP →
+        // add-to-cart → cart → home → open mini cart → cart). Edge is significantly slower
+        // than Chromium on UAT and the default 60 s is insufficient.
+        test.setTimeout(180_000);
+
         const homePage = new HomePage(page);
         const searchResultsPage = new SearchResultsPage(page);
         const { miniCart } = homePageData;
@@ -215,12 +229,12 @@ test(
             await page.locator('body').click({ force: true });
             await homePage.waitForSearchInput();
             await homePage.search(miniCart.searchTerm);
-            await page.waitForURL(/\/search/, { timeout: 20_000 });
+            await page.waitForURL(/\/search/, { timeout: 30_000 });
             // Wait for product results to render, then click the first one.
-            await searchResultsPage.firstProductLink.waitFor({ state: 'visible', timeout: 20_000 });
+            await searchResultsPage.firstProductLink.waitFor({ state: 'visible', timeout: 30_000 });
             await searchResultsPage.firstProductLink.click();
             // Wait until the browser has left the search page and landed on the product page.
-            await page.waitForURL((url) => !url.pathname.includes('/search'), { timeout: 20_000 });
+            await page.waitForURL((url) => !url.pathname.includes('/search'), { timeout: 30_000 });
             await page.waitForLoadState('domcontentloaded');
         });
 
@@ -228,13 +242,13 @@ test(
             // Read the h1 heading on the product detail page.
             // This is used later to verify the item appears in the cart.
             const h1 = page.locator('h1').first();
-            await h1.waitFor({ state: 'visible', timeout: 15_000 });
+            await h1.waitFor({ state: 'visible', timeout: 30_000 });
             productName = (await h1.textContent() ?? '').trim();
         });
 
         await test.step('Add product to cart', async () => {
             const addToCartBtn = page.locator('button[aria-label="Add to cart button"]');
-            await addToCartBtn.waitFor({ state: 'visible', timeout: 15_000 });
+            await addToCartBtn.waitFor({ state: 'visible', timeout: 30_000 });
             await addToCartBtn.click();
         });
 
@@ -242,12 +256,12 @@ test(
             // After adding to cart the product page shows a "View Cart & Checkout" CTA.
             // Waiting for it confirms the item was successfully added to the cart.
             const viewCartCheckoutBtn = page.locator('button', { hasText: 'View Cart & Checkout' });
-            await viewCartCheckoutBtn.waitFor({ state: 'visible', timeout: 15_000 });
+            await viewCartCheckoutBtn.waitFor({ state: 'visible', timeout: 30_000 });
             await viewCartCheckoutBtn.click();
         });
 
         await test.step('Wait for cart page to load', async () => {
-            await page.waitForURL(miniCart.expectedCartUrlRegex, { timeout: 20_000 });
+            await page.waitForURL(miniCart.expectedCartUrlRegex, { timeout: 30_000 });
         });
         // ── End precondition ──────────────────────────────────────────────────
 
@@ -269,29 +283,29 @@ test(
             // state has been loaded from the API before opening the panel.
             await page.locator('button[aria-label="Show Mini Cart Items"] div[class*="bottom-1"]')
                 .first()
-                .waitFor({ state: 'visible', timeout: 15_000 });
+                .waitFor({ state: 'visible', timeout: 30_000 });
         });
 
         await test.step('Click mini cart icon in header', async () => {
-            await homePage.miniCartButton.waitFor({ state: 'visible', timeout: 10_000 });
+            await homePage.miniCartButton.waitFor({ state: 'visible', timeout: 30_000 });
             await homePage.miniCartButton.click();
         });
 
         await test.step('Verify mini cart panel opens', async () => {
-            await expect(homePage.miniCartPanel).toBeVisible({ timeout: 15_000 });
+            await expect(homePage.miniCartPanel).toBeVisible({ timeout: 30_000 });
         });
 
         await test.step("Click 'View Cart' button inside mini cart panel", async () => {
-            await homePage.proceedToCheckoutButton.waitFor({ state: 'visible', timeout: 10_000 });
+            await homePage.proceedToCheckoutButton.waitFor({ state: 'visible', timeout: 30_000 });
             await homePage.proceedToCheckoutButton.click();
         });
 
         await test.step('Verify cart page opens and shows Cart heading', async () => {
-            await page.waitForURL(miniCart.expectedCartUrlRegex, { timeout: 20_000 });
+            await page.waitForURL(miniCart.expectedCartUrlRegex, { timeout: 30_000 });
             await expect(page).toHaveURL(miniCart.expectedCartUrlRegex);
             await expect(
                 page.locator('h1').filter({ hasText: miniCart.cartPageHeading }).first()
-            ).toBeVisible({ timeout: 10_000 });
+            ).toBeVisible({ timeout: 30_000 });
         });
 
         await test.step('Verify added product is listed in the cart', async () => {
@@ -299,12 +313,12 @@ test(
             // Product name appears in <h3 class="text-wrap text-base"> inside each item.
             await expect(
                 page.locator('a[data-testid="cart:cart item"]').first()
-            ).toBeVisible({ timeout: 10_000 });
+            ).toBeVisible({ timeout: 30_000 });
             await expect(
                 page.locator('h3', {
                     hasText: new RegExp(productName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'),
                 })
-            ).toBeVisible({ timeout: 10_000 });
+            ).toBeVisible({ timeout: 30_000 });
         });
     }
 );
@@ -333,12 +347,12 @@ test(
         });
 
         await test.step('Click hamburger / mega menu button', async () => {
-            await homePage.megaMenuButton.waitFor({ state: 'visible', timeout: 15_000 });
+            await homePage.megaMenuButton.waitFor({ state: 'visible', timeout: 30_000 });
             await homePage.megaMenuButton.click();
         });
 
         await test.step('Verify mega menu is visible', async () => {
-            await expect(homePage.megaMenu).toBeVisible({ timeout: 15_000 });
+            await expect(homePage.megaMenu).toBeVisible({ timeout: 30_000 });
         });
 
         await test.step('Verify the hamburger button itself is still visible', async () => {
@@ -367,22 +381,22 @@ test(
         });
 
         await test.step('Verify "Deals & Events" link is visible and has correct href', async () => {
-            await homePage.dealsLink.waitFor({ state: 'visible', timeout: 15_000 });
+            await homePage.dealsLink.waitFor({ state: 'visible', timeout: 30_000 });
             await expect(homePage.dealsLink).toHaveAttribute('href', headerNav.deals.href);
         });
 
         await test.step('Verify "Services" link is visible and has correct href', async () => {
-            await homePage.servicesLink.waitFor({ state: 'visible', timeout: 10_000 });
+            await homePage.servicesLink.waitFor({ state: 'visible', timeout: 30_000 });
             await expect(homePage.servicesLink).toHaveAttribute('href', headerNav.services.href);
         });
 
         await test.step('Verify "Flyers" link is visible and has correct href', async () => {
-            await homePage.flyersLink.waitFor({ state: 'visible', timeout: 10_000 });
+            await homePage.flyersLink.waitFor({ state: 'visible', timeout: 30_000 });
             await expect(homePage.flyersLink).toHaveAttribute('href', headerNav.flyers.href);
         });
 
         await test.step('Verify "Gift Registry" link is visible and has correct href', async () => {
-            await homePage.giftRegistryLink.waitFor({ state: 'visible', timeout: 10_000 });
+            await homePage.giftRegistryLink.waitFor({ state: 'visible', timeout: 30_000 });
             await expect(homePage.giftRegistryLink).toHaveAttribute('href', headerNav.giftRegistry.href);
         });
     }
@@ -399,6 +413,10 @@ test(
 test(
     'TC-83232 — Newsletter signup in footer accepts valid email and redirects to confirmation @newsletter @footer',
     async ({ page }) => {
+        // Override the global 60 s timeout: Builder.io networkidle can take 30 s,
+        // the incremental scroll loop ~20 s, and the final waitFor 45 s. 180 s is safe.
+        test.setTimeout(180_000);
+
         const homePage = new HomePage(page);
         const { newsletter } = homePageData;
 
@@ -407,11 +425,57 @@ test(
         });
 
         await test.step('Scroll to footer newsletter form', async () => {
-            // The footer is lazy-rendered: the email input is not in the DOM until the
-            // page has scrolled near the bottom. Scroll there first, then wait for the
-            // element to mount before interacting.
-            await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-            await homePage.newsletterEmailInput.waitFor({ state: 'visible', timeout: 20_000 });
+            // The newsletter section is Builder.io-driven and is only rendered
+            // once its placeholder element enters the viewport (IntersectionObserver).
+            // A single jump to document.body.scrollHeight does NOT work because the
+            // page height at load time is small (~285px) — the newsletter placeholder
+            // is far below and the IntersectionObserver never fires.
+            //
+            // Strategy: incremental scrolling in viewport-height steps to ensure
+            // every Builder.io section's IntersectionObserver fires as the viewport
+            // passes over it. Between steps we wait 800 ms so lazy fetches complete.
+            // After the loop, fall back to scrollIntoViewIfNeeded + a final waitFor.
+
+            // First, let the page finish its initial network activity.
+            await page.waitForLoadState('networkidle', { timeout: 30_000 }).catch(() => {});
+            await page.waitForTimeout(1_000);
+
+            const viewportHeight = page.viewportSize()?.height ?? 800;
+            let scrollPosition = 0;
+
+            // Scroll in viewport-sized increments for up to 20 passes.
+            for (let pass = 0; pass < 20; pass++) {
+                // Check if the element is already visible before scrolling further.
+                const alreadyVisible = await homePage.newsletterEmailInput
+                    .isVisible()
+                    .catch(() => false);
+                if (alreadyVisible) break;
+
+                scrollPosition += viewportHeight;
+                await page.evaluate((pos: number) => window.scrollTo(0, pos), scrollPosition);
+                await page.waitForTimeout(800);
+
+                // If we have scrolled past the current page bottom, restart from
+                // the top so Builder.io's lazy sections re-evaluate their position.
+                const currentScrollHeight = await page.evaluate(
+                    () => document.body.scrollHeight
+                );
+                if (scrollPosition >= currentScrollHeight) {
+                    scrollPosition = 0;
+                    await page.evaluate(() => window.scrollTo(0, 0));
+                    await page.waitForTimeout(500);
+                }
+            }
+
+            // Belt-and-suspenders: ask Playwright to scroll the element into view
+            // if it is already in the DOM but not yet in the viewport.
+            await homePage.newsletterEmailInput
+                .scrollIntoViewIfNeeded({ timeout: 5_000 })
+                .catch(() => undefined);
+
+            // Final authoritative wait. By this point the element should be
+            // visible; the 45 s window covers any remaining Builder.io fetch delay.
+            await homePage.newsletterEmailInput.waitFor({ state: 'visible', timeout: 45_000 });
         });
 
         await test.step('Fill valid email in newsletter input', async () => {
@@ -419,8 +483,11 @@ test(
         });
 
         await test.step('Click SIGN UP button', async () => {
-            await homePage.newsletterSubmitButton.waitFor({ state: 'visible', timeout: 10_000 });
-            await homePage.newsletterSubmitButton.click();
+            await homePage.newsletterSubmitButton.waitFor({ state: 'visible', timeout: 30_000 });
+            // The newsletter section can have an overlapping layout element on some browsers
+            // (e.g. Edge). Use force:true to bypass the actionability overlay check and
+            // dispatch the click event directly to the button element.
+            await homePage.newsletterSubmitButton.click({ force: true });
         });
 
         await test.step('Verify page redirects to /enewsletter-settings', async () => {

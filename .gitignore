@@ -19,3 +19,4 @@ reports/archived/*.xml
 
 # MCP Web Inspector - browser profile data (machine-specific, binary, noisy)
 .mcp-web-inspector/
+.coda/skills/

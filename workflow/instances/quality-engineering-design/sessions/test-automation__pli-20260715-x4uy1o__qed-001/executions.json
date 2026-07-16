@@ -1,0 +1,148 @@
+[
+  {
+    "execution_id": "3edded68-9710-4b55-9c8f-320235d45bf3",
+    "step_id": "test-case-generation",
+    "version_sequence": 1,
+    "session_name": "test-automation__pli-20260715-x4uy1o__qed-001",
+    "capability_name": "quality-engineering-design",
+    "started_at": "2026-07-15T14:29:34.653Z",
+    "completed_at": "2026-07-15T14:29:45.758Z",
+    "duration_seconds": 11,
+    "status": "Cancelled",
+    "request_type": "Generation",
+    "executor": "coda-batch",
+    "run_id": "1784125774653-1layt2w8",
+    "model": "anthropic/claude-sonnet-4-6",
+    "model_tier": "worker",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": false,
+      "used": false,
+      "count": 0
+    },
+    "error_message": "Execution interrupted by SIGINT — cancelled by user"
+  },
+  {
+    "execution_id": "7d0d374a-1b1d-4825-b669-cb4cfcb54318",
+    "step_id": "test-case-generation",
+    "version_sequence": 2,
+    "session_name": "test-automation__pli-20260715-x4uy1o__qed-001",
+    "capability_name": "quality-engineering-design",
+    "started_at": "2026-07-15T14:32:02.987Z",
+    "completed_at": "2026-07-15T14:41:12.723Z",
+    "duration_seconds": 550,
+    "status": "Error_Format",
+    "request_type": "Generation",
+    "executor": "coda-batch",
+    "run_id": "1784125922987-65p1fchb",
+    "model": "anthropic/claude-sonnet-4-6",
+    "model_tier": "worker",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": false,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 8664219,
+      "output_tokens": 17354,
+      "cost_usd": 7.192837
+    },
+    "error_message": "Step 'test-case-generation' exited successfully but produced incomplete outputs:\n  - required output 'test_cases_path' is an empty directory (no non-empty files): /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-design/test-cases"
+  },
+  {
+    "execution_id": "8aa8e600-f108-45d6-9c4e-1138fc15461e",
+    "step_id": "test-case-generation",
+    "version_sequence": 3,
+    "session_name": "test-automation__pli-20260715-x4uy1o__qed-001",
+    "capability_name": "quality-engineering-design",
+    "started_at": "2026-07-15T15:40:26.001Z",
+    "completed_at": "2026-07-15T15:44:34.646Z",
+    "duration_seconds": 249,
+    "status": "Error_Format",
+    "request_type": "Generation",
+    "executor": "coda-batch",
+    "run_id": "1784130026001-czfib1wk",
+    "model": "anthropic/claude-sonnet-4-6",
+    "model_tier": "worker",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": false,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 2872258,
+      "output_tokens": 10140,
+      "cost_usd": 2.604635
+    },
+    "error_message": "Step 'test-case-generation' exited successfully but produced incomplete outputs:\n  - required output 'test_cases_path' is an empty directory (no non-empty files): /Users/virginia.zambudio/PlaywrightAutomation/artifacts/outputs/quality-engineering-design/test-cases"
+  },
+  {
+    "execution_id": "b788b4d1-0817-4d6a-b28c-fe1ed477d923",
+    "step_id": "test-case-generation",
+    "version_sequence": 4,
+    "session_name": "test-automation__pli-20260715-x4uy1o__qed-001",
+    "capability_name": "quality-engineering-design",
+    "started_at": "2026-07-15T15:46:39.722Z",
+    "completed_at": "2026-07-15T15:46:54.259Z",
+    "duration_seconds": 15,
+    "status": "Cancelled",
+    "request_type": "Generation",
+    "executor": "coda-batch",
+    "run_id": "1784130399722-5zsx4hur",
+    "model": "anthropic/claude-sonnet-4-6",
+    "model_tier": "worker",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": false,
+      "used": false,
+      "count": 0
+    },
+    "error_message": "Execution interrupted by SIGINT — cancelled by user"
+  },
+  {
+    "execution_id": "09961e02-1041-4030-8ea9-26798d53cbdc",
+    "step_id": "test-case-generation",
+    "version_sequence": 5,
+    "session_name": "test-automation__pli-20260715-x4uy1o__qed-001",
+    "capability_name": "quality-engineering-design",
+    "started_at": "2026-07-15T15:50:46.213Z",
+    "completed_at": "2026-07-15T16:01:32.706Z",
+    "duration_seconds": 646,
+    "status": "Success",
+    "request_type": "Generation",
+    "executor": "coda-batch",
+    "run_id": "1784130646213-7gft2sd5",
+    "model": "anthropic/claude-sonnet-4-6",
+    "model_tier": "worker",
+    "session_resume": {
+      "resumed": false,
+      "cold_reason": "first_run"
+    },
+    "parallel_delegation": {
+      "available": false,
+      "used": false,
+      "count": 0
+    },
+    "token_usage": {
+      "input_tokens": 8512634,
+      "output_tokens": 37691,
+      "cost_usd": 9.24012
+    },
+    "items_spawned": 9,
+    "artifact_group_id": "6eeb5daa-a34f-46a3-96a5-c0416626502d"
+  }
+]

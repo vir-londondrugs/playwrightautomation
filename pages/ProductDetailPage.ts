@@ -255,24 +255,89 @@ export class ProductDetailPage extends BasePage {
     }
 
     /**
-     * Opens the store selector dialog by clicking "Set your store" and waits
-     * for the dialog to be visible.
+     * Opens the store selector dialog and waits for it to be visible.
+     *
+     * Two states are handled:
+     *   1. No store set yet  -- a "Set your store" link is visible.
+     *   2. Store already set -- the site (e.g. via geolocation on Firefox/WebKit)
+     *      pre-selects a store, replacing the "Set your store" link with
+     *      "Check Availability at other stores". Clicking that link also opens
+     *      the `dialog#store-selector` so the rest of the flow is identical.
+     *
+     * Scrolls to the fulfillment section first to ensure intersection-observer
+     * elements are mounted before waiting.
+     *
+     * Firefox / WebKit note: `inStorePickupRadio` may not be present on products
+     * that only offer Ship to Home. We use a two-step scroll strategy:
+     *   1. Try scrollIntoViewIfNeeded on the pickup radio (silently ignored if missing).
+     *   2. Fallback: scroll to ~60 % of the page height to bring the fulfillment
+     *      section — and with it the "Set your store" link — into the viewport and
+     *      trigger any remaining IntersectionObservers.
      */
     async openStoreSelectorDialog(): Promise<void> {
-        await this.setYourStoreLink.waitFor({ state: 'visible', timeout: 15_000 });
-        await this.setYourStoreLink.click();
+        // Step 1: attempt to scroll via the In-Store Pickup radio (may not exist).
+        await this.inStorePickupRadio
+            .scrollIntoViewIfNeeded({ timeout: 5_000 })
+            .catch(() => undefined);
+
+        // Step 2: attempt to scroll via the "Set your store" link itself.
+        // If it is already in the DOM (even before full hydration) this brings it
+        // into view and triggers the IntersectionObserver.
+        await this.setYourStoreLink
+            .scrollIntoViewIfNeeded({ timeout: 5_000 })
+            .catch(() => undefined);
+
+        // Step 3: fixed proportional scroll to ensure the fulfillment area
+        // (roughly 60-80 % down most PDP pages) enters the viewport.
+        // This is the safest fallback for Firefox and WebKit where the above
+        // scrollIntoViewIfNeeded calls may silently fail.
+        await this.page.evaluate(() => {
+            window.scrollBy(0, Math.round(document.body.scrollHeight * 0.6));
+        });
+
+        // Allow intersection-observer driven elements to mount after scrolling.
+        // Firefox and WebKit hydrate more slowly than Chromium; 3 s is safe.
+        await this.page.waitForTimeout(3_000);
+
+        const checkAvailabilityLink = this.page
+            .locator('p.cursor-pointer')
+            .filter({ hasText: /check availability at other stores/i })
+            .first();
+
+        // Try "Set your store" first (no store set yet). Use a 12 s window to
+        // accommodate slower Firefox / WebKit hydration.
+        let setStoreVisible = false;
+        try {
+            await this.setYourStoreLink.waitFor({ state: 'visible', timeout: 12_000 });
+            setStoreVisible = true;
+        } catch {
+            setStoreVisible = false;
+        }
+
+        if (setStoreVisible) {
+            await this.setYourStoreLink.click();
+        } else {
+            // Store was pre-selected (geolocation). Click "Check Availability at
+            // other stores" to open the same dialog.
+            await checkAvailabilityLink.waitFor({ state: 'visible', timeout: 15_000 });
+            await checkAvailabilityLink.click();
+        }
+
         await this.storeSelectorDialog.waitFor({ state: 'visible', timeout: 10_000 });
     }
 
     /**
      * Searches for stores by postal code/city in the store selector dialog
      * and waits for search results to appear (first "Set Store" button visible).
+     *
+     * Increased timeout to 30 s: Firefox and WebKit are slower than Chromium at
+     * fetching store search results from the UAT API, and 15 s was insufficient.
      */
     async searchStores(postalCode: string): Promise<void> {
         await this.storeSelectorSearchInput.waitFor({ state: 'visible', timeout: 10_000 });
         await this.storeSelectorSearchInput.fill(postalCode);
         await this.storeSelectorSearchButton.click();
-        await this.firstSetStoreButton.waitFor({ state: 'visible', timeout: 15_000 });
+        await this.firstSetStoreButton.waitFor({ state: 'visible', timeout: 30_000 });
     }
 
     /**

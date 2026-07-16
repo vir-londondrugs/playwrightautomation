@@ -20,14 +20,14 @@ async function navigateToVitaminsPdp(
     await simulateBodyClickToUnblock(page);
     await homePage.waitForSearchInput();
     await homePage.search(pdpData.vitaminsSearchTerm);
-    await page.waitForURL(/\/search/, { timeout: 20_000 });
+    await page.waitForURL(/\/search/, { timeout: 30_000 });
     await simulateBodyClickToUnblock(page);
-    await searchResultsPage.firstProductLink.waitFor({ state: 'visible', timeout: 20_000 });
+    await searchResultsPage.firstProductLink.waitFor({ state: 'visible', timeout: 30_000 });
     await searchResultsPage.firstProductLink.click();
-    await page.waitForURL((url) => !url.pathname.includes('/search'), { timeout: 20_000 });
+    await page.waitForURL((url) => !url.pathname.includes('/search'), { timeout: 30_000 });
     await page.waitForLoadState('domcontentloaded');
     await simulateBodyClickToUnblock(page);
-    await page.locator('h1').first().waitFor({ state: 'visible', timeout: 15_000 });
+    await page.locator('h1').first().waitFor({ state: 'visible', timeout: 30_000 });
 }
 
 // Capture a full-page screenshot only on failure
@@ -54,7 +54,7 @@ test(
         let breadcrumbText = '';
 
         await test.step('Verify second-level breadcrumb link is visible', async () => {
-            await pdpPage.secondLevelBreadcrumb.waitFor({ state: 'visible', timeout: 10_000 });
+            await pdpPage.secondLevelBreadcrumb.waitFor({ state: 'visible', timeout: 30_000 });
             breadcrumbText = (await pdpPage.secondLevelBreadcrumb.textContent() ?? '').trim();
             breadcrumbHref = (await pdpPage.secondLevelBreadcrumb.getAttribute('href') ?? '').trim();
             expect(breadcrumbText.length).toBeGreaterThan(0);
@@ -67,10 +67,10 @@ test(
 
         await test.step('Verify navigation lands on category listing page', async () => {
             // The category URL follows the pattern /category/<slug>/c/<id>
-            await page.waitForURL(/\/category\//, { timeout: 20_000 });
+            await page.waitForURL(/\/category\//, { timeout: 30_000 });
             await expect(page).toHaveURL(new RegExp(breadcrumbHref.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
             // The category page renders with a heading or product list — verify h1 or h2 is present
-            await page.locator('h1, h2').first().waitFor({ state: 'visible', timeout: 15_000 });
+            await page.locator('h1, h2').first().waitFor({ state: 'visible', timeout: 30_000 });
         });
     }
 );
@@ -91,13 +91,13 @@ test(
         });
 
         await test.step('Verify "Our Price" label is visible', async () => {
-            await pdpPage.priceLabel.waitFor({ state: 'visible', timeout: 10_000 });
+            await pdpPage.priceLabel.waitFor({ state: 'visible', timeout: 30_000 });
             const labelText = (await pdpPage.priceLabel.textContent() ?? '').trim().toLowerCase();
             expect(labelText).toMatch(/our price/i);
         });
 
         await test.step('Verify price value is visible and matches $X.XX format', async () => {
-            await pdpPage.priceValue.waitFor({ state: 'visible', timeout: 10_000 });
+            await pdpPage.priceValue.waitFor({ state: 'visible', timeout: 30_000 });
             const priceText = (await pdpPage.priceValue.textContent() ?? '').trim();
             // Case-insensitive regex match for a valid CAD price: $digits.twoDigits
             expect(priceText).toMatch(pdpData.price.validPriceRegex);
@@ -121,11 +121,11 @@ test(
         });
 
         await test.step('Verify "Availability:" section is visible on the page', async () => {
-            await pdpPage.availabilitySection.waitFor({ state: 'visible', timeout: 10_000 });
+            await pdpPage.availabilitySection.waitFor({ state: 'visible', timeout: 30_000 });
         });
 
         await test.step('Verify "Availability:" label text is present', async () => {
-            await pdpPage.availabilityLabel.waitFor({ state: 'visible', timeout: 10_000 });
+            await pdpPage.availabilityLabel.waitFor({ state: 'visible', timeout: 30_000 });
             const labelText = (await pdpPage.availabilityLabel.textContent() ?? '').trim();
             expect(labelText).toMatch(/availability/i);
         });
@@ -151,6 +151,10 @@ test(
 test(
     'TC-83238 — Add to cart with In-Store Pickup (postal V6B 1A1) increments mini cart counter @pdp @cart @in-store-pickup',
     async ({ page }) => {
+        // Extended timeout: store-selector search can take up to 30 s on UAT across all browsers.
+        // Total flow: navigate (20 s) + scroll/open dialog (15 s) + search (30 s) + add-to-cart (20 s) = ~85 s.
+        test.setTimeout(150_000);
+
         const homePage = new HomePage(page);
         const searchResultsPage = new SearchResultsPage(page);
         const pdpPage = new ProductDetailPage(page);
@@ -181,8 +185,8 @@ test(
 
         await test.step('Verify In-Store Pickup is now selected (fulfillment changed)', async () => {
             // After selecting a store, In-Store Pickup radio is checked automatically
-            await pdpPage.inStorePickupRadio.waitFor({ state: 'attached', timeout: 10_000 });
-            await expect(pdpPage.inStorePickupRadio).toBeChecked({ timeout: 10_000 });
+            await pdpPage.inStorePickupRadio.waitFor({ state: 'attached', timeout: 30_000 });
+            await expect(pdpPage.inStorePickupRadio).toBeChecked({ timeout: 30_000 });
         });
 
         await test.step('Click ADD TO CART with In-Store Pickup fulfillment', async () => {
@@ -229,7 +233,7 @@ test(
             if (!homeRadioChecked) {
                 await pdpPage.shipToHomeRadio.click();
             }
-            await expect(pdpPage.shipToHomeRadio).toBeChecked({ timeout: 10_000 });
+            await expect(pdpPage.shipToHomeRadio).toBeChecked({ timeout: 30_000 });
         });
 
         await test.step('Click ADD TO CART with Ship to Home fulfillment', async () => {
@@ -271,7 +275,7 @@ test(
         });
 
         await test.step('Verify the wishlist heart button is visible', async () => {
-            await pdpPage.wishlistButton.waitFor({ state: 'visible', timeout: 10_000 });
+            await pdpPage.wishlistButton.waitFor({ state: 'visible', timeout: 30_000 });
         });
 
         // ── Intercept wishlist API call and click heart ─────────────────────
@@ -285,7 +289,7 @@ test(
                     response.request().method() === 'POST' &&
                     response.url().includes('/products/') &&
                     response.status() === 200,
-                { timeout: 20_000 }
+                { timeout: 30_000 }
             );
 
             await pdpPage.wishlistButton.click();

@@ -1,0 +1,5319 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/virginia.zambudio/PlaywrightAutomation/node_modules/.bin/playwright",
+      "test",
+      "--reporter=json"
+    ],
+    "configFile": "/Users/virginia.zambudio/PlaywrightAutomation/playwright.config.ts",
+    "rootDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/virginia.zambudio/PlaywrightAutomation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/virginia.zambudio/PlaywrightAutomation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/virginia.zambudio/PlaywrightAutomation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/virginia.zambudio/PlaywrightAutomation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "edge",
+        "name": "edge",
+        "testDir": "/Users/virginia.zambudio/PlaywrightAutomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "home-page.spec.ts",
+      "file": "home-page.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-83225 — Logo click navigates to home @homepage @navigation @smoke",
+          "ok": true,
+          "tags": [
+            "homepage",
+            "navigation",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6526,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to an internal page (not home)",
+                      "duration": 3790
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 865
+                    },
+                    {
+                      "title": "Click the London Drugs logo",
+                      "duration": 933
+                    },
+                    {
+                      "title": "Click page body to dismiss loading overlay if stuck",
+                      "duration": 1
+                    },
+                    {
+                      "title": "Verify home page is loaded after logo click",
+                      "duration": 12
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:09.470Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-b2179e0b32c3f2eed8c0",
+          "file": "home-page.spec.ts",
+          "line": 17,
+          "column": 5
+        },
+        {
+          "title": "TC-83226 — Search with invalid term shows 'Nothing found!' @search @negative",
+          "ok": true,
+          "tags": [
+            "search",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 9824,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 4045
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 849
+                    },
+                    {
+                      "title": "Wait for search input to be ready",
+                      "duration": 25
+                    },
+                    {
+                      "title": "Type non-existent search term",
+                      "duration": 810
+                    },
+                    {
+                      "title": "Submit search",
+                      "duration": 815
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 817
+                    },
+                    {
+                      "title": "Wait for no-results message'",
+                      "duration": 1838
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:09.475Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-de244833382d95017932",
+          "file": "home-page.spec.ts",
+          "line": 51,
+          "column": 5
+        },
+        {
+          "title": "TC-83227 — Search returns relevant results for a valid term @search @positive @smoke",
+          "ok": true,
+          "tags": [
+            "search",
+            "positive",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 10246,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 4033
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 949
+                    },
+                    {
+                      "title": "Wait for search input to be ready",
+                      "duration": 17
+                    },
+                    {
+                      "title": "Click search input field",
+                      "duration": 851
+                    },
+                    {
+                      "title": "Type search term",
+                      "duration": 807
+                    },
+                    {
+                      "title": "Submit search by pressing Enter",
+                      "duration": 813
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 823
+                    },
+                    {
+                      "title": "Verify search term appears in a product title or section heading",
+                      "duration": 1343
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:09.473Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-a5b99a46797c2bd5c24c",
+          "file": "home-page.spec.ts",
+          "line": 91,
+          "column": 5
+        },
+        {
+          "title": "TC-83228 — Store Locator opens and Find All Stores link works @store-locator @navigation",
+          "ok": true,
+          "tags": [
+            "store-locator",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 28778,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 24057
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 1930
+                    },
+                    {
+                      "title": "Click 'Select Your Store' / stores link in header",
+                      "duration": 862
+                    },
+                    {
+                      "title": "Wait for Store Locator URL",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Verify 'Find a Store Near You' heading is visible",
+                      "duration": 308
+                    },
+                    {
+                      "title": "Click 'Find All Stores by Province' link",
+                      "duration": 863
+                    },
+                    {
+                      "title": "Wait for All Stores URL",
+                      "duration": 21
+                    },
+                    {
+                      "title": "Verify All Stores list is visible",
+                      "duration": 13
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:09.468Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-6a5fe7c7dfaba4f2c434",
+          "file": "home-page.spec.ts",
+          "line": 142,
+          "column": 5
+        },
+        {
+          "title": "TC-83229 — Mini Cart opens and View Cart navigates to cart page @mini-cart @cart @navigation",
+          "ok": true,
+          "tags": [
+            "mini-cart",
+            "cart",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32554,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Search for a product and navigate to the first result",
+                      "duration": 9323
+                    },
+                    {
+                      "title": "Capture product name from product page",
+                      "duration": 815
+                    },
+                    {
+                      "title": "Add product to cart",
+                      "duration": 6008
+                    },
+                    {
+                      "title": "Wait for View Cart & Checkout button and click it",
+                      "duration": 1897
+                    },
+                    {
+                      "title": "Wait for cart page to load",
+                      "duration": 2228
+                    },
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1702
+                    },
+                    {
+                      "title": "Wait for homepage React hydration before interacting",
+                      "duration": 847
+                    },
+                    {
+                      "title": "Wait for mini cart badge to show item count",
+                      "duration": 2812
+                    },
+                    {
+                      "title": "Click mini cart icon in header",
+                      "duration": 867
+                    },
+                    {
+                      "title": "Verify mini cart panel opens",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Click 'View Cart' button inside mini cart panel",
+                      "duration": 2646
+                    },
+                    {
+                      "title": "Verify cart page opens and shows Cart heading",
+                      "duration": 3205
+                    },
+                    {
+                      "title": "Verify added product is listed in the cart",
+                      "duration": 5
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:17.438Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-5d10f82538964b2e8515",
+          "file": "home-page.spec.ts",
+          "line": 206,
+          "column": 5
+        },
+        {
+          "title": "TC-83230 — Hamburger menu opens and displays category navigation @navigation @mega-menu @hamburger",
+          "ok": true,
+          "tags": [
+            "navigation",
+            "mega-menu",
+            "hamburger"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3857,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1917
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 844
+                    },
+                    {
+                      "title": "Click hamburger / mega menu button",
+                      "duration": 882
+                    },
+                    {
+                      "title": "Verify mega menu is visible",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Verify the hamburger button itself is still visible",
+                      "duration": 3
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:20.742Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-c3b7dea8f89da43b3669",
+          "file": "home-page.spec.ts",
+          "line": 336,
+          "column": 5
+        },
+        {
+          "title": "TC-83231 — Main navigation links (Deals, Services, Flyers, Gift Registry) are visible and redirect to the correct pages @navigation @header",
+          "ok": true,
+          "tags": [
+            "navigation",
+            "header"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 5337,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 4311
+                    },
+                    {
+                      "title": "Click page body to unblock loading overlay",
+                      "duration": 825
+                    },
+                    {
+                      "title": "Verify \"Deals & Events\" link is visible and has correct href",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Verify \"Services\" link is visible and has correct href",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Verify \"Flyers\" link is visible and has correct href",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Verify \"Gift Registry\" link is visible and has correct href",
+                      "duration": 4
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:21.095Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-beeaa0d9cd6ce9654ad3",
+          "file": "home-page.spec.ts",
+          "line": 369,
+          "column": 5
+        },
+        {
+          "title": "TC-83232 — Newsletter signup in footer accepts valid email and redirects to confirmation @newsletter @footer",
+          "ok": true,
+          "tags": [
+            "newsletter",
+            "footer"
+          ],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 35615,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1818
+                    },
+                    {
+                      "title": "Scroll to footer newsletter form",
+                      "duration": 31880
+                    },
+                    {
+                      "title": "Fill valid email in newsletter input",
+                      "duration": 824
+                    },
+                    {
+                      "title": "Click SIGN UP button",
+                      "duration": 842
+                    },
+                    {
+                      "title": "Verify page redirects to /enewsletter-settings",
+                      "duration": 8
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:24.614Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-78877cfe03262b4130f2",
+          "file": "home-page.spec.ts",
+          "line": 413,
+          "column": 5
+        },
+        {
+          "title": "TC-83225 — Logo click navigates to home @homepage @navigation @smoke",
+          "ok": true,
+          "tags": [
+            "homepage",
+            "navigation",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 5364,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to an internal page (not home)",
+                      "duration": 2100
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 875
+                    },
+                    {
+                      "title": "Click the London Drugs logo",
+                      "duration": 1022
+                    },
+                    {
+                      "title": "Click page body to dismiss loading overlay if stuck",
+                      "duration": 1
+                    },
+                    {
+                      "title": "Verify home page is loaded after logo click",
+                      "duration": 36
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:28:50.976Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-59c5555b6a161bb6adf6",
+          "file": "home-page.spec.ts",
+          "line": 17,
+          "column": 5
+        },
+        {
+          "title": "TC-83226 — Search with invalid term shows 'Nothing found!' @search @negative",
+          "ok": true,
+          "tags": [
+            "search",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 8648,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1929
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 929
+                    },
+                    {
+                      "title": "Wait for search input to be ready",
+                      "duration": 35
+                    },
+                    {
+                      "title": "Type non-existent search term",
+                      "duration": 819
+                    },
+                    {
+                      "title": "Submit search",
+                      "duration": 812
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 888
+                    },
+                    {
+                      "title": "Wait for no-results message'",
+                      "duration": 1929
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:28:51.991Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-fa5590d6f3c1e602c284",
+          "file": "home-page.spec.ts",
+          "line": 51,
+          "column": 5
+        },
+        {
+          "title": "TC-83227 — Search returns relevant results for a valid term @search @positive @smoke",
+          "ok": true,
+          "tags": [
+            "search",
+            "positive",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8521,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1895
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 889
+                    },
+                    {
+                      "title": "Wait for search input to be ready",
+                      "duration": 22
+                    },
+                    {
+                      "title": "Click search input field",
+                      "duration": 900
+                    },
+                    {
+                      "title": "Type search term",
+                      "duration": 812
+                    },
+                    {
+                      "title": "Submit search by pressing Enter",
+                      "duration": 811
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 875
+                    },
+                    {
+                      "title": "Verify search term appears in a product title or section heading",
+                      "duration": 938
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:28:52.642Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-84b9319a24dee0654d63",
+          "file": "home-page.spec.ts",
+          "line": 91,
+          "column": 5
+        },
+        {
+          "title": "TC-83228 — Store Locator opens and Find All Stores link works @store-locator @navigation",
+          "ok": true,
+          "tags": [
+            "store-locator",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 11852,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 7240
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 2062
+                    },
+                    {
+                      "title": "Click 'Select Your Store' / stores link in header",
+                      "duration": 974
+                    },
+                    {
+                      "title": "Wait for Store Locator URL",
+                      "duration": 2
+                    },
+                    {
+                      "title": "Verify 'Find a Store Near You' heading is visible",
+                      "duration": 296
+                    },
+                    {
+                      "title": "Click 'Find All Stores by Province' link",
+                      "duration": 926
+                    },
+                    {
+                      "title": "Wait for All Stores URL",
+                      "duration": 25
+                    },
+                    {
+                      "title": "Verify All Stores list is visible",
+                      "duration": 49
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:28:57.396Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-74c86b5c5cf181000371",
+          "file": "home-page.spec.ts",
+          "line": 142,
+          "column": 5
+        },
+        {
+          "title": "TC-83229 — Mini Cart opens and View Cart navigates to cart page @mini-cart @cart @navigation",
+          "ok": true,
+          "tags": [
+            "mini-cart",
+            "cart",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 35096,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Search for a product and navigate to the first result",
+                      "duration": 9478
+                    },
+                    {
+                      "title": "Capture product name from product page",
+                      "duration": 485
+                    },
+                    {
+                      "title": "Add product to cart",
+                      "duration": 6379
+                    },
+                    {
+                      "title": "Wait for View Cart & Checkout button and click it",
+                      "duration": 1965
+                    },
+                    {
+                      "title": "Wait for cart page to load",
+                      "duration": 2862
+                    },
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1626
+                    },
+                    {
+                      "title": "Wait for homepage React hydration before interacting",
+                      "duration": 929
+                    },
+                    {
+                      "title": "Wait for mini cart badge to show item count",
+                      "duration": 2848
+                    },
+                    {
+                      "title": "Click mini cart icon in header",
+                      "duration": 945
+                    },
+                    {
+                      "title": "Verify mini cart panel opens",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Click 'View Cart' button inside mini cart panel",
+                      "duration": 3303
+                    },
+                    {
+                      "title": "Verify cart page opens and shows Cart heading",
+                      "duration": 3930
+                    },
+                    {
+                      "title": "Verify added product is listed in the cart",
+                      "duration": 9
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:01.749Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-fc8de60119780b3d0ef9",
+          "file": "home-page.spec.ts",
+          "line": 206,
+          "column": 5
+        },
+        {
+          "title": "TC-83230 — Hamburger menu opens and displays category navigation @navigation @mega-menu @hamburger",
+          "ok": true,
+          "tags": [
+            "navigation",
+            "mega-menu",
+            "hamburger"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3946,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1797
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 866
+                    },
+                    {
+                      "title": "Click hamburger / mega menu button",
+                      "duration": 989
+                    },
+                    {
+                      "title": "Verify mega menu is visible",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Verify the hamburger button itself is still visible",
+                      "duration": 3
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:02.399Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-71dd8c350de2b04479e7",
+          "file": "home-page.spec.ts",
+          "line": 336,
+          "column": 5
+        },
+        {
+          "title": "TC-83231 — Main navigation links (Deals, Services, Flyers, Gift Registry) are visible and redirect to the correct pages @navigation @header",
+          "ok": true,
+          "tags": [
+            "navigation",
+            "header"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3000,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1748
+                    },
+                    {
+                      "title": "Click page body to unblock loading overlay",
+                      "duration": 873
+                    },
+                    {
+                      "title": "Verify \"Deals & Events\" link is visible and has correct href",
+                      "duration": 13
+                    },
+                    {
+                      "title": "Verify \"Services\" link is visible and has correct href",
+                      "duration": 11
+                    },
+                    {
+                      "title": "Verify \"Flyers\" link is visible and has correct href",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Verify \"Gift Registry\" link is visible and has correct href",
+                      "duration": 11
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:06.377Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-a79a27f85453c72c74ef",
+          "file": "home-page.spec.ts",
+          "line": 369,
+          "column": 5
+        },
+        {
+          "title": "TC-83232 — Newsletter signup in footer accepts valid email and redirects to confirmation @newsletter @footer",
+          "ok": true,
+          "tags": [
+            "newsletter",
+            "footer"
+          ],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 13269,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1892
+                    },
+                    {
+                      "title": "Scroll to footer newsletter form",
+                      "duration": 9311
+                    },
+                    {
+                      "title": "Fill valid email in newsletter input",
+                      "duration": 819
+                    },
+                    {
+                      "title": "Click SIGN UP button",
+                      "duration": 910
+                    },
+                    {
+                      "title": "Verify page redirects to /enewsletter-settings",
+                      "duration": 10
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:09.258Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-142fa15160ed454d0164",
+          "file": "home-page.spec.ts",
+          "line": 413,
+          "column": 5
+        },
+        {
+          "title": "TC-83225 — Logo click navigates to home @homepage @navigation @smoke",
+          "ok": true,
+          "tags": [
+            "homepage",
+            "navigation",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5114,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to an internal page (not home)",
+                      "duration": 1791
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 851
+                    },
+                    {
+                      "title": "Click the London Drugs logo",
+                      "duration": 901
+                    },
+                    {
+                      "title": "Click page body to dismiss loading overlay if stuck",
+                      "duration": 1
+                    },
+                    {
+                      "title": "Verify home page is loaded after logo click",
+                      "duration": 17
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:19.234Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-b80345b66d83d1440069",
+          "file": "home-page.spec.ts",
+          "line": 17,
+          "column": 5
+        },
+        {
+          "title": "TC-83226 — Search with invalid term shows 'Nothing found!' @search @negative",
+          "ok": true,
+          "tags": [
+            "search",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8347,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1736
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 827
+                    },
+                    {
+                      "title": "Wait for search input to be ready",
+                      "duration": 19
+                    },
+                    {
+                      "title": "Type non-existent search term",
+                      "duration": 810
+                    },
+                    {
+                      "title": "Submit search",
+                      "duration": 817
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 821
+                    },
+                    {
+                      "title": "Wait for no-results message'",
+                      "duration": 2332
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:21.331Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-41c0877a2724884af99f",
+          "file": "home-page.spec.ts",
+          "line": 51,
+          "column": 5
+        },
+        {
+          "title": "TC-83227 — Search returns relevant results for a valid term @search @positive @smoke",
+          "ok": true,
+          "tags": [
+            "search",
+            "positive",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 8228,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1835
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 835
+                    },
+                    {
+                      "title": "Wait for search input to be ready",
+                      "duration": 29
+                    },
+                    {
+                      "title": "Click search input field",
+                      "duration": 840
+                    },
+                    {
+                      "title": "Type search term",
+                      "duration": 814
+                    },
+                    {
+                      "title": "Submit search by pressing Enter",
+                      "duration": 822
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 814
+                    },
+                    {
+                      "title": "Verify search term appears in a product title or section heading",
+                      "duration": 1321
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:22.596Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-1b18bd0ae80deadecd59",
+          "file": "home-page.spec.ts",
+          "line": 91,
+          "column": 5
+        },
+        {
+          "title": "TC-83228 — Store Locator opens and Find All Stores link works @store-locator @navigation",
+          "ok": true,
+          "tags": [
+            "store-locator",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12159,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 6828
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 2857
+                    },
+                    {
+                      "title": "Click 'Select Your Store' / stores link in header",
+                      "duration": 923
+                    },
+                    {
+                      "title": "Wait for Store Locator URL",
+                      "duration": 2
+                    },
+                    {
+                      "title": "Verify 'Find a Store Near You' heading is visible",
+                      "duration": 291
+                    },
+                    {
+                      "title": "Click 'Find All Stores by Province' link",
+                      "duration": 872
+                    },
+                    {
+                      "title": "Wait for All Stores URL",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Verify All Stores list is visible",
+                      "duration": 3
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:24.801Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-276e5fbc9295e75858ab",
+          "file": "home-page.spec.ts",
+          "line": 142,
+          "column": 5
+        },
+        {
+          "title": "TC-83229 — Mini Cart opens and View Cart navigates to cart page @mini-cart @cart @navigation",
+          "ok": true,
+          "tags": [
+            "mini-cart",
+            "cart",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 35194,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Search for a product and navigate to the first result",
+                      "duration": 9257
+                    },
+                    {
+                      "title": "Capture product name from product page",
+                      "duration": 805
+                    },
+                    {
+                      "title": "Add product to cart",
+                      "duration": 5036
+                    },
+                    {
+                      "title": "Wait for View Cart & Checkout button and click it",
+                      "duration": 4176
+                    },
+                    {
+                      "title": "Wait for cart page to load",
+                      "duration": 3901
+                    },
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1377
+                    },
+                    {
+                      "title": "Wait for homepage React hydration before interacting",
+                      "duration": 829
+                    },
+                    {
+                      "title": "Wait for mini cart badge to show item count",
+                      "duration": 2807
+                    },
+                    {
+                      "title": "Click mini cart icon in header",
+                      "duration": 856
+                    },
+                    {
+                      "title": "Verify mini cart panel opens",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Click 'View Cart' button inside mini cart panel",
+                      "duration": 2680
+                    },
+                    {
+                      "title": "Verify cart page opens and shows Cart heading",
+                      "duration": 2655
+                    },
+                    {
+                      "title": "Verify added product is listed in the cart",
+                      "duration": 3
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:28.878Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-efb2a6ff9b04ccc06993",
+          "file": "home-page.spec.ts",
+          "line": 206,
+          "column": 5
+        },
+        {
+          "title": "TC-83230 — Hamburger menu opens and displays category navigation @navigation @mega-menu @hamburger",
+          "ok": true,
+          "tags": [
+            "navigation",
+            "mega-menu",
+            "hamburger"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3816,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1786
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 821
+                    },
+                    {
+                      "title": "Click hamburger / mega menu button",
+                      "duration": 857
+                    },
+                    {
+                      "title": "Verify mega menu is visible",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Verify the hamburger button itself is still visible",
+                      "duration": 2
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:30.139Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-0f024281d5eeedac5285",
+          "file": "home-page.spec.ts",
+          "line": 336,
+          "column": 5
+        },
+        {
+          "title": "TC-83231 — Main navigation links (Deals, Services, Flyers, Gift Registry) are visible and redirect to the correct pages @navigation @header",
+          "ok": true,
+          "tags": [
+            "navigation",
+            "header"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 2986,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1773
+                    },
+                    {
+                      "title": "Click page body to unblock loading overlay",
+                      "duration": 820
+                    },
+                    {
+                      "title": "Verify \"Deals & Events\" link is visible and has correct href",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Verify \"Services\" link is visible and has correct href",
+                      "duration": 13
+                    },
+                    {
+                      "title": "Verify \"Flyers\" link is visible and has correct href",
+                      "duration": 13
+                    },
+                    {
+                      "title": "Verify \"Gift Registry\" link is visible and has correct href",
+                      "duration": 16
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:31.344Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-bf141208ab12bfc8d07a",
+          "file": "home-page.spec.ts",
+          "line": 369,
+          "column": 5
+        },
+        {
+          "title": "TC-83232 — Newsletter signup in footer accepts valid email and redirects to confirmation @newsletter @footer",
+          "ok": true,
+          "tags": [
+            "newsletter",
+            "footer"
+          ],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12426,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1681
+                    },
+                    {
+                      "title": "Scroll to footer newsletter form",
+                      "duration": 8744
+                    },
+                    {
+                      "title": "Fill valid email in newsletter input",
+                      "duration": 810
+                    },
+                    {
+                      "title": "Click SIGN UP button",
+                      "duration": 849
+                    },
+                    {
+                      "title": "Verify page redirects to /enewsletter-settings",
+                      "duration": 13
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:33.972Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-fbe49974e37583da1209",
+          "file": "home-page.spec.ts",
+          "line": 413,
+          "column": 5
+        },
+        {
+          "title": "TC-83225 — Logo click navigates to home @homepage @navigation @smoke",
+          "ok": true,
+          "tags": [
+            "homepage",
+            "navigation",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 26161,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to an internal page (not home)",
+                      "duration": 24011
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 809
+                    },
+                    {
+                      "title": "Click the London Drugs logo",
+                      "duration": 853
+                    },
+                    {
+                      "title": "Click page body to dismiss loading overlay if stuck",
+                      "duration": 1
+                    },
+                    {
+                      "title": "Verify home page is loaded after logo click",
+                      "duration": 14
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:31:38.589Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-d84186c50b6be5b86739",
+          "file": "home-page.spec.ts",
+          "line": 17,
+          "column": 5
+        },
+        {
+          "title": "TC-83226 — Search with invalid term shows 'Nothing found!' @search @negative",
+          "ok": true,
+          "tags": [
+            "search",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6449,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1911
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 851
+                    },
+                    {
+                      "title": "Wait for search input to be ready",
+                      "duration": 25
+                    },
+                    {
+                      "title": "Type non-existent search term",
+                      "duration": 810
+                    },
+                    {
+                      "title": "Submit search",
+                      "duration": 809
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 816
+                    },
+                    {
+                      "title": "Wait for no-results message'",
+                      "duration": 826
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:31:41.852Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-1a70428a9418093789a2",
+          "file": "home-page.spec.ts",
+          "line": 51,
+          "column": 5
+        },
+        {
+          "title": "TC-83227 — Search returns relevant results for a valid term @search @positive @smoke",
+          "ok": true,
+          "tags": [
+            "search",
+            "positive",
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 30575,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 23928
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 882
+                    },
+                    {
+                      "title": "Wait for search input to be ready",
+                      "duration": 52
+                    },
+                    {
+                      "title": "Click search input field",
+                      "duration": 861
+                    },
+                    {
+                      "title": "Type search term",
+                      "duration": 810
+                    },
+                    {
+                      "title": "Submit search by pressing Enter",
+                      "duration": 813
+                    },
+                    {
+                      "title": "Click page body to unblock loading after search",
+                      "duration": 821
+                    },
+                    {
+                      "title": "Verify search term appears in a product title or section heading",
+                      "duration": 1890
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:31:42.774Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-bf9d4e0776714d98be7b",
+          "file": "home-page.spec.ts",
+          "line": 91,
+          "column": 5
+        },
+        {
+          "title": "TC-83228 — Store Locator opens and Find All Stores link works @store-locator @navigation",
+          "ok": true,
+          "tags": [
+            "store-locator",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 28496,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 23134
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 2264
+                    },
+                    {
+                      "title": "Click 'Select Your Store' / stores link in header",
+                      "duration": 890
+                    },
+                    {
+                      "title": "Wait for Store Locator URL",
+                      "duration": 104
+                    },
+                    {
+                      "title": "Verify 'Find a Store Near You' heading is visible",
+                      "duration": 803
+                    },
+                    {
+                      "title": "Click 'Find All Stores by Province' link",
+                      "duration": 855
+                    },
+                    {
+                      "title": "Wait for All Stores URL",
+                      "duration": 30
+                    },
+                    {
+                      "title": "Verify All Stores list is visible",
+                      "duration": 14
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:31:48.813Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-2f9f59f190bc1434b1c4",
+          "file": "home-page.spec.ts",
+          "line": 142,
+          "column": 5
+        },
+        {
+          "title": "TC-83229 — Mini Cart opens and View Cart navigates to cart page @mini-cart @cart @navigation",
+          "ok": true,
+          "tags": [
+            "mini-cart",
+            "cart",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 31616,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Search for a product and navigate to the first result",
+                      "duration": 9554
+                    },
+                    {
+                      "title": "Capture product name from product page",
+                      "duration": 862
+                    },
+                    {
+                      "title": "Add product to cart",
+                      "duration": 876
+                    },
+                    {
+                      "title": "Wait for View Cart & Checkout button and click it",
+                      "duration": 4411
+                    },
+                    {
+                      "title": "Wait for cart page to load",
+                      "duration": 2603
+                    },
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1698
+                    },
+                    {
+                      "title": "Wait for homepage React hydration before interacting",
+                      "duration": 844
+                    },
+                    {
+                      "title": "Wait for mini cart badge to show item count",
+                      "duration": 2811
+                    },
+                    {
+                      "title": "Click mini cart icon in header",
+                      "duration": 851
+                    },
+                    {
+                      "title": "Verify mini cart panel opens",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Click 'View Cart' button inside mini cart panel",
+                      "duration": 3154
+                    },
+                    {
+                      "title": "Verify cart page opens and shows Cart heading",
+                      "duration": 3691
+                    },
+                    {
+                      "title": "Verify added product is listed in the cart",
+                      "duration": 8
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:31:49.110Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-9788eb5e1b248bd51cf3",
+          "file": "home-page.spec.ts",
+          "line": 206,
+          "column": 5
+        },
+        {
+          "title": "TC-83230 — Hamburger menu opens and displays category navigation @navigation @mega-menu @hamburger",
+          "ok": true,
+          "tags": [
+            "navigation",
+            "mega-menu",
+            "hamburger"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 4125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 2176
+                    },
+                    {
+                      "title": "Click page body to unblock loading",
+                      "duration": 811
+                    },
+                    {
+                      "title": "Click hamburger / mega menu button",
+                      "duration": 874
+                    },
+                    {
+                      "title": "Verify mega menu is visible",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Verify the hamburger button itself is still visible",
+                      "duration": 2
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:32:05.828Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-04b465b3ad1f2c00dba7",
+          "file": "home-page.spec.ts",
+          "line": 336,
+          "column": 5
+        },
+        {
+          "title": "TC-83231 — Main navigation links (Deals, Services, Flyers, Gift Registry) are visible and redirect to the correct pages @navigation @header",
+          "ok": true,
+          "tags": [
+            "navigation",
+            "header"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 3425,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 2353
+                    },
+                    {
+                      "title": "Click page body to unblock loading overlay",
+                      "duration": 811
+                    },
+                    {
+                      "title": "Verify \"Deals & Events\" link is visible and has correct href",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Verify \"Services\" link is visible and has correct href",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Verify \"Flyers\" link is visible and has correct href",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Verify \"Gift Registry\" link is visible and has correct href",
+                      "duration": 3
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:32:09.961Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-8425ad23ddf262fb9e22",
+          "file": "home-page.spec.ts",
+          "line": 369,
+          "column": 5
+        },
+        {
+          "title": "TC-83232 — Newsletter signup in footer accepts valid email and redirects to confirmation @newsletter @footer",
+          "ok": true,
+          "tags": [
+            "newsletter",
+            "footer"
+          ],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 35779,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to homepage",
+                      "duration": 1872
+                    },
+                    {
+                      "title": "Scroll to footer newsletter form",
+                      "duration": 31876
+                    },
+                    {
+                      "title": "Fill valid email in newsletter input",
+                      "duration": 812
+                    },
+                    {
+                      "title": "Click SIGN UP button",
+                      "duration": 898
+                    },
+                    {
+                      "title": "Verify page redirects to /enewsletter-settings",
+                      "duration": 6
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:32:13.400Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d186ff7d110502c4a7d9-3222733829753dd38f7f",
+          "file": "home-page.spec.ts",
+          "line": 413,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "pdp.spec.ts",
+      "file": "pdp.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-83235 — Second-level breadcrumb link on PDP navigates back to category listing @pdp @breadcrumbs @navigation",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "breadcrumbs",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 19276,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 13385
+                    },
+                    {
+                      "title": "Verify second-level breadcrumb link is visible",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Click second-level breadcrumb link",
+                      "duration": 853
+                    },
+                    {
+                      "title": "Verify navigation lands on category listing page",
+                      "duration": 4779
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:26.465Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-675925af85c1bc07a21b",
+          "file": "pdp.spec.ts",
+          "line": 42,
+          "column": 5
+        },
+        {
+          "title": "TC-83236 — Price element is visible and formatted correctly on the first vitamins PDP @pdp @price",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "price"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 12261,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 12066
+                    },
+                    {
+                      "title": "Verify \"Our Price\" label is visible",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Verify price value is visible and matches $X.XX format",
+                      "duration": 5
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:39.692Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-6ac80dda422fec71946c",
+          "file": "pdp.spec.ts",
+          "line": 82,
+          "column": 5
+        },
+        {
+          "title": "TC-83237 — Availability indicator is visible on PDP for a vitamins product @pdp @availability",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "availability"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 11305,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 11114
+                    },
+                    {
+                      "title": "Verify \"Availability:\" section is visible on the page",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Verify \"Availability:\" label text is present",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Verify availability section contains a status indicator",
+                      "duration": 3
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:45.751Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-9296d1911cef9e94d976",
+          "file": "pdp.spec.ts",
+          "line": 112,
+          "column": 5
+        },
+        {
+          "title": "TC-83238 — Add to cart with In-Store Pickup (postal V6B 1A1) increments mini cart counter @pdp @cart @in-store-pickup",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "cart",
+            "in-store-pickup"
+          ],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 52184,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 13648
+                    },
+                    {
+                      "title": "Read current mini cart badge count before adding to cart",
+                      "duration": 0
+                    },
+                    {
+                      "title": "Open store selector dialog and set store using postal code V6B 1A1",
+                      "duration": 21714
+                    },
+                    {
+                      "title": "Search for stores using postal code V6B 1A1",
+                      "duration": 5992
+                    },
+                    {
+                      "title": "Select the first store from results",
+                      "duration": 882
+                    },
+                    {
+                      "title": "Verify In-Store Pickup is now selected (fulfillment changed)",
+                      "duration": 287
+                    },
+                    {
+                      "title": "Click ADD TO CART with In-Store Pickup fulfillment",
+                      "duration": 1650
+                    },
+                    {
+                      "title": "Verify mini cart badge counter incremented by 1",
+                      "duration": 2834
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:50.016Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-4aebc5fbd00c58740416",
+          "file": "pdp.spec.ts",
+          "line": 151,
+          "column": 5
+        },
+        {
+          "title": "TC-83239 — Add to cart with Ship to Home (postal V6B 1A1) increments cart counter @pdp @cart @ship-to-home",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "cart",
+            "ship-to-home"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 22556,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 11055
+                    },
+                    {
+                      "title": "Open the delivery location modal via \"Change Postal Code\" link",
+                      "duration": 848
+                    },
+                    {
+                      "title": "Fill postal code V6B 1A1 and submit",
+                      "duration": 1696
+                    },
+                    {
+                      "title": "Ensure Ship to Home fulfillment is selected",
+                      "duration": 287
+                    },
+                    {
+                      "title": "Click ADD TO CART with Ship to Home fulfillment",
+                      "duration": 1642
+                    },
+                    {
+                      "title": "Verify cart counter incremented by 1",
+                      "duration": 1802
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:51.963Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-e4ea373bc7a3eabfade1",
+          "file": "pdp.spec.ts",
+          "line": 208,
+          "column": 5
+        },
+        {
+          "title": "TC-83240 — Authenticated user adds product to wishlist and API call confirms the action @pdp @wishlist @authenticated",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "wishlist",
+            "authenticated"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 43234,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Log in with test user credentials",
+                      "duration": 27961
+                    },
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 14179
+                    },
+                    {
+                      "title": "Verify the wishlist heart button is visible",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Click the heart icon and confirm the wishlist API call is made",
+                      "duration": 881
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:27:57.067Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-2329adf4324b6aaf133c",
+          "file": "pdp.spec.ts",
+          "line": 259,
+          "column": 5
+        },
+        {
+          "title": "TC-83235 — Second-level breadcrumb link on PDP navigates back to category listing @pdp @breadcrumbs @navigation",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "breadcrumbs",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17609,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 11290
+                    },
+                    {
+                      "title": "Verify second-level breadcrumb link is visible",
+                      "duration": 18
+                    },
+                    {
+                      "title": "Click second-level breadcrumb link",
+                      "duration": 938
+                    },
+                    {
+                      "title": "Verify navigation lands on category listing page",
+                      "duration": 5090
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:09.416Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-ee15e66a0eed2dd5cd21",
+          "file": "pdp.spec.ts",
+          "line": 42,
+          "column": 5
+        },
+        {
+          "title": "TC-83236 — Price element is visible and formatted correctly on the first vitamins PDP @pdp @price",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "price"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 12892,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 12553
+                    },
+                    {
+                      "title": "Verify \"Our Price\" label is visible",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Verify price value is visible and matches $X.XX format",
+                      "duration": 6
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:22.568Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-0378863cffec605ffc60",
+          "file": "pdp.spec.ts",
+          "line": 82,
+          "column": 5
+        },
+        {
+          "title": "TC-83237 — Availability indicator is visible on PDP for a vitamins product @pdp @availability",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "availability"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12983,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 11536
+                    },
+                    {
+                      "title": "Verify \"Availability:\" section is visible on the page",
+                      "duration": 12
+                    },
+                    {
+                      "title": "Verify \"Availability:\" label text is present",
+                      "duration": 14
+                    },
+                    {
+                      "title": "Verify availability section contains a status indicator",
+                      "duration": 8
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:23.244Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-46f4d39f7e3166fc43ca",
+          "file": "pdp.spec.ts",
+          "line": 112,
+          "column": 5
+        },
+        {
+          "title": "TC-83238 — Add to cart with In-Store Pickup (postal V6B 1A1) increments mini cart counter @pdp @cart @in-store-pickup",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "cart",
+            "in-store-pickup"
+          ],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 51411,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 13299
+                    },
+                    {
+                      "title": "Read current mini cart badge count before adding to cart",
+                      "duration": 0
+                    },
+                    {
+                      "title": "Open store selector dialog and set store using postal code V6B 1A1",
+                      "duration": 21799
+                    },
+                    {
+                      "title": "Search for stores using postal code V6B 1A1",
+                      "duration": 5114
+                    },
+                    {
+                      "title": "Select the first store from results",
+                      "duration": 1024
+                    },
+                    {
+                      "title": "Verify In-Store Pickup is now selected (fulfillment changed)",
+                      "duration": 811
+                    },
+                    {
+                      "title": "Click ADD TO CART with In-Store Pickup fulfillment",
+                      "duration": 2756
+                    },
+                    {
+                      "title": "Verify mini cart badge counter incremented by 1",
+                      "duration": 1303
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:27.036Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-541aebf37ae846ce4b65",
+          "file": "pdp.spec.ts",
+          "line": 151,
+          "column": 5
+        },
+        {
+          "title": "TC-83239 — Add to cart with Ship to Home (postal V6B 1A1) increments cart counter @pdp @cart @ship-to-home",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "cart",
+            "ship-to-home"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 22726,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 11150
+                    },
+                    {
+                      "title": "Open the delivery location modal via \"Change Postal Code\" link",
+                      "duration": 948
+                    },
+                    {
+                      "title": "Fill postal code V6B 1A1 and submit",
+                      "duration": 1768
+                    },
+                    {
+                      "title": "Ensure Ship to Home fulfillment is selected",
+                      "duration": 96
+                    },
+                    {
+                      "title": "Click ADD TO CART with Ship to Home fulfillment",
+                      "duration": 1735
+                    },
+                    {
+                      "title": "Verify cart counter incremented by 1",
+                      "duration": 1809
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:35.467Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-0bdd5a371e2c02aa4fb4",
+          "file": "pdp.spec.ts",
+          "line": 208,
+          "column": 5
+        },
+        {
+          "title": "TC-83240 — Authenticated user adds product to wishlist and API call confirms the action @pdp @wishlist @authenticated",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "wishlist",
+            "authenticated"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 27203,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Log in with test user credentials",
+                      "duration": 11692
+                    },
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 14340
+                    },
+                    {
+                      "title": "Verify the wishlist heart button is visible",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Click the heart icon and confirm the wishlist API call is made",
+                      "duration": 933
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:36.874Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-f24dce6d7ea63339f034",
+          "file": "pdp.spec.ts",
+          "line": 259,
+          "column": 5
+        },
+        {
+          "title": "TC-83235 — Second-level breadcrumb link on PDP navigates back to category listing @pdp @breadcrumbs @navigation",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "breadcrumbs",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 20031,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 14740
+                    },
+                    {
+                      "title": "Verify second-level breadcrumb link is visible",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Click second-level breadcrumb link",
+                      "duration": 862
+                    },
+                    {
+                      "title": "Verify navigation lands on category listing page",
+                      "duration": 4130
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:34.372Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-87e2aaad7456215f604d",
+          "file": "pdp.spec.ts",
+          "line": 42,
+          "column": 5
+        },
+        {
+          "title": "TC-83236 — Price element is visible and formatted correctly on the first vitamins PDP @pdp @price",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "price"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12202,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 11896
+                    },
+                    {
+                      "title": "Verify \"Our Price\" label is visible",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Verify price value is visible and matches $X.XX format",
+                      "duration": 3
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:37.000Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-41ab17f8223fbe73d821",
+          "file": "pdp.spec.ts",
+          "line": 82,
+          "column": 5
+        },
+        {
+          "title": "TC-83237 — Availability indicator is visible on PDP for a vitamins product @pdp @availability",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "availability"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12088,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 11730
+                    },
+                    {
+                      "title": "Verify \"Availability:\" section is visible on the page",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Verify \"Availability:\" label text is present",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Verify availability section contains a status indicator",
+                      "duration": 2
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:46.429Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-061edec7070a2e02f4d8",
+          "file": "pdp.spec.ts",
+          "line": 112,
+          "column": 5
+        },
+        {
+          "title": "TC-83238 — Add to cart with In-Store Pickup (postal V6B 1A1) increments mini cart counter @pdp @cart @in-store-pickup",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "cart",
+            "in-store-pickup"
+          ],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 47860,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 10710
+                    },
+                    {
+                      "title": "Read current mini cart badge count before adding to cart",
+                      "duration": 0
+                    },
+                    {
+                      "title": "Open store selector dialog and set store using postal code V6B 1A1",
+                      "duration": 21696
+                    },
+                    {
+                      "title": "Search for stores using postal code V6B 1A1",
+                      "duration": 5491
+                    },
+                    {
+                      "title": "Select the first store from results",
+                      "duration": 907
+                    },
+                    {
+                      "title": "Verify In-Store Pickup is now selected (fulfillment changed)",
+                      "duration": 284
+                    },
+                    {
+                      "title": "Click ADD TO CART with In-Store Pickup fulfillment",
+                      "duration": 1676
+                    },
+                    {
+                      "title": "Verify mini cart badge counter incremented by 1",
+                      "duration": 1793
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:49.209Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-e37f60d2aed30ca504c8",
+          "file": "pdp.spec.ts",
+          "line": 151,
+          "column": 5
+        },
+        {
+          "title": "TC-83239 — Add to cart with Ship to Home (postal V6B 1A1) increments cart counter @pdp @cart @ship-to-home",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "cart",
+            "ship-to-home"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 23252,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 12128
+                    },
+                    {
+                      "title": "Open the delivery location modal via \"Change Postal Code\" link",
+                      "duration": 873
+                    },
+                    {
+                      "title": "Fill postal code V6B 1A1 and submit",
+                      "duration": 1693
+                    },
+                    {
+                      "title": "Ensure Ship to Home fulfillment is selected",
+                      "duration": 290
+                    },
+                    {
+                      "title": "Click ADD TO CART with Ship to Home fulfillment",
+                      "duration": 1636
+                    },
+                    {
+                      "title": "Verify cart counter incremented by 1",
+                      "duration": 1291
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:54.409Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-2719962edb3d3e641d3d",
+          "file": "pdp.spec.ts",
+          "line": 208,
+          "column": 5
+        },
+        {
+          "title": "TC-83240 — Authenticated user adds product to wishlist and API call confirms the action @pdp @wishlist @authenticated",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "wishlist",
+            "authenticated"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 26605,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Log in with test user credentials",
+                      "duration": 11515
+                    },
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 13895
+                    },
+                    {
+                      "title": "Verify the wishlist heart button is visible",
+                      "duration": 2
+                    },
+                    {
+                      "title": "Click the heart icon and confirm the wishlist API call is made",
+                      "duration": 879
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:58.523Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-dccc27db76f44ec484d6",
+          "file": "pdp.spec.ts",
+          "line": 259,
+          "column": 5
+        },
+        {
+          "title": "TC-83235 — Second-level breadcrumb link on PDP navigates back to category listing @pdp @breadcrumbs @navigation",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "breadcrumbs",
+            "navigation"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 16585,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 10666
+                    },
+                    {
+                      "title": "Verify second-level breadcrumb link is visible",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Click second-level breadcrumb link",
+                      "duration": 857
+                    },
+                    {
+                      "title": "Verify navigation lands on category listing page",
+                      "duration": 4856
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:32:14.196Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-9748f8c58170995db240",
+          "file": "pdp.spec.ts",
+          "line": 42,
+          "column": 5
+        },
+        {
+          "title": "TC-83236 — Price element is visible and formatted correctly on the first vitamins PDP @pdp @price",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "price"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10455,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 10191
+                    },
+                    {
+                      "title": "Verify \"Our Price\" label is visible",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Verify price value is visible and matches $X.XX format",
+                      "duration": 10
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:32:18.126Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-2689e417125fd2645c2b",
+          "file": "pdp.spec.ts",
+          "line": 82,
+          "column": 5
+        },
+        {
+          "title": "TC-83237 — Availability indicator is visible on PDP for a vitamins product @pdp @availability",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "availability"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 11779,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 11449
+                    },
+                    {
+                      "title": "Verify \"Availability:\" section is visible on the page",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Verify \"Availability:\" label text is present",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Verify availability section contains a status indicator",
+                      "duration": 3
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:32:20.770Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-53e4bd586d4bbc5706ae",
+          "file": "pdp.spec.ts",
+          "line": 112,
+          "column": 5
+        },
+        {
+          "title": "TC-83238 — Add to cart with In-Store Pickup (postal V6B 1A1) increments mini cart counter @pdp @cart @in-store-pickup",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "cart",
+            "in-store-pickup"
+          ],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 31840,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 10977
+                    },
+                    {
+                      "title": "Read current mini cart badge count before adding to cart",
+                      "duration": 0
+                    },
+                    {
+                      "title": "Open store selector dialog and set store using postal code V6B 1A1",
+                      "duration": 5538
+                    },
+                    {
+                      "title": "Search for stores using postal code V6B 1A1",
+                      "duration": 4983
+                    },
+                    {
+                      "title": "Select the first store from results",
+                      "duration": 864
+                    },
+                    {
+                      "title": "Verify In-Store Pickup is now selected (fulfillment changed)",
+                      "duration": 292
+                    },
+                    {
+                      "title": "Click ADD TO CART with In-Store Pickup fulfillment",
+                      "duration": 1654
+                    },
+                    {
+                      "title": "Verify mini cart badge counter incremented by 1",
+                      "duration": 2298
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:32:28.593Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-47979346bd949e343401",
+          "file": "pdp.spec.ts",
+          "line": 151,
+          "column": 5
+        },
+        {
+          "title": "TC-83239 — Add to cart with Ship to Home (postal V6B 1A1) increments cart counter @pdp @cart @ship-to-home",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "cart",
+            "ship-to-home"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 42954,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 31193
+                    },
+                    {
+                      "title": "Open the delivery location modal via \"Change Postal Code\" link",
+                      "duration": 874
+                    },
+                    {
+                      "title": "Fill postal code V6B 1A1 and submit",
+                      "duration": 1673
+                    },
+                    {
+                      "title": "Ensure Ship to Home fulfillment is selected",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Click ADD TO CART with Ship to Home fulfillment",
+                      "duration": 2138
+                    },
+                    {
+                      "title": "Verify cart counter incremented by 1",
+                      "duration": 1791
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:32:30.794Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-5608148c81d2ae0c7f62",
+          "file": "pdp.spec.ts",
+          "line": 208,
+          "column": 5
+        },
+        {
+          "title": "TC-83240 — Authenticated user adds product to wishlist and API call confirms the action @pdp @wishlist @authenticated",
+          "ok": true,
+          "tags": [
+            "pdp",
+            "wishlist",
+            "authenticated"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 43473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Log in with test user credentials",
+                      "duration": 28437
+                    },
+                    {
+                      "title": "Navigate to a vitamins product detail page via search",
+                      "duration": 13972
+                    },
+                    {
+                      "title": "Verify the wishlist heart button is visible",
+                      "duration": 1
+                    },
+                    {
+                      "title": "Click the heart icon and confirm the wishlist API call is made",
+                      "duration": 865
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:32:32.559Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f952aa59de7cf4ea406f-073fe1d23fcf62eee3a1",
+          "file": "pdp.spec.ts",
+          "line": 259,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "plp.spec.ts",
+      "file": "plp.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-83233 FTC_02_01_01 -- Applying first available filter on lipstick search triggers API call and reflects filter in URL @plp @filter @positive",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "positive"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 17846,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Step 1: Navigate to lipstick search and wait for PLP to load",
+                      "duration": 7595
+                    },
+                    {
+                      "title": "Step 2: Wait for filter panel (drawer trigger) to be visible",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Step 3: Open filter drawer and apply first available filter option",
+                      "duration": 4383
+                    },
+                    {
+                      "title": "Step 4: Wait for filtered results API response (or redirect abort)",
+                      "duration": 5621
+                    },
+                    {
+                      "title": "Assert: URL reflects active filter (URL changed from baseline)",
+                      "duration": 1
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:28:00.300Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-819f8998eb497bb425a8",
+          "file": "plp.spec.ts",
+          "line": 66,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_01_02 -- Applying multiple filters on lipstick search narrows results @plp @filter @positive",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "positive"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 36827,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to lipstick PLP",
+                      "duration": 28103
+                    },
+                    {
+                      "title": "Wait for filter drawer trigger to be visible",
+                      "duration": 4
+                    },
+                    {
+                      "title": "Open filter drawer and apply first filter",
+                      "duration": 4276
+                    },
+                    {
+                      "title": "Assert URL changed after first filter applied",
+                      "duration": 0
+                    },
+                    {
+                      "title": "Open filter drawer again and apply a second filter",
+                      "duration": 4248
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:28:14.550Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-53162cb030ca0e5d8e7f",
+          "file": "plp.spec.ts",
+          "line": 127,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_01_03 -- Filter panel is present on lipstick PLP and page loads without error @plp @filter @negative",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8444,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to lipstick PLP",
+                      "duration": 8231
+                    },
+                    {
+                      "title": "Assert filter trigger (drawer button) is present",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Assert page loaded without a JavaScript error heading",
+                      "duration": 4
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:28:18.158Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-a5d730ef3f043cb95e88",
+          "file": "plp.spec.ts",
+          "line": 183,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_01_04 -- Removing applied filter on lipstick PLP restores full results and clears filter URL param @plp @filter @negative",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 15789,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to lipstick PLP and apply first filter",
+                      "duration": 11269
+                    },
+                    {
+                      "title": "Open filter drawer and uncheck the applied filter",
+                      "duration": 3379
+                    },
+                    {
+                      "title": "Assert: URL no longer contains the filter parameter after clearing",
+                      "duration": 956
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:28:26.612Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-e2b6bd21934fc7c4aa09",
+          "file": "plp.spec.ts",
+          "line": 210,
+          "column": 5
+        },
+        {
+          "title": "TC-83234 FTC_02_02_01 -- Selecting 'Price: Low to High' sort on vitamins search triggers API call and reflects sort in URL @plp @sort @positive",
+          "ok": true,
+          "tags": [
+            "plp",
+            "sort",
+            "positive"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 10161,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Step 1: Navigate to vitamins search and wait for PLP to load",
+                      "duration": 6995
+                    },
+                    {
+                      "title": "Step 2: Wait for sort control to be visible",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Step 3: Open sort overlay and select 'Price: Low to High' option",
+                      "duration": 1723
+                    },
+                    {
+                      "title": "Step 4: Wait for sorted results API response / URL update",
+                      "duration": 1193
+                    },
+                    {
+                      "title": "Assert: URL reflects active sort (URL changed from baseline)",
+                      "duration": 1
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:28:40.319Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-86dc10f8d43430223049",
+          "file": "plp.spec.ts",
+          "line": 267,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_02_02 -- Sort control is present on vitamins PLP and page loads without error @plp @sort @negative",
+          "ok": true,
+          "tags": [
+            "plp",
+            "sort",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9581,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to vitamins PLP",
+                      "duration": 9310
+                    },
+                    {
+                      "title": "Assert sort button (overlay trigger) is visible",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Assert page loaded without a JavaScript error heading",
+                      "duration": 2
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:28:42.221Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-1c0903d5d2de6aa7064f",
+          "file": "plp.spec.ts",
+          "line": 325,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_02_03 -- Switching sort from 'Price: Low to High' to 'Price: High to Low' updates URL @plp @sort @boundary",
+          "ok": true,
+          "tags": [
+            "plp",
+            "sort",
+            "boundary"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 40274,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to vitamins PLP",
+                      "duration": 27706
+                    },
+                    {
+                      "title": "Wait for sort control to be visible",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Apply 'Price: Low to High' sort first",
+                      "duration": 1704
+                    },
+                    {
+                      "title": "Switch to 'Price: High to Low' sort",
+                      "duration": 10603
+                    },
+                    {
+                      "title": "Assert URL updated after sort switch",
+                      "duration": 1
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:28:42.453Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-6981ab798dd0a90f7d93",
+          "file": "plp.spec.ts",
+          "line": 350,
+          "column": 5
+        },
+        {
+          "title": "TC-83233 FTC_02_01_01 -- Applying first available filter on lipstick search triggers API call and reflects filter in URL @plp @filter @positive",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "positive"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 17528,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Step 1: Navigate to lipstick search and wait for PLP to load",
+                      "duration": 7142
+                    },
+                    {
+                      "title": "Step 2: Wait for filter panel (drawer trigger) to be visible",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Step 3: Open filter drawer and apply first available filter option",
+                      "duration": 5523
+                    },
+                    {
+                      "title": "Step 4: Wait for filtered results API response (or redirect abort)",
+                      "duration": 4480
+                    },
+                    {
+                      "title": "Assert: URL reflects active filter (URL changed from baseline)",
+                      "duration": 1
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:37.463Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-bf1c008a6e49fdc7dc01",
+          "file": "plp.spec.ts",
+          "line": 66,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_01_02 -- Applying multiple filters on lipstick search narrows results @plp @filter @positive",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "positive"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 17435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to lipstick PLP",
+                      "duration": 7142
+                    },
+                    {
+                      "title": "Wait for filter drawer trigger to be visible",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Open filter drawer and apply first filter",
+                      "duration": 5498
+                    },
+                    {
+                      "title": "Assert URL changed after first filter applied",
+                      "duration": 1
+                    },
+                    {
+                      "title": "Open filter drawer again and apply a second filter",
+                      "duration": 4531
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:55.002Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-194c72ffdf07840ecf8e",
+          "file": "plp.spec.ts",
+          "line": 127,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_01_03 -- Filter panel is present on lipstick PLP and page loads without error @plp @filter @negative",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 7266,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to lipstick PLP",
+                      "duration": 7034
+                    },
+                    {
+                      "title": "Assert filter trigger (drawer button) is present",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Assert page loaded without a JavaScript error heading",
+                      "duration": 4
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:29:58.217Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-0dd68c7d4bc1e5f90220",
+          "file": "plp.spec.ts",
+          "line": 183,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_01_04 -- Removing applied filter on lipstick PLP restores full results and clears filter URL param @plp @filter @negative",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 17234,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to lipstick PLP and apply first filter",
+                      "duration": 12334
+                    },
+                    {
+                      "title": "Open filter drawer and uncheck the applied filter",
+                      "duration": 3673
+                    },
+                    {
+                      "title": "Assert: URL no longer contains the filter parameter after clearing",
+                      "duration": 1002
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:04.114Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-c1ceeef0f0d556c73ce9",
+          "file": "plp.spec.ts",
+          "line": 210,
+          "column": 5
+        },
+        {
+          "title": "TC-83234 FTC_02_02_01 -- Selecting 'Price: Low to High' sort on vitamins search triggers API call and reflects sort in URL @plp @sort @positive",
+          "ok": true,
+          "tags": [
+            "plp",
+            "sort",
+            "positive"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 10097,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Step 1: Navigate to vitamins search and wait for PLP to load",
+                      "duration": 6911
+                    },
+                    {
+                      "title": "Step 2: Wait for sort control to be visible",
+                      "duration": 9
+                    },
+                    {
+                      "title": "Step 3: Open sort overlay and select 'Price: Low to High' option",
+                      "duration": 2922
+                    },
+                    {
+                      "title": "Step 4: Wait for sorted results API response / URL update",
+                      "duration": 2
+                    },
+                    {
+                      "title": "Assert: URL reflects active sort (URL changed from baseline)",
+                      "duration": 0
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:05.491Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-d385205e5ff183207fd0",
+          "file": "plp.spec.ts",
+          "line": 267,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_02_02 -- Sort control is present on vitamins PLP and page loads without error @plp @sort @negative",
+          "ok": true,
+          "tags": [
+            "plp",
+            "sort",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7868,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to vitamins PLP",
+                      "duration": 7181
+                    },
+                    {
+                      "title": "Assert sort button (overlay trigger) is visible",
+                      "duration": 305
+                    },
+                    {
+                      "title": "Assert page loaded without a JavaScript error heading",
+                      "duration": 17
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:12.444Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-75e833be26be12e90373",
+          "file": "plp.spec.ts",
+          "line": 325,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_02_03 -- Switching sort from 'Price: Low to High' to 'Price: High to Low' updates URL @plp @sort @boundary",
+          "ok": true,
+          "tags": [
+            "plp",
+            "sort",
+            "boundary"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 12439,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to vitamins PLP",
+                      "duration": 7555
+                    },
+                    {
+                      "title": "Wait for sort control to be visible",
+                      "duration": 16
+                    },
+                    {
+                      "title": "Apply 'Price: Low to High' sort first",
+                      "duration": 2141
+                    },
+                    {
+                      "title": "Switch to 'Price: High to Low' sort",
+                      "duration": 1919
+                    },
+                    {
+                      "title": "Assert URL updated after sort switch",
+                      "duration": 531
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:30:15.597Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-0078c17062830c55056c",
+          "file": "plp.spec.ts",
+          "line": 350,
+          "column": 5
+        },
+        {
+          "title": "TC-83233 FTC_02_01_01 -- Applying first available filter on lipstick search triggers API call and reflects filter in URL @plp @filter @positive",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "positive"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 17294,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Step 1: Navigate to lipstick search and wait for PLP to load",
+                      "duration": 6924
+                    },
+                    {
+                      "title": "Step 2: Wait for filter panel (drawer trigger) to be visible",
+                      "duration": 16
+                    },
+                    {
+                      "title": "Step 3: Open filter drawer and apply first available filter option",
+                      "duration": 4732
+                    },
+                    {
+                      "title": "Step 4: Wait for filtered results API response (or redirect abort)",
+                      "duration": 5269
+                    },
+                    {
+                      "title": "Assert: URL reflects active filter (URL changed from baseline)",
+                      "duration": 3
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:31:04.434Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-c3644392fc674056a448",
+          "file": "plp.spec.ts",
+          "line": 66,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_01_02 -- Applying multiple filters on lipstick search narrows results @plp @filter @positive",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "positive"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 16997,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to lipstick PLP",
+                      "duration": 6993
+                    },
+                    {
+                      "title": "Wait for filter drawer trigger to be visible",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Open filter drawer and apply first filter",
+                      "duration": 5433
+                    },
+                    {
+                      "title": "Assert URL changed after first filter applied",
+                      "duration": 0
+                    },
+                    {
+                      "title": "Open filter drawer again and apply a second filter",
+                      "duration": 4274
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:31:17.682Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-9702decf4b121b3aea86",
+          "file": "plp.spec.ts",
+          "line": 127,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_01_03 -- Filter panel is present on lipstick PLP and page loads without error @plp @filter @negative",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 7347,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to lipstick PLP",
+                      "duration": 7019
+                    },
+                    {
+                      "title": "Assert filter trigger (drawer button) is present",
+                      "duration": 8
+                    },
+                    {
+                      "title": "Assert page loaded without a JavaScript error heading",
+                      "duration": 4
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:31:21.738Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-bf6d68797c1e7664315a",
+          "file": "plp.spec.ts",
+          "line": 183,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_01_04 -- Removing applied filter on lipstick PLP restores full results and clears filter URL param @plp @filter @negative",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 16355,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to lipstick PLP and apply first filter",
+                      "duration": 11688
+                    },
+                    {
+                      "title": "Open filter drawer and uncheck the applied filter",
+                      "duration": 3457
+                    },
+                    {
+                      "title": "Assert: URL no longer contains the filter parameter after clearing",
+                      "duration": 898
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:31:25.171Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-48ae1e75784b26f87102",
+          "file": "plp.spec.ts",
+          "line": 210,
+          "column": 5
+        },
+        {
+          "title": "TC-83234 FTC_02_02_01 -- Selecting 'Price: Low to High' sort on vitamins search triggers API call and reflects sort in URL @plp @sort @positive",
+          "ok": true,
+          "tags": [
+            "plp",
+            "sort",
+            "positive"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 9111,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Step 1: Navigate to vitamins search and wait for PLP to load",
+                      "duration": 6513
+                    },
+                    {
+                      "title": "Step 2: Wait for sort control to be visible",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Step 3: Open sort overlay and select 'Price: Low to High' option",
+                      "duration": 2279
+                    },
+                    {
+                      "title": "Step 4: Wait for sorted results API response / URL update",
+                      "duration": 1
+                    },
+                    {
+                      "title": "Assert: URL reflects active sort (URL changed from baseline)",
+                      "duration": 0
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:31:29.101Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-b8155a56fa11f0c9bf39",
+          "file": "plp.spec.ts",
+          "line": 267,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_02_02 -- Sort control is present on vitamins PLP and page loads without error @plp @sort @negative",
+          "ok": true,
+          "tags": [
+            "plp",
+            "sort",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 7575,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to vitamins PLP",
+                      "duration": 7241
+                    },
+                    {
+                      "title": "Assert sort button (overlay trigger) is visible",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Assert page loaded without a JavaScript error heading",
+                      "duration": 6
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:31:34.702Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-de30ac9988a7a5f97469",
+          "file": "plp.spec.ts",
+          "line": 325,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_02_03 -- Switching sort from 'Price: Low to High' to 'Price: High to Low' updates URL @plp @sort @boundary",
+          "ok": true,
+          "tags": [
+            "plp",
+            "sort",
+            "boundary"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11324,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to vitamins PLP",
+                      "duration": 6547
+                    },
+                    {
+                      "title": "Wait for sort control to be visible",
+                      "duration": 107
+                    },
+                    {
+                      "title": "Apply 'Price: Low to High' sort first",
+                      "duration": 2313
+                    },
+                    {
+                      "title": "Switch to 'Price: High to Low' sort",
+                      "duration": 1952
+                    },
+                    {
+                      "title": "Assert URL updated after sort switch",
+                      "duration": 2
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:31:37.090Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-229849b5aceb4b20057b",
+          "file": "plp.spec.ts",
+          "line": 350,
+          "column": 5
+        },
+        {
+          "title": "TC-83233 FTC_02_01_01 -- Applying first available filter on lipstick search triggers API call and reflects filter in URL @plp @filter @positive",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "positive"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 17525,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Step 1: Navigate to lipstick search and wait for PLP to load",
+                      "duration": 7320
+                    },
+                    {
+                      "title": "Step 2: Wait for filter panel (drawer trigger) to be visible",
+                      "duration": 3
+                    },
+                    {
+                      "title": "Step 3: Open filter drawer and apply first available filter option",
+                      "duration": 4321
+                    },
+                    {
+                      "title": "Step 4: Wait for filtered results API response (or redirect abort)",
+                      "duration": 5682
+                    },
+                    {
+                      "title": "Assert: URL reflects active filter (URL changed from baseline)",
+                      "duration": 2
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:32:49.205Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-2a90aeedd11ffb2dff1c",
+          "file": "plp.spec.ts",
+          "line": 66,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_01_02 -- Applying multiple filters on lipstick search narrows results @plp @filter @positive",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "positive"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16547,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to lipstick PLP",
+                      "duration": 7772
+                    },
+                    {
+                      "title": "Wait for filter drawer trigger to be visible",
+                      "duration": 1
+                    },
+                    {
+                      "title": "Open filter drawer and apply first filter",
+                      "duration": 4309
+                    },
+                    {
+                      "title": "Assert URL changed after first filter applied",
+                      "duration": 0
+                    },
+                    {
+                      "title": "Open filter drawer again and apply a second filter",
+                      "duration": 4270
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:33:00.454Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-ac7e1dc0fb9714502f37",
+          "file": "plp.spec.ts",
+          "line": 127,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_01_03 -- Filter panel is present on lipstick PLP and page loads without error @plp @filter @negative",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 7275,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to lipstick PLP",
+                      "duration": 7063
+                    },
+                    {
+                      "title": "Assert filter trigger (drawer button) is present",
+                      "duration": 7
+                    },
+                    {
+                      "title": "Assert page loaded without a JavaScript error heading",
+                      "duration": 3
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:33:06.743Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-485071288a55ddd1ec26",
+          "file": "plp.spec.ts",
+          "line": 183,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_01_04 -- Removing applied filter on lipstick PLP restores full results and clears filter URL param @plp @filter @negative",
+          "ok": true,
+          "tags": [
+            "plp",
+            "filter",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 18817,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to lipstick PLP and apply first filter",
+                      "duration": 14159
+                    },
+                    {
+                      "title": "Open filter drawer and uncheck the applied filter",
+                      "duration": 3394
+                    },
+                    {
+                      "title": "Assert: URL no longer contains the filter parameter after clearing",
+                      "duration": 961
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:33:13.827Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-83f46d27a034fe7c5227",
+          "file": "plp.spec.ts",
+          "line": 210,
+          "column": 5
+        },
+        {
+          "title": "TC-83234 FTC_02_02_01 -- Selecting 'Price: Low to High' sort on vitamins search triggers API call and reflects sort in URL @plp @sort @positive",
+          "ok": true,
+          "tags": [
+            "plp",
+            "sort",
+            "positive"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 8885,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Step 1: Navigate to vitamins search and wait for PLP to load",
+                      "duration": 6904
+                    },
+                    {
+                      "title": "Step 2: Wait for sort control to be visible",
+                      "duration": 1
+                    },
+                    {
+                      "title": "Step 3: Open sort overlay and select 'Price: Low to High' option",
+                      "duration": 1712
+                    },
+                    {
+                      "title": "Step 4: Wait for sorted results API response / URL update",
+                      "duration": 1
+                    },
+                    {
+                      "title": "Assert: URL reflects active sort (URL changed from baseline)",
+                      "duration": 0
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:33:14.025Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-8a8c9aea769d362e9891",
+          "file": "plp.spec.ts",
+          "line": 267,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_02_02 -- Sort control is present on vitamins PLP and page loads without error @plp @sort @negative",
+          "ok": true,
+          "tags": [
+            "plp",
+            "sort",
+            "negative"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7406,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to vitamins PLP",
+                      "duration": 7018
+                    },
+                    {
+                      "title": "Assert sort button (overlay trigger) is visible",
+                      "duration": 6
+                    },
+                    {
+                      "title": "Assert page loaded without a JavaScript error heading",
+                      "duration": 2
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:33:16.098Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-8a4563a6103d7f7f378b",
+          "file": "plp.spec.ts",
+          "line": 325,
+          "column": 5
+        },
+        {
+          "title": "FTC_02_02_03 -- Switching sort from 'Price: Low to High' to 'Price: High to Low' updates URL @plp @sort @boundary",
+          "ok": true,
+          "tags": [
+            "plp",
+            "sort",
+            "boundary"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "edge",
+              "projectName": "edge",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32514,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Navigate to vitamins PLP",
+                      "duration": 28850
+                    },
+                    {
+                      "title": "Wait for sort control to be visible",
+                      "duration": 5
+                    },
+                    {
+                      "title": "Apply 'Price: Low to High' sort first",
+                      "duration": 1714
+                    },
+                    {
+                      "title": "Switch to 'Price: High to Low' sort",
+                      "duration": 1764
+                    },
+                    {
+                      "title": "Assert URL updated after sort switch",
+                      "duration": 1
+                    }
+                  ],
+                  "startTime": "2026-07-15T21:33:17.021Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f34df1c5ce7eea99e902-ade62088e0c932183c3a",
+          "file": "plp.spec.ts",
+          "line": 350,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-15T21:27:09.105Z",
+    "duration": 401166.158,
+    "expected": 84,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

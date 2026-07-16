@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETED",
+  "session_id": "REPORT-PLAYWRIGHTAUTOMATION-20260715",
+  "started_at": "2026-07-15T21:41:00Z",
+  "completed_at": "2026-07-15T21:55:00Z",
+  "skill": "reporting-analysis",
+  "outputs": {
+    "spec": "REPORT-SPEC-REPORT-PLAYWRIGHTAUTOMATION-20260715.md",
+    "audit": "REPORT-AUDIT-REPORT-PLAYWRIGHTAUTOMATION-20260715.md"
+  }
+}

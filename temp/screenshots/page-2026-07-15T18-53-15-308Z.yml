@@ -1,0 +1,387 @@
+- generic [ref=f45e1]:
+  - alert [ref=f45e4]
+  - link [ref=f45e8] [cursor=pointer]:
+    - /url: https://www.londondrugs.com/category/clearance/c/39
+    - paragraph [ref=f45e11]:
+      - strong [ref=f45e12]: "Last Chance Clearance:"
+    - paragraph [ref=f45e15]: new items are added weekly online and in-store. Shop now
+  - article [ref=f45e16]:
+    - list [ref=f45e17]:
+      - listitem [ref=f45e18]:
+        - 'link "Customer Service: 1-888-991-2299" [ref=f45e19] [cursor=pointer]':
+          - /url: tel:18889912299
+        - generic [ref=f45e20]: "|"
+      - listitem [ref=f45e21]:
+        - link "Travel Essentials" [ref=f45e22] [cursor=pointer]:
+          - /url: /travel
+        - generic [ref=f45e23]: "|"
+      - listitem [ref=f45e24]:
+        - link "30-Day Price Match Guarantee" [ref=f45e25] [cursor=pointer]:
+          - /url: /our-guarantee/OurGuarantee
+  - banner [ref=f45e26]:
+    - generic [ref=f45e27]:
+      - generic [ref=f45e28]:
+        - link [ref=f45e29] [cursor=pointer]:
+          - /url: /
+          - img "London Drugs" [ref=f45e30]
+        - textbox "Search for products" [active] [ref=f45e34]:
+          - /placeholder: Find your product
+        - complementary [ref=f45e37]:
+          - list [ref=f45e38]:
+            - listitem [ref=f45e39]:
+              - link "Select Your Store" [ref=f45e40] [cursor=pointer]:
+                - /url: /stores
+          - complementary [ref=f45e44]:
+            - complementary [ref=f45e45]:
+              - button [ref=f45e47] [cursor=pointer]
+            - generic [ref=f45e49]:
+              - link "Show Wishlist Items" [ref=f45e50] [cursor=pointer]:
+                - /url: /myaccount/wishlist
+              - link "Show My List & Registry Items" [ref=f45e53] [cursor=pointer]:
+                - /url: /myaccount/wishlist#registry
+                - img "Add to Registry Icon" [ref=f45e54]
+            - button "Show Mini Cart Items" [ref=f45e57] [cursor=pointer]
+      - generic [ref=f45e63]:
+        - generic [ref=f45e64]:
+          - button "Opens Mega Menu" [ref=f45e65] [cursor=pointer]
+          - button "shop by category" [ref=f45e67] [cursor=pointer]: Shop by Category
+        - list [ref=f45e68]:
+          - listitem [ref=f45e69]:
+            - link "Deals & Events" [ref=f45e71] [cursor=pointer]:
+              - /url: /category/deals-and-events/c/1027
+          - listitem [ref=f45e72]:
+            - link "Services" [ref=f45e74] [cursor=pointer]:
+              - /url: /our-services
+          - listitem [ref=f45e75]:
+            - generic [ref=f45e76]:
+              - img "Pharmacy" [ref=f45e77]
+              - link "Pharmacy" [ref=f45e78] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com
+          - listitem [ref=f45e79]:
+            - generic [ref=f45e80]:
+              - img "PhotoLab" [ref=f45e81]
+              - link "PhotoLab" [ref=f45e82] [cursor=pointer]:
+                - /url: https://photolab.londondrugs.com
+          - listitem [ref=f45e83]:
+            - link "Gift Registry" [ref=f45e85] [cursor=pointer]:
+              - /url: /myaccount/wishlist#registry
+          - listitem [ref=f45e86]:
+            - link [ref=f45e87] [cursor=pointer]:
+              - /url: https://www.ldextras.com
+              - generic [ref=f45e88]:
+                - strong [ref=f45e89]: LD
+                - emphasis [ref=f45e90]: Extras
+        - link [ref=f45e91] [cursor=pointer]:
+          - /url: /flyer
+          - img "Flyers Logo" [ref=f45e92]
+          - text: Flyers
+  - main [ref=f45e93]:
+    - navigation [ref=f45e94]:
+      - list [ref=f45e95]:
+        - listitem [ref=f45e96]:
+          - link "Home" [ref=f45e97] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f45e98]:
+          - link "Appliances" [ref=f45e99] [cursor=pointer]:
+            - /url: /category/appliances/c/50
+        - listitem [ref=f45e100]:
+          - link "Cookers & Grills" [ref=f45e101] [cursor=pointer]:
+            - /url: /category/cookers-and-grills/c/56
+        - listitem [ref=f45e102]:
+          - link "Rice Cookers" [ref=f45e103] [cursor=pointer]:
+            - /url: /category/rice-cookers/c/59
+        - listitem [ref=f45e104]:
+          - generic [ref=f45e105]: Zojirushi Commercial Rice Cooker &amp; Warmer - NYC-36
+    - generic [ref=f45e106]:
+      - img "product image" [ref=f45e118]
+      - generic [ref=f45e119]:
+        - link "Shop All by ZOJIRUSHI" [ref=f45e120] [cursor=pointer]:
+          - /url: /search?q=ZOJIRUSHI
+        - heading "Zojirushi Commercial Rice Cooker &amp; Warmer - NYC-36" [level=1] [ref=f45e121]
+        - paragraph [ref=f45e122]: "Web ID: L1939690"
+        - generic [ref=f45e124]:
+          - button "No rating value Same page link. (0)" [ref=f45e125]:
+            - generic [ref=f45e126]: No rating value Same page link.
+            - generic [ref=f45e138]: (0)
+          - button "Write a Review (opens pop-up). This action will open a modal dialog." [ref=f45e143]: Write a review
+        - generic [ref=f45e144]:
+          - heading "Our Price" [level=3] [ref=f45e145]
+          - paragraph [ref=f45e146]: $599.99
+        - article [ref=f45e147]:
+          - button "See Available Promotions" [ref=f45e148] [cursor=pointer]
+        - generic [ref=f45e149]:
+          - generic [ref=f45e151]:
+            - generic [ref=f45e152]:
+              - heading "Special Order Item" [level=3] [ref=f45e153]
+              - paragraph [ref=f45e155]: This is a special order item. Estimated delivery time is 3-6 weeks.
+            - heading "Availability:" [level=4] [ref=f45e156]
+            - generic [ref=f45e161]:
+              - paragraph [ref=f45e162] [cursor=pointer]: Set your store
+              - paragraph [ref=f45e163]: to see product availability
+          - generic [ref=f45e165]:
+            - generic [ref=f45e166]:
+              - generic [ref=f45e167]:
+                - radio "Product Ship To Home Fulfillment Type" [checked] [ref=f45e168]
+                - heading "Ship to Home" [level=4] [ref=f45e169]
+              - link "Free Shipping on Orders over $75*" [ref=f45e170] [cursor=pointer]:
+                - /url: /shipping-delivery
+            - generic [ref=f45e171]:
+              - paragraph [ref=f45e172]: This is a special order item. Estimated delivery time is 3-6 weeks.
+              - paragraph [ref=f45e173] [cursor=pointer]: Change Postal Code
+              - paragraph [ref=f45e175]: This item may be available for Expedited Delivery
+          - generic [ref=f45e176]:
+            - paragraph [ref=f45e177]: Maximum 6 Per Order
+            - generic [ref=f45e179]:
+              - generic [ref=f45e181]:
+                - button "-" [ref=f45e182]
+                - textbox [ref=f45e183]: "1"
+                - button "+" [ref=f45e184] [cursor=pointer]
+              - button "Add to cart button" [ref=f45e186] [cursor=pointer]:
+                - generic [ref=f45e187]:
+                  - text: ADD TO CART
+                  - generic [ref=f45e188]: for Ship to Home
+          - generic [ref=f45e191]:
+            - button "Add product to wishlist heart button" [ref=f45e193] [cursor=pointer]: Add to My List
+            - button "Add to Registry Icon Add to Registry" [ref=f45e197] [cursor=pointer]:
+              - img "Add to Registry Icon" [ref=f45e198]
+              - generic [ref=f45e199]: Add to Registry
+        - generic [ref=f45e200]:
+          - paragraph [ref=f45e201]: "Share:"
+          - generic [ref=f45e202]:
+            - link "Share on Facebook" [ref=f45e203] [cursor=pointer]:
+              - /url: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flondon-drugs-uat-origin.kibology.us%2Fproducts%2Fzojirushi-commercial-rice-cooker-andamp-warmer-nyc-36%2Fp%2FL1939690
+              - img "Facebook Logo" [ref=f45e204]
+            - link "Share on X" [ref=f45e205] [cursor=pointer]:
+              - /url: https://x.com/intent/tweet?text=Check%20out%20this%20product!&url=https%3A%2F%2Flondon-drugs-uat-origin.kibology.us%2Fproducts%2Fzojirushi-commercial-rice-cooker-andamp-warmer-nyc-36%2Fp%2FL1939690&hashtags=YourStore
+              - img "X Logo" [ref=f45e206]
+            - link "Share on Pinterest" [ref=f45e207] [cursor=pointer]:
+              - /url: https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Flondon-drugs-uat-origin.kibology.us%2Fproducts%2Fzojirushi-commercial-rice-cooker-andamp-warmer-nyc-36%2Fp%2FL1939690&media=https%3A%2F%2Fcdn-tp2.mozu.com%2F28945-m1%2Fcms%2Ffiles%2Fproducts%2FL1939690%2Flarge%2FL1939690.JPG&description=Check%20out%20this%20product%20from%20Your%20Store!
+              - img "Pinterest Logo" [ref=f45e208]
+            - link "Share on Email" [ref=f45e209] [cursor=pointer]:
+              - /url: mailto:name@email.com?subject=Zojirushi%20Commercial%20Rice%20Cooker%20%26amp%3B%20Warmer%20-%20NYC-36&body=https%3A%2F%2Flondon-drugs-uat-origin.kibology.us%2Fproducts%2Fzojirushi-commercial-rice-cooker-andamp-warmer-nyc-36%2Fp%2FL1939690
+              - img "Email Logo" [ref=f45e210]
+    - generic [ref=f45e211]:
+      - group [ref=f45e212]:
+        - generic [ref=f45e213] [cursor=pointer]:
+          - heading "Product Description" [level=2] [ref=f45e214]
+          - text: −
+        - generic [ref=f45e216]:
+          - paragraph [ref=f45e217]: The NSF certified Commercial Rice Cooker & Warmer cooks up to 20 cups of rice. The unit automatically goes into keep warm mode after cooking, features durable stainless steel exterior and comes with an extra large rice spatula.
+          - paragraph [ref=f45e218]: • 20-cup large rice cooker with automatic keep warm
+          - paragraph [ref=f45e219]: • Durable stainless steel exterior
+          - paragraph [ref=f45e220]: • Nonstick inner cooking pan with rinse-free rice water measure line
+          - paragraph [ref=f45e221]: • Easy-to-use single switch control
+          - paragraph [ref=f45e222]: • Easy-to-open latch
+          - paragraph [ref=f45e223]: • Detachable and easy-to-clean condensation collector
+          - paragraph [ref=f45e224]: • Side condensation collector
+          - paragraph [ref=f45e225]: • Detachable and washable inner lid
+          - paragraph [ref=f45e226]: • Includes an extra large rice spatula
+          - paragraph [ref=f45e227]: • cETLus listed, NSF certified
+      - group [ref=f45e228]:
+        - generic [ref=f45e229] [cursor=pointer]:
+          - heading "Specifications" [level=2] [ref=f45e230]
+          - text: +
+      - group [ref=f45e231]:
+        - generic [ref=f45e232] [cursor=pointer]:
+          - heading "Reviews" [level=2] [ref=f45e233]
+          - text: +
+  - generic [ref=f45e235]:
+    - generic [ref=f45e236]:
+      - heading "Email Newsletter" [level=3] [ref=f45e237]
+      - paragraph [ref=f45e238]: Sign up and receive promotions and special offers by email
+    - textbox "Enter your email" [ref=f45e240]
+    - button "SIGN UP" [ref=f45e242] [cursor=pointer]
+  - contentinfo [ref=f45e243]:
+    - generic [ref=f45e248]:
+      - generic [ref=f45e250]:
+        - generic [ref=f45e252]:
+          - paragraph [ref=f45e257]: Our Blogs
+          - generic [ref=f45e258]:
+            - generic [ref=f45e260]:
+              - link [ref=f45e263] [cursor=pointer]:
+                - /url: https://blog.londondrugs.com
+              - link "londondrugs blog" [ref=f45e266] [cursor=pointer]:
+                - /url: https://blog.londondrugs.com
+                - paragraph [ref=f45e268]: LONDON DRUGS BLOG
+            - generic [ref=f45e270]:
+              - link [ref=f45e273] [cursor=pointer]:
+                - /url: http://www.greendeal.ca/blog
+              - link "greendeal-blog" [ref=f45e276] [cursor=pointer]:
+                - /url: http://www.greendeal.ca/blog
+                - paragraph [ref=f45e278]: GREEN DEAL BLOG
+        - generic [ref=f45e282]:
+          - generic [ref=f45e285]:
+            - generic "our-services" [ref=f45e287]: Our Services
+            - generic [ref=f45e289]:
+              - generic "presc" [ref=f45e290]:
+                - link [ref=f45e291] [cursor=pointer]:
+                  - /url: https://blog.londondrugs.com/pharmacy-services-and-information
+                  - generic "prescription-refills" [ref=f45e292]:
+                    - paragraph [ref=f45e294]: Prescription Refills
+              - link [ref=f45e296] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com/manage-prescriptions/delivery-and-pickup
+                - generic "prescription-delivery" [ref=f45e297]:
+                  - paragraph [ref=f45e299]: Prescription Delivery
+              - link [ref=f45e301] [cursor=pointer]:
+                - /url: /apple-service
+                - generic "apple-services" [ref=f45e302]:
+                  - paragraph [ref=f45e304]: Apple Service
+              - link [ref=f45e306] [cursor=pointer]:
+                - /url: /tech-services
+                - generic "tech-services" [ref=f45e307]:
+                  - paragraph [ref=f45e309]: TECH Services
+              - link [ref=f45e311] [cursor=pointer]:
+                - /url: /photography-services
+                - generic "photography-services" [ref=f45e312]:
+                  - paragraph [ref=f45e314]: Photography Services
+              - link [ref=f45e316] [cursor=pointer]:
+                - /url: https://www.ldinsurance.ca
+                - generic "insurance-services" [ref=f45e317]:
+                  - paragraph [ref=f45e319]: Insurance Services
+              - link [ref=f45e321] [cursor=pointer]:
+                - /url: /subscriptions
+                - generic "subscription-services" [ref=f45e322]:
+                  - paragraph [ref=f45e324]: Subscription Services
+              - link [ref=f45e326] [cursor=pointer]:
+                - /url: https://pharmacy.londondrugs.com/health-clinics/travel-clinic
+                - generic "travel-clinics" [ref=f45e327]:
+                  - paragraph [ref=f45e329]: Travel Clinics
+              - link [ref=f45e331] [cursor=pointer]:
+                - /url: /optical/optical-london-drugs-new
+                - generic "optical-london-drugs" [ref=f45e332]:
+                  - paragraph [ref=f45e334]: Optical London Drugs
+              - link [ref=f45e336] [cursor=pointer]:
+                - /url: /emergencies
+                - generic "emergency-preparedness" [ref=f45e337]:
+                  - paragraph [ref=f45e339]: Emergency Preparedness
+              - link [ref=f45e341] [cursor=pointer]:
+                - /url: /passportphoto
+                - generic "passport-photos" [ref=f45e342]:
+                  - paragraph [ref=f45e344]: Passport Photos
+              - link [ref=f45e346] [cursor=pointer]:
+                - /url: /postal-outlets-available-at-select-london-drugs-stores/LDPostalOutlets
+                - generic "postal-outlets" [ref=f45e347]:
+                  - paragraph [ref=f45e349]: Postal Outlets
+              - link [ref=f45e351] [cursor=pointer]:
+                - /url: https://www.tld.com
+                - generic "tld-computers" [ref=f45e352]:
+                  - paragraph [ref=f45e354]: TLD Computers
+          - generic [ref=f45e357]:
+            - generic "customer-care" [ref=f45e359]: Customer Care
+            - generic [ref=f45e361]:
+              - link [ref=f45e363] [cursor=pointer]:
+                - /url: /customer-service/customer-service-landing
+                - generic "customer-service" [ref=f45e364]:
+                  - paragraph [ref=f45e366]: Customer Service
+              - link [ref=f45e368] [cursor=pointer]:
+                - /url: /enewsletter-settings
+                - generic "email-subscription-settings" [ref=f45e369]:
+                  - paragraph [ref=f45e371]: Email Subscription Settings
+              - link [ref=f45e373] [cursor=pointer]:
+                - /url: /contact-us
+                - generic "contact-us" [ref=f45e374]:
+                  - paragraph [ref=f45e376]: Contact Us
+              - link [ref=f45e378] [cursor=pointer]:
+                - /url: /frequently-asked-questions/faqs
+                - generic "freq-asked" [ref=f45e379]:
+                  - paragraph [ref=f45e381]: Frequently Asked Questions
+              - link [ref=f45e383] [cursor=pointer]:
+                - /url: /our-guarantee
+                - generic "our-guarantee" [ref=f45e384]:
+                  - paragraph [ref=f45e386]: Our Guarantee
+              - link [ref=f45e388] [cursor=pointer]:
+                - /url: /purchase-protection-plan/purchase-protection-plan-introduction
+                - generic "purchase-protection-plans" [ref=f45e389]:
+                  - paragraph [ref=f45e391]: Purchase Protection Plan
+              - link [ref=f45e393] [cursor=pointer]:
+                - /url: /product-recalls-and-advisories/product-recall-and-advisories
+                - generic "product-refills-advisories" [ref=f45e394]:
+                  - paragraph [ref=f45e396]: Product Recalls & Advisories
+              - link [ref=f45e398] [cursor=pointer]:
+                - /url: /returns-and-exchanges
+                - generic "return-exchanges" [ref=f45e399]:
+                  - paragraph [ref=f45e401]: Return & Exchanges
+              - link [ref=f45e403] [cursor=pointer]:
+                - /url: /shipping-and-delivery/shippinganddelivery
+                - paragraph [ref=f45e406]: Shipping & Delivery
+              - link [ref=f45e408] [cursor=pointer]:
+                - /url: /faq-for-quick-refill
+                - paragraph [ref=f45e411]: FAQ for Quick Refill
+          - generic [ref=f45e414]:
+            - generic [ref=f45e415]: Company Info
+            - generic [ref=f45e418]:
+              - link [ref=f45e420] [cursor=pointer]:
+                - /url: /cyber-incident-update-employee-notice
+                - paragraph [ref=f45e423]: CYBER INCIDENT UPDATE - EMPLOYEE NOTICE
+              - link [ref=f45e425] [cursor=pointer]:
+                - /url: /believe-in-better
+                - paragraph [ref=f45e428]: Believe in Better
+              - link [ref=f45e430] [cursor=pointer]:
+                - /url: /corporate-information/corporate-info
+                - paragraph [ref=f45e433]: Corporate Info
+              - link [ref=f45e435] [cursor=pointer]:
+                - /url: /about-london-drugs/about-us
+                - paragraph [ref=f45e438]: London Drugs Story
+              - link [ref=f45e440] [cursor=pointer]:
+                - /url: /stores
+                - paragraph [ref=f45e443]: Our Locations
+              - link [ref=f45e445] [cursor=pointer]:
+                - /url: https://london-drugs-limited-jobs.careerplug.com/account
+                - generic "careers" [ref=f45e446]:
+                  - paragraph [ref=f45e448]: Careers
+              - link [ref=f45e450] [cursor=pointer]:
+                - /url: /london-drugs-in-your-community/cominvolve
+                - generic "community" [ref=f45e451]:
+                  - paragraph [ref=f45e453]: Community
+              - link [ref=f45e455] [cursor=pointer]:
+                - /url: /news-and-events/news-and-events
+                - generic "news-events" [ref=f45e456]:
+                  - paragraph [ref=f45e458]: News & Events
+              - link [ref=f45e460] [cursor=pointer]:
+                - /url: /influencers
+                - generic "news-events" [ref=f45e461]:
+                  - paragraph [ref=f45e463]: Influencers
+              - link [ref=f45e465] [cursor=pointer]:
+                - /url: https://blog.londondrugs.com/employment-recruitment-scam-advisory
+                - generic "avoid-recruitment-fraud" [ref=f45e466]:
+                  - paragraph [ref=f45e468]: Avoid Recruitment Fraud
+              - link [ref=f45e470] [cursor=pointer]:
+                - /url: https://cdn.builder.io/o/assets%2F062164fc6d8546c68b6329a2b6a851f1%2Feb834c26acec46178c53dc20c4484293?alt=media&token=80adc0f7-10fd-4c11-b184-b0dce7a8c427&apiKey=062164fc6d8546c68b6329a2b6a851f1
+                - paragraph [ref=f45e473]: Pay Transparency Report
+              - link "commitment-against-slavery" [ref=f45e476] [cursor=pointer]:
+                - /url: https://www.londondrugs.com/commitment-against-slavery
+                - paragraph [ref=f45e478]: COMMITMENT AGAINST SLAVERY
+      - generic [ref=f45e479]:
+        - generic [ref=f45e480]:
+          - generic "connect-with-us" [ref=f45e481]:
+            - paragraph [ref=f45e483]: Connect With Us
+          - generic [ref=f45e484]:
+            - link "londondrugs-facebook" [ref=f45e485] [cursor=pointer]:
+              - /url: https://www.facebook.com/LondonDrugs
+            - link "londondrugs-twitter" [ref=f45e486] [cursor=pointer]:
+              - /url: https://x.com/LondonDrugs/
+            - link "londondrugs-pininterest" [ref=f45e487] [cursor=pointer]:
+              - /url: https://ca.pinterest.com/londondrugs/
+            - link "londondrugs-instagram" [ref=f45e488] [cursor=pointer]:
+              - /url: https://www.instagram.com/londondrugs/
+            - link "londondrugs-youtube" [ref=f45e489] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/LondonDrugsLtd
+            - link "londondrugs-tiktok" [ref=f45e490] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@londondrugs
+        - generic [ref=f45e491]:
+          - img "London Drugs Logo" [ref=f45e493]
+          - generic [ref=f45e494]:
+            - generic [ref=f45e495]:
+              - strong [ref=f45e498]:
+                - link "Legal Terms" [ref=f45e499] [cursor=pointer]:
+                  - /url: /legal-terms-of-use/TermsConditions
+              - strong [ref=f45e502]:
+                - link "Privacy Policy" [ref=f45e503] [cursor=pointer]:
+                  - /url: /london-drugs-privacy-policy/privacy-policy
+              - strong [ref=f45e506]:
+                - link "Security Policy & Cookie Notice" [ref=f45e507] [cursor=pointer]:
+                  - /url: /security-policy-and-cookie-notice/privacy-security
+              - strong [ref=f45e510]:
+                - link "Sitemap" [ref=f45e511] [cursor=pointer]:
+                  - /url: /sitemap/
+            - paragraph [ref=f45e514]: © 2026 London Drugs. All rights reserved.
