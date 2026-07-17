@@ -20,22 +20,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+      - name: Install Playwright Browsers & Edge
+        run: |
+          npx playwright install --with-deps
+          npx playwright install msedge
 
       - name: Run Playwright tests
         run: npx playwright test --workers=4
-
-      # ---------------------------------------------------------------
-      # Publish JUnit results to ADO Test Plans > Runs
-      # Runs even if tests fail (if: always) so every run is recorded.
-      # Requires secret ADO_PAT with scope: Test Management (Read & write)
-      # ---------------------------------------------------------------
-      - name: Publish results to ADO Test Plans
-        if: always()
-        env:
-          ADO_PAT: ${{ secrets.ADO_PAT }}
-        run: python3 scripts/publish-ado-results.py
 
       # ---------------------------------------------------------------
       # Upload interactive HTML report as pipeline artifact

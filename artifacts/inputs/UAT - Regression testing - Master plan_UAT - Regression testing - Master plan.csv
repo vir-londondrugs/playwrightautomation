@@ -75,6 +75,29 @@
 ,,,2,Wait for sort control to load,Verify step completes successfully,,,
 ,,,3,Select 'Price: Low to High' sorting option,Verify step completes successfully,,,
 ,,,4,Wait for sorted results API response,URL reflects active sort = True,,,
+83365,Test Case,PLP — Applying multiple filters on lipstick search narrows results,,,,PLP,Virginia Zambudio (On Behalf of London Drugs) <VZambudio@londondrugs.com>,Design
+,,,1,Navigate to https://london-drugs-uat-origin.kibology.us/ and search for lipstick,PLP loads with lipstick results,,,
+,,,2,Wait for filter drawer trigger to be visible,Filter trigger is visible,,,
+,,,3,Open filter drawer and apply first filter checkbox,URL changes after first filter applied,,,
+,,,4,Open filter drawer again and apply a second filter checkbox,URL changes again after second filter applied,,,
+83366,Test Case,PLP — Filter panel is present on lipstick PLP and page loads without error,,,,PLP,Virginia Zambudio (On Behalf of London Drugs) <VZambudio@londondrugs.com>,Design
+,,,1,Navigate to https://london-drugs-uat-origin.kibology.us/ and search for lipstick,PLP loads with lipstick results,,,
+,,,2,Assert filter trigger (drawer button) is present,Filter trigger is visible,,,
+,,,3,Assert page has no JavaScript error heading (h1 with 'Error' or 'Something went wrong'),No error heading found = True,,,
+83367,Test Case,PLP — Removing applied filter on lipstick PLP restores full results and clears filter URL param,,,,PLP,Virginia Zambudio (On Behalf of London Drugs) <VZambudio@londondrugs.com>,Design
+,,,1,Navigate to https://london-drugs-uat-origin.kibology.us/ and search for lipstick,PLP loads with lipstick results,,,
+,,,2,Wait for filter trigger and open filter drawer; apply first filter,URL changes to include filter param,,,
+,,,3,Open filter drawer and uncheck the applied filter,Filter checkbox is unchecked,,,
+,,,4,Click Clear or Apply to remove the filter,URL no longer contains the filter parameter,,,
+83368,Test Case,PLP — Sort control is present on vitamins PLP and page loads without error,,,,PLP,Virginia Zambudio (On Behalf of London Drugs) <VZambudio@londondrugs.com>,Design
+,,,1,Navigate to https://london-drugs-uat-origin.kibology.us/ and search for vitamins,PLP loads with vitamins results,,,
+,,,2,Assert sort button (overlay trigger) is visible,Sort button is visible,,,
+,,,3,Assert page has no JavaScript error heading (h1 with 'Error' or 'Something went wrong'),No error heading found = True,,,
+83214,Test Case,PLP — Switching sort from 'Price: Low to High' to 'Price: High to Low' updates URL,,,,PLP,Virginia Zambudio (On Behalf of London Drugs) <VZambudio@londondrugs.com>,Design
+,,,1,Navigate to https://london-drugs-uat-origin.kibology.us/ and search for vitamins,PLP loads with vitamins results,,,
+,,,2,Wait for sort control to be visible,Sort button is visible,,,
+,,,3,Open sort overlay and select 'Price: Low to High' option,URL updates with sort parameter,,,
+,,,4,Wait for sort overlay to close; re-open sort overlay and select 'Price: High to Low' option,URL updates again with new sort parameter,,,
 83235,Test Case,PDP — Second-level breadcrumb link on product detail page navigates back to the category listing page,,,,PDP,LD.com - Globant,Virginia Zambudio (On Behalf of London Drugs) <VZambudio@londondrugs.com>,Design
 ,,,1,Navigate to https://www.londondrugs.com/search?text=vitamins,Page loads with results,,,
 ,,,2,Click first product card to open PDP,Verify step completes successfully,,,

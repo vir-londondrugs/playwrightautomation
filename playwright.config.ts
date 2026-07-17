@@ -21,6 +21,7 @@ export default defineConfig({
   ],
   /* Shared settings for all the projects below. */
   use: {
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
     /* Base URL: driven by process.env.BASE_URL; falls back to UAT origin for local runs.
        Smoke workflows pass BASE_URL=https://www.londondrugs.com/ for PROD runs.
        Tests that call page.goto('/path') resolve relative to this base URL. */
@@ -35,7 +36,6 @@ export default defineConfig({
       /* slowMo only for local runs -- CI must run at full speed */
       slowMo: process.env.CI ? 0 : 800,
       args: [
-        '--lang=en-CA',
         '--disable-features=Translate,TranslateUI',
         '--disable-translate',
         '--no-default-browser-check',
