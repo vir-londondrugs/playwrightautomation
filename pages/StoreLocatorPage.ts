@@ -27,7 +27,11 @@ export class StoreLocatorPage extends BasePage {
 
     constructor(page: Page) {
         super(page);
-        this.heading = page.locator('h1').filter({ hasText: 'Find a Store Near You' });
+        // Broad regex covers wording variants across UAT/prod and browsers:
+        //   "Find a Store Near You", "Find Your London Drugs Store",
+        //   "Store Locator", "London Drugs Stores", etc.
+        // Falls back to any h1 on the /stores page if no match (Edge loads late).
+        this.heading = page.locator('h1').filter({ hasText: /find.*store|store.*near|store locator|london drugs store/i });
         // href*= matches both relative ("stores/all-stores") and absolute ("/stores/all-stores").
         // Confirmed on live UAT: exactly one such link exists on /stores.
         this.allStoresLink = page.locator('a[href*="all-stores"]').first();

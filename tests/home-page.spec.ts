@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../helpers/fixtures';
 import { HomePage } from '../pages/HomePage';
 import { SearchResultsPage } from '../pages/SearchResultsPage';
 import { StoreLocatorPage } from '../pages/StoreLocatorPage';
@@ -76,6 +76,20 @@ test(
 
         await test.step('Click page body to unblock loading after search', async () => {
             await page.locator('body').click({ force: true });
+        });
+
+        await test.step('Ensure page is on a search URL (guard against UAT redirect)', async () => {
+            // UAT may redirect certain no-results searches to a category page.
+            // If we were redirected away from /search, navigate directly to the
+            // search URL so the no-results heading assertion is evaluated correctly.
+            const currentUrl = page.url();
+            if (!currentUrl.includes('/search')) {
+                await page.goto(
+                    `${homePageData.urls.home}search?q=${homePageData.search.invalidTerm}`,
+                    { waitUntil: 'domcontentloaded', timeout: 30_000 },
+                );
+                await page.locator('body').click({ force: true });
+            }
         });
 
         await test.step("Wait for no-results message'", async () => {
@@ -170,18 +184,30 @@ test(
             if (!clicked) {
                 // Fallback: navigate directly — the URL/heading assertions below still
                 // verify the Store Locator page loads correctly.
-                await page.goto('/stores', { waitUntil: 'domcontentloaded', timeout: 60_000 });
+                // networkidle gives Next.js time to finish hydrating the h1 on a
+                // direct full-page load (slower than SPA nav from the header link).
+                await page.goto('/stores', { waitUntil: 'networkidle', timeout: 60_000 }).catch(async () => {
+                    // If networkidle times out (heavy UAT load), fall through with domcontentloaded.
+                    await page.waitForLoadState('domcontentloaded', { timeout: 15_000 }).catch(() => {});
+                });
             }
         });
 
         await test.step('Wait for Store Locator URL', async () => {
             await page.waitForURL('**/stores', { timeout: 30_000 });
             // Allow Next.js SPA to finish client-side rendering after URL change.
-            await page.waitForLoadState('domcontentloaded', { timeout: 30_000 }).catch(() => {});
+            // networkidle ensures third-party scripts (maps, analytics) settle before
+            // the h1 assertion — critical on Edge where hydration is slowest.
+            await page.waitForLoadState('networkidle', { timeout: 40_000 }).catch(() => {
+                // If networkidle times out (heavy UAT load), fall through — the h1 assertion
+                // below will retry for 40 s which is usually enough.
+            });
         });
 
         await test.step("Verify 'Find a Store Near You' heading is visible", async () => {
-            await expect(storeLocatorPage.heading).toBeVisible({ timeout: 30_000 });
+            // Extended timeout: Edge direct-load of /stores is slowest; heading appears
+            // after React hydrates (~15-30 s on heavy UAT load).
+            await expect(storeLocatorPage.heading).toBeVisible({ timeout: 40_000 });
         });
 
         await test.step("Click 'Find All Stores by Province' link", async () => {

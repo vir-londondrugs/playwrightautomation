@@ -42,12 +42,18 @@ If a task requires parsing, updating, or referencing test cases, always resolve 
 ## Commands
 
 ```bash
-# Run all tests
+# Run all tests (headless by default)
 npx playwright test
 
-# Run with UI
+# Run with browsers visible
+HEADED=1 npx playwright test
+
+# Run with interactive UI
 npx playwright test --ui
 
-# Run a specific test file
+# Run a specific test file (headless)
 npx playwright test tests/home-page.spec.ts
+
+# Run a specific test file with browsers visible
+HEADED=1 npx playwright test tests/home-page.spec.ts
 ```

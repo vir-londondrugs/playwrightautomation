@@ -10,7 +10,7 @@
  *
  * @tags @plp @filter @sort @search-results
  */
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../helpers/fixtures';
 import { HomePage } from '../pages/HomePage';
 import { SearchResultsPage } from '../pages/SearchResultsPage';
 import { plpData } from '../test-data/plp.data';

@@ -27,7 +27,8 @@ export default defineConfig({
        Tests that call page.goto('/path') resolve relative to this base URL. */
     baseURL: process.env.BASE_URL || 'https://london-drugs-uat-origin.kibology.us/',
     /* Headless in CI, visible window locally for manual observation */
-    headless: !!process.env.CI,
+    /* Headless by default. Pass HEADED=1 to open browser windows: HEADED=1 npx playwright test */
+    headless: !process.env.HEADED,
     /* Suppress browser permission/translate popups */
     locale: 'en-CA',
     geolocation: { latitude: 49.2827, longitude: -123.1207 },

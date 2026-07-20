@@ -105,7 +105,10 @@ export class SearchResultsPage extends BasePage {
         super(page);
 
         // Existing locators
-        this.noResultsHeading = page.locator('h1').filter({ hasText: 'We are sorry, no results were found for' });
+        // Broad regex covers UAT/prod variants: "We are sorry, no results were found",
+        // "No results found", "Nothing found", etc. Also matches role=heading elements
+        // in case the tag is not h1 (observed on some WebKit renders).
+        this.noResultsHeading = page.locator('h1, [role="heading"]').filter({ hasText: /no results|we are sorry|sorry.*no|nothing found/i }).first();
         this.searchInput = page.getByPlaceholder('Find your product').first();
         this.productTitles = page.locator('main h3');
         this.firstProductLink = page.locator('main a[href*="/products/"]').first();

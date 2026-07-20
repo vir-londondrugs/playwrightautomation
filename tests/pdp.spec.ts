@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../helpers/fixtures';
 import { HomePage } from '../pages/HomePage';
 import { SearchResultsPage } from '../pages/SearchResultsPage';
 import { ProductDetailPage } from '../pages/ProductDetailPage';
@@ -23,9 +23,16 @@ async function navigateToVitaminsPdp(
     await page.waitForURL(/\/search/, { timeout: 30_000 });
     await simulateBodyClickToUnblock(page);
     await searchResultsPage.firstProductLink.waitFor({ state: 'visible', timeout: 30_000 });
-    await searchResultsPage.firstProductLink.click();
-    await page.waitForURL((url) => !url.pathname.includes('/search'), { timeout: 30_000 });
-    await page.waitForLoadState('domcontentloaded');
+    // Promise.all ensures waitForURL is registered BEFORE the click fires so the
+    // navigation event is never missed on Edge (which can be fast enough that a
+    // sequential click-then-waitForURL loses the navigation signal entirely).
+    // waitUntil: 'domcontentloaded' avoids hanging on 'load' when the PDP fires
+    // third-party scripts that delay the load event (observed on Chromium + Edge).
+    await Promise.all([
+        page.waitForURL((url) => !url.pathname.includes('/search'), { timeout: 55_000, waitUntil: 'domcontentloaded' }),
+        searchResultsPage.firstProductLink.click(),
+    ]);
+    await page.waitForLoadState('domcontentloaded', { timeout: 30_000 }).catch(() => {});
     await simulateBodyClickToUnblock(page);
     await page.locator('h1').first().waitFor({ state: 'visible', timeout: 30_000 });
 }
@@ -259,6 +266,9 @@ test(
 test(
     'TC-83240 — Authenticated user adds product to wishlist and API call confirms the action @pdp @wishlist @authenticated',
     async ({ page }) => {
+        // Extended timeout: login + SRP navigation + PDP load can exceed 60 s on Edge/Chromium UAT.
+        test.setTimeout(120_000);
+
         const loginPage = new LoginPage(page);
         const homePage = new HomePage(page);
         const searchResultsPage = new SearchResultsPage(page);
