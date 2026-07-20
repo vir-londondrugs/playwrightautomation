@@ -52,7 +52,10 @@ export class HomePage extends BasePage {
         super(page);
         this.logo = page.locator('a[href="/"] img[alt="London Drugs"]').first();
         this.searchInput = page.getByPlaceholder('Find your product').first();
-        this.storesLink = page.locator('a[href="/stores"]').first();
+        // Partial href match (:not all-stores) so this works even when the server
+        // renders an absolute URL (https://.../stores) instead of a relative one,
+        // which Edge sometimes does on UAT due to Next.js SSR/hydration differences.
+        this.storesLink = page.locator('a[href*="/stores"]:not([href*="all-stores"])').first();
         this.miniCartButton = page.locator('button[aria-label="Show Mini Cart Items"]').first();
         // Mini-cart panel: confirmed on UAT as an absolute z-50 div with min-w-80.
         // Always present in DOM regardless of cart state; using min-w-80 makes the selector
